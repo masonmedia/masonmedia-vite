@@ -19,7 +19,7 @@ fetch(url)
 </script>
 
 <template>
-  <div class="fade-up">
+  <div>
     <div class="container-fluid px-0 pt-5 mt-4">
       <div class="row m-3 p-0">
         <div class="col-lg-12 min-vh-75 rounded-5 p-5 m-0 center-center" style="background-color: #EDEDE9; background: url('https://picsum.photos/id/38/1200/600') center; background-size: cover">
@@ -30,7 +30,8 @@ fetch(url)
       </div>
       <div class="row m-2 p-0" id="about">
         <div class="col-lg-8 p-0">
-            <div class="left-center p-5 m-2 min-vh-75 rounded-5" style="background: #D6CCC2">
+            <div class="left-center p-5 m-2 min-vh-75 rounded-5" style="background: #D5BDAF">
+            <!-- <div class="left-center p-5 m-2 min-vh-75 rounded-5" style="background: #D6CCC2"> -->
                 <h5 class="text-dark">about</h5>
                 <h1 class="ls-1 lh-1 fw-bold display-3" style="color: grey;">Hi, I'm Andrew. I'm a passionate frontend developer, designer & musician.</h1>
                 <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#aboutModal">

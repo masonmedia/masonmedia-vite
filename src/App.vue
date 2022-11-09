@@ -5,7 +5,7 @@ import Nav from './components/TheNav.vue'
 </script>
 
 <template>
-<div>
+<div class="fade-in">
   <header>
     <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -17,7 +17,7 @@ import Nav from './components/TheNav.vue'
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div> -->
-    <Nav class="fade-down"></Nav>
+    <Nav></Nav>
   </header>
   <RouterView />
 </div>
