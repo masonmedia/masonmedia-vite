@@ -20,7 +20,7 @@ fetch(url)
 
 <template>
   <div>
-    <div class="container-fluid px-0 pt-5 mt-4">
+    <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4">
       <div class="row m-3 p-0">
         <div class="col-lg-12 min-vh-75 rounded-5 p-5 m-0 center-center" style="background-color: #EDEDE9; background: url('https://picsum.photos/id/38/1200/600') center; background-size: cover">
           <h1 class="fw-bold lh-1 display-1" style="color: #E6CCB2; letter-spacing: -5px">mason<span style="color: #EDE0D4">media</span></h1>
@@ -30,11 +30,11 @@ fetch(url)
       </div>
       <div class="row m-2 p-0" id="about">
         <div class="col-lg-8 p-0">
-            <div class="left-center p-5 m-2 min-vh-75 rounded-5" style="background: #D5BDAF">
+            <div class="left-center p-4 p-lg-5 m-2 min-vh-75 rounded-5" style="background: #D5BDAF">
             <!-- <div class="left-center p-5 m-2 min-vh-75 rounded-5" style="background: #D6CCC2"> -->
                 <h5 class="text-dark">about</h5>
                 <h1 class="ls-1 lh-1 fw-bold display-3" style="color: grey;">Hi, I'm Andrew. I'm a passionate frontend developer, designer & musician.</h1>
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#aboutModal">
+                <button class="btn ps-0" type="button" data-bs-toggle="modal" data-bs-target="#aboutModal">
                     <i class="fs-1 bi bi-plus-circle text-secondary"></i>
                 </button>
                 <!-- <button class="btn btn-secondary rounded-5 px-4 mt-3 fw-bold" type="button" data-bs-toggle="modal" data-bs-target="#aboutModal">more</button> -->
@@ -54,10 +54,10 @@ fetch(url)
       <!-- design -->
 
       <div id="design" class="row m-3 p-0 rounded-5" style="background: #F5EBE0">
-        <div class="col-lg-10 min-vh-75 rounded-5 p-5 m-0 left-center">
+        <div class="col-lg-10 min-vh-75 rounded-5 p-4 p-lg-5 m-0 left-center">
             <h5 class="text-dark">design</h5>
             <h1 class="ls-1 lh-1 fw-bold display-3" style="color: grey;">I design user interfaces, imagery, and assets for websites, social media, and print.</h1>
-            <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#designModal">
+            <button class="btn ps-0" type="button" data-bs-toggle="modal" data-bs-target="#designModal">
                 <i class="fs-1 bi bi-plus-circle text-secondary"></i>
             </button>
             <!-- <button class="btn btn-secondary rounded-5 px-4 mt-3 fw-bold" type="button" data-bs-toggle="modal" data-bs-target="#designModal">more</button> -->
@@ -78,7 +78,7 @@ fetch(url)
             <div class="left-center p-5 m-2 min-vh-75 rounded-5" style="background: #B08968; color: E6CCB2">
                 <h5>development</h5>
                 <h1 class="ls-1 lh-1 fw-bold display-3">I build web applications from scratch using a variety of modern tools and frameworks.</h1>
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#dev">
+                <button class="btn ps-0" type="button" data-bs-toggle="modal" data-bs-target="#dev">
                     <i class="fs-1 bi bi-plus-circle text-dark"></i>
                 </button>
                 <!-- <button class="btn btn-dark rounded-5 px-4 mt-3 fw-bold" type="button" data-bs-toggle="modal" data-bs-target="#dev">more</button> -->
@@ -94,7 +94,7 @@ fetch(url)
         <div class="col-lg-10 min-vh-75 rounded-5 p-5 m-0 left-center">
             <h5 class="text-dark">projects</h5>
             <h1 class="ls-1 lh-1 fw-bold display-3" style="color: #B08968;">Explore sample projects from a variety of spaces involving a range of build tools, designs, and contexts.</h1>
-            <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#projectsModal">
+            <button class="btn ps-0" type="button" data-bs-toggle="modal" data-bs-target="#projectsModal">
                 <i class="fs-1 bi bi-plus-circle" style="color: #B08968"></i>
             </button>
             <!-- <button class="btn btn-secondary rounded-5 px-4 mt-3 fw-bold" style="background: #B08968; border: 1px solid #B08968 !important" type="button" data-bs-toggle="modal" data-bs-target="#projectsModal">more</button> -->
@@ -106,7 +106,7 @@ fetch(url)
 
       <div id="contact" class="row m-2 p-0">
         <div class="col-lg-8 p-0">
-            <div class="left-center p-5 m-2 min-vh-75 rounded-5" style="background: #D6CCC2">
+            <div class="left-center p-5 m-2 min-vh-75 rounded-5" style="background: #E3D5CA">
                 <h5 class="text-dark">contact</h5>
                 <h1 class="ls-1 lh-1 fw-bold display-3" style="color: grey;">Reach out for more info or to chat about your next project.</h1>
                 <div class="mt-2 d-flex align-items-center">

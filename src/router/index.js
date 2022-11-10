@@ -42,13 +42,16 @@ const router = createRouter({
       component: () => import('../views/TestView.vue')
     }
   ],
-  scrollBehavior() {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({ left: 0, top: 0 })
-      }, 500)
-    })
-  },
+  // scrollBehavior() {
+  //   return new Promise((resolve) => {
+  //     setTimeout(() => {
+  //       resolve({ left: 0, top: 0 })
+  //     }, 500)
+  //   })
+  // },
+  scrollBehavior () {
+    return { x: 0, y: 0 };
+  }
 })
 
 export default router

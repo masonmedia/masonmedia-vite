@@ -1,13 +1,11 @@
-<div class="container p-5">
+<div class="container p-4 p-lg-5">
 
 <h1 class="display-1 lh-1 ls-1 fw-900">Development.</h1>
 
 <br /> 
-<br /> 
 
 <img src="https://picsum.photos/1200/500?random=2" class="w-100 rounded-5 img-full" alt="">
 
-<br />
 <br />
 <br />
 

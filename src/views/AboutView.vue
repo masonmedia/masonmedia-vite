@@ -1,5 +1,6 @@
 <script setup>
 import {onMounted} from 'vue'
+import About from '@/components/Pages/About.md'
 
 onMounted(() => {
   window.scrollTo(0, 0);
@@ -9,8 +10,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <div class="container-fluid p-0">
+  <div class="pt-3 pt-lg-5 mt-3 mt-lg-5">
+    <!-- <div class="container-fluid p-0">
       <div class="row m-0 p-0 min-vh-100 rounded-5">
         
         <div class="col-lg-12 p-5 m-0 center-center">
@@ -44,7 +45,9 @@ onMounted(() => {
           <button class="btn btn-dark mt-3">Design</button>
         </div>
       </div>
-    </div>
+    </div> -->
+
+    <About />
   </div>
 </template>
 

@@ -9,7 +9,7 @@
 <div class="row rounded-5 my-3 mx-0 py-3" v-for="(item, index) in repos" :key="index" style="background: #EDE0D4" :style="index % 2 === 0 ? 'background: #B08968' : index % 3 === 1 ? 'background: #DDB892' : 'background: #E6CCB2'">
 <div class="col-lg-6 left-center order-2 order-lg-1">
     <div class="m-0 m-lg-3 p-4">
-        <h5 class="small">{{ item.language }}</h5>
+        <!-- <h5 class="small">{{ item.language }}</h5> -->
         <h1 class="fw-bold lh-1 ls-1 mb-3">{{ item.name }}</h1>
         <p class="h5 fw-bold pb-3">{{ item.description }}</p>
         <a :href="item.html_url" target="_blank" class="me-2">
