@@ -87,7 +87,7 @@ onMounted(() => {
                 <h5 class="up">about</h5>
                 <h1 class="up ls-1 lh-1 fw-bold display-3">Hi, I'm Andrew. I'm a passionate frontend developer, designer & musician.</h1>
                 <router-link :to="$router.options.routes[1]">
-                    <button class="btn ps-0" type="button">
+                    <button class="btn stretched-link ps-0" type="button">
                         <i class="fs-1 bi bi-plus-circle text-secondary"></i>
                     </button>
                 </router-link>
@@ -111,7 +111,7 @@ onMounted(() => {
             <h5>development</h5>
             <h1 class="ls-1 lh-1 fw-bold display-3">I build websites & web applications from scratch using a variety of modern tools and frameworks.</h1>
             <router-link :to="$router.options.routes[2]">
-                <button class="btn ps-0" type="button">
+                <button class="btn stretched-link ps-0" type="button">
                     <i class="fs-1 bi bi-plus-circle" style="color: #B08968"></i>
                 </button>
             </router-link>
@@ -134,7 +134,7 @@ onMounted(() => {
                 <h5 class="up text-dark">design</h5>
                 <h1 class="up ls-1 lh-1 fw-bold display-3">I design user interfaces, imagery, and assets for websites, social media, and print.</h1>
                 <router-link :to="$router.options.routes[3]">
-                    <button class="btn ps-0" type="button">
+                    <button class="btn stretched-link ps-0" type="button">
                         <i class="fs-1 bi bi-plus-circle text-dark"></i>
                     </button>
                 </router-link>
@@ -151,7 +151,7 @@ onMounted(() => {
             <h5 class="up">projects</h5>
             <h1 class="up ls-1 lh-1 fw-bold display-3">Explore sample projects from a variety of spaces using a range of build tools, designs, and contexts.</h1>
             <router-link :to="$router.options.routes[4]">
-                <button class="btn ps-0" type="button">
+                <button class="btn stretched-link ps-0" type="button">
                     <i class="fs-1 bi bi-plus-circle" style="color: #B08968"></i>
                 </button>
             </router-link>

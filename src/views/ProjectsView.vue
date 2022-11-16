@@ -108,15 +108,6 @@ const titles = [
         "title": "creator"
     }
 ]
-const repoTitles = [
-    "Decentral Inc.",
-    "Warren Yen",
-    "Copetín",
-    "Neil Whitford",
-    "Oakwood Guitar School",
-    "Leadership Development App",
-    "Jen Mason Consulting"
-]
 
 const images = [
     "https://raw.githubusercontent.com/masonmedia-projects/decentral/master/assets/img/dc_browser_screen.png",
