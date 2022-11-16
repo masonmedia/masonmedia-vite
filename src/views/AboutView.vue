@@ -1,15 +1,10 @@
 <script setup>
-import {onMounted} from 'vue'
 import About from '@/components/Pages/About.md'
-
-onMounted(() => {
-  window.scrollTo(0, 0);
-  console.log('about mounted')
-})
 
 </script>
 
 <template>
+<!-- <div> -->
   <div class="pt-3 pt-lg-5 mt-3 mt-lg-5">
     <!-- <div class="container-fluid p-0">
       <div class="row m-0 p-0 min-vh-100 rounded-5">
@@ -28,9 +23,10 @@ onMounted(() => {
           <img src="https://picsum.photos/1200/600?random=1" class="w-100 rounded-5 img-full min-vh-100" alt="">
         </div>
       </div>
-      <div class="row m-0 p-0 min-vh-100 left-center bg-dark text-light">
+      <div class="row m-3 p-0 min-vh-100 left-center bg-dark rounded-5">
         <div class="col-lg-12 p-5">
           <h1 class="fw-bold lh-1 ls-1 display-3">I specialize in building web applications, visual/UI/UX design, and copywriting. I help companies and individuals create bold, engaging digital experiences.</h1>
+          <h1 class="display-1 lh-1 ls-1 fw-bold min-vh-50"><span style="color: #9C6644">I specialize in building websites and web applications, visual/UI/UX design, and copywriting.</span></h1>
         </div>
       </div>
       <div class="row m-3 p-0 left-center bg-light" style="background: royalblue">
@@ -40,9 +36,9 @@ onMounted(() => {
       </div>
       
       <div class="row m-0 p-0 min-vh-100 left-center bg-light">
-        <div class="col-lg-12 p-5">
-          <h1 class="fw-900 lh-1 ls-1 display-3">I have a diverse, multidisciplinary background with a love of frontend development, design, animation, new technologies, and a belief in ethics and data privacy.</h1>
-          <button class="btn btn-dark mt-3">Design</button>
+        <div class="col-lg-10 p-5">
+          <h1 class="display-1 lh-1 ls-1 fw-bold min-vh-50">I help companies and individuals create bold, engaging digital experiences.</h1>
+          <button class="btn btn-dark">Design</button>
         </div>
       </div>
     </div> -->

@@ -3,9 +3,9 @@
         <div class="w-100 border-bottom d-lg-none d-flex">
             <router-link class="navbar-brand p-3 fw-900 fs-5" to="/">m.</router-link>
 
-            <!-- <button class="btn ms-auto my-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+            <button class="btn ms-auto my-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
                 <i class="fs-2 bi bi-justify"></i>
-            </button> -->
+            </button>
         </div>
         <!-- nav -->
         <nav class="navbar p-3 fixed-top d-none d-lg-block w-100" style="background: #D6CCC2">
@@ -14,31 +14,30 @@
                 <router-link class="navbar-brand" to="/">m.</router-link>
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <!-- <router-link class="nav-link" aria-current="page" to="/about">about</router-link> -->
-                        <a class="nav-link" aria-current="page" href="#about">about</a>
+                        <router-link class="nav-link" aria-current="page" to="/about">about</router-link>
+                        <!-- <a class="nav-link" aria-current="page" href="#about">about</a> -->
                     </li>
                     <li class="nav-item">
-                        <!-- <router-link class="nav-link" aria-current="page" to="/design">design</router-link> -->
-                        <a class="nav-link" href="#design">design</a>
+                        <router-link class="nav-link" to="/design">design</router-link>
+                        <!-- <a class="nav-link" href="#design">design</a> -->
                     </li>
                     <li class="nav-item">
-                        <!-- <router-link class="nav-link" aria-current="page" to="/development">development</router-link> -->
-                         <a class="nav-link" href="#development">development</a>    
+                        <router-link class="nav-link" aria-current="page" to="/development">development</router-link>
                     </li>
                     <li class="nav-item">
-                        <!-- <router-link class="nav-link" aria-current="page" to="/">projects</router-link> -->
-                         <a class="nav-link" href="#projects">projects</a>
+                        <router-link class="nav-link" aria-current="page" to="/projects">projects</router-link>
+                         <!-- <a class="nav-link" href="#projects">projects</a> -->
                     </li>
                     <li class="nav-item">
                         <!-- <router-link class="nav-link" aria-current="page" to="/">contact</router-link> -->
-                         <a class="nav-link" href="#contact">contact</a>
+                         <a class="nav-link" href="mailto:andrewmasonmedia@gmail.com">contact</a>
                     </li>
                 </ul>
             </div>
             
         </nav>
 
-        <!-- <div class="offcanvas offcanvas-end border-bottom" tabindex="-1" id="offcanvasResponsive" style="background: #D6CCC2" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas offcanvas-end border-bottom" tabindex="-1" id="offcanvasResponsive" style="background: #D6CCC2" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title fw-900">m.</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -62,7 +61,7 @@
                     </li>
                 </ul>
             </div>
-        </div> -->
+        </div>
 
     </div>
 </template>

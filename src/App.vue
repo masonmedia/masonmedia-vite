@@ -1,40 +1,75 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-// import HelloWorld from './components/HelloWorld.vue'
+import gsap from 'gsap'
 import Nav from './components/TheNav.vue'
+import Footer from './components/TheFooter.vue'
+
+// const beforeEnter = (el) => {
+//   el.style.opacity = '0'
+//   el.style.transform = 'translateY(-100px)'
+// }
+
+const beforeEnter = (el) => {
+      gsap.set("nav", { y: -100, opacity: 0 });
+      gsap.set("#footer", { y: 100, opacity: 0 });
+      gsap.set(el, {
+        opacity: 0,
+        y: -50
+      });
+}
+
+const enter = (el, done) => {
+      gsap.to("nav", { y: 0, opacity: 1 });
+      gsap.to("#footer", { y: 0, opacity: 1 });
+      gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        ease: 'power4.inOut',
+        onComplete: done
+      })
+}
+
+const leave = (el, done) => {
+      gsap.to("nav", { y: -100, opacity: 0 });
+      gsap.to("#footer", { y: 100, opacity: 0 });
+      gsap.to(el, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: 'power4.inOut',
+        onComplete: done
+      })
+    }
+    
 </script>
 
 <template>
-<div>
+<div class="overflow-hidden">
   <header>
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div> -->
     <Nav></Nav>
   </header>
-  <RouterView />
+
+  <router-view v-slot="{ Component }">
+    <!-- <transition 
+    name="slide-fade"
+    mode="out-in"> -->
+    <transition 
+    mode="out-in"
+    @before-enter="beforeEnter"
+    @enter="enter"
+    @leave="leave">
+      <component :is="Component" />
+    </transition>
+  </router-view>
+<Footer />
+  <!-- <RouterView /> -->
 </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
+/* nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
@@ -57,32 +92,6 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
-}
+} */
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
 </style>

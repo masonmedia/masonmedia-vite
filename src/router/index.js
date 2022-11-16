@@ -18,40 +18,37 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
+      path: '/development',
+      name: 'Development',
+      component: () => import('../views/DevelopmentView.vue')
+    },
+    {
       path: '/design',
       name: 'Design',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/DesignView.vue')
     },
     {
-      path: '/development',
-      name: 'Development',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/DevelopmentView.vue')
+      path: '/projects',
+      name: 'Projects',
+      component: () => import('../views/ProjectsView.vue')
     },
     {
       path: '/test',
       name: 'Test',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/TestView.vue')
     }
   ],
-  // scrollBehavior() {
-  //   return new Promise((resolve) => {
-  //     setTimeout(() => {
-  //       resolve({ left: 0, top: 0 })
-  //     }, 500)
-  //   })
-  // },
-  scrollBehavior () {
-    return { x: 0, y: 0 };
-  }
+  // scrollBehavior () {
+  //   return { top: 0, left: 0 }
+  // }
+    scrollBehavior() {
+    return new Promise((resolve) => {
+      // resolve({ left: 0, top: 0 })
+      setTimeout(() => {
+        resolve({ left: 0, top: 0 })
+      }, 500)
+    })
+  },
 })
 
 export default router
