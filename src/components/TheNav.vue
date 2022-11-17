@@ -46,7 +46,7 @@
                     <li class="nav-item fw-900"
                     style="font-size: 6vmin; line-height: 6vmin;"
                     data-bs-dismiss="offcanvas">
-                        <router-link class="nav-link" v-for="(route, index) in this.$router.options.routes.slice(0,5)" :key="index"
+                        <router-link class="nav-link" v-for="(route, index) in router.options.routes.slice(0,5)" :key="index"
                         :to="route.path">
                             {{ route.name }}
                         </router-link>
@@ -60,8 +60,9 @@
 </template>
 
 <script setup>
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 const location = useRoute();
+const router = useRouter();
 </script>
 
 <style lang="scss" scoped>
