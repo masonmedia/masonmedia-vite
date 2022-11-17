@@ -33,8 +33,7 @@
                          <a class="nav-link" href="mailto:andrewmasonmedia@gmail.com">contact</a>
                     </li>
                 </ul>
-            </div>
-            
+            </div>   
         </nav>
 
         <div class="offcanvas offcanvas-end border-bottom" tabindex="-1" id="offcanvasResponsive" style="background: #D6CCC2" aria-labelledby="offcanvasRightLabel">
@@ -42,22 +41,16 @@
                 <h5 class="offcanvas-title fw-900">m.</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
-                <ul class="nav justify-content-end">
-                    <li class="nav-item" data-bs-dismiss="offcanvas">
-                        <a class="nav-link" aria-current="page" href="#about">about</a>
-                    </li>
-                    <li class="nav-item" data-bs-dismiss="offcanvas">
-                        <a class="nav-link" href="#design">design</a>
-                    </li>
-                    <li class="nav-item">
-                         <a class="nav-link" href="#development">development</a>    
-                    </li>
-                    <li class="nav-item">
-                         <a class="nav-link" href="#projects">projects</a>
-                    </li>
-                    <li class="nav-item">
-                         <a class="nav-link" href="#contact">contact</a>
+            <div class="offcanvas-body d-flex flex-column align-items-start justify-content-end py-5">
+                <ul class="nav">
+                    <li class="nav-item fw-900"
+                    style="font-size: 6vmin; line-height: 6vmin;"
+                    data-bs-dismiss="offcanvas">
+                        <router-link class="nav-link" v-for="(route, index) in this.$router.options.routes.slice(0,5)" :key="index"
+                        :to="route.path">
+                            {{ route.name }}
+                        </router-link>
+                        <a class="nav-link" href="mailto:andrewmasonmedia@gmail.com">Contact</a>
                     </li>
                 </ul>
             </div>
