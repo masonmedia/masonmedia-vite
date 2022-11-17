@@ -40,11 +40,11 @@ console.log(odds); // [0, 2, 4]
 bigOdds()
 
 onMounted(() => {
-//     gsap.from("h1", {
-//     duration: 1.5,
-//     x: 100,
-//   });
-        gsap.utils.toArray(".up").forEach(layer => {
+    gsap.from("body", {
+        duration: 1,
+        opacity: 0,
+    });
+    gsap.utils.toArray(".up").forEach(layer => {
         gsap.from(layer, {
             y: 70,
             opacity: 0,
