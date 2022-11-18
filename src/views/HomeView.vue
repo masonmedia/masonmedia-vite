@@ -82,7 +82,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="row m-2 p-0" id="about">
-        <div class="col-lg-8 p-0">
+        <div class="up col-lg-8 p-0">
             <div class="up left-center p-4 p-lg-5 m-2 min-vh-75 rounded-5" style="background: #D5BDAF; color: grey;">
                 <h5 class="up">about</h5>
                 <h1 class="up ls-1 lh-1 fw-bold display-3">Hi, I'm Andrew. I'm a passionate frontend developer, designer & musician.</h1>
@@ -98,7 +98,7 @@ onMounted(() => {
             </div>
         </div>
         <div class="up col-lg-4 p-0">
-             <div class="m-2">
+             <div class="up m-2">
                 <img src="https://picsum.photos/id/42/1200/600" class="w-100 rounded-5 img-full min-vh-75" alt="">
              </div>
         </div>

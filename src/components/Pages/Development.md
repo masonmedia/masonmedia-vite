@@ -10,7 +10,7 @@
 <br />   
 
 <h4 class='fw-bold'>intro</h4>
-<h1 class="display-1 lh-1 ls-1 fw-bold min-vh-50" style="color: grey">I create custom frontend solutions from user interfaces to websites, blogs and headless CMSs, landing pages, and ecommerce sites all with a focus on SEO and page speed optimization.</h1>
+<h1 class="display-1 lh-1 ls-1 fw-bold min-vh-50" style="color: grey">I build custom frontend solutions from user interfaces to websites, blogs and headless CMSs, landing pages, and ecommerce sites all with a focus on SEO and page speed optimization.</h1>
 
 <hr class='my-5' />
 
