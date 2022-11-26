@@ -51,6 +51,12 @@ h5,
   margin: 0;
 }
 
+// fonts
+
+.font-antonio {
+  font-family: 'Antonio', Arial, Helvetica, sans-serif
+}
+
 // effects
 
 .fw-900 {
@@ -71,10 +77,6 @@ h5,
 /* media queries */
 
 @media (max-width: 992px) {
-  // .nav-link {
-  //   border-bottom: 1px solid grey;
-  //   padding: 16px 0;
-  // }
   .order-1-md {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
@@ -84,12 +86,6 @@ h5,
     -webkit-box-ordinal-group: 13;
     -ms-flex-order: 12;
     order: 12;
-  }
-}
-
-@media (max-width: 834px) {
-  .bg-bulb {
-    background-position: 90% 100%;
   }
 }
 
@@ -103,8 +99,5 @@ h5,
   }
   p {
     font-size: 19px;
-  }
-  .bg-bulb {
-    background-position: 85% 100%;
   }
 }

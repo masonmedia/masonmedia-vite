@@ -2,6 +2,10 @@
 import { onMounted } from 'vue'
 import useAnimation from '../stores/useAnimation'
 
+// import gsap from 'gsap'
+// import ScrollTrigger from "gsap/ScrollTrigger";
+// gsap.registerPlugin(ScrollTrigger);
+
 // image paths
 const imgUrl = new URL('@/assets/img/mm_banner_sand.jpg', import.meta.url).href
 
@@ -34,13 +38,9 @@ onMounted(() => {
     <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4 bg-dark text-secondary" style="background: url('src/assets/img/angles.svg') center repeat; background-size: 100%">
       <div class="row m-0">
         <div class="up col-lg-12 min-vh-100 pb-5 m-0 center-center">
-          <h1 class="up fw-900 lh-1 pb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">About</h1>
+          <h1 class="up fw-900 lh-1 pb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">Me</h1>
           
-          <!-- <h2 class="up fw-light text-uppercase position-absolute z-1 top-50 start-50 translate-middle pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">About me</h2> -->
-          <div class="position-absolute z-1 top-50 start-50 translate-middle ">
-            <h1 class="up fw-light text-uppercase mb-5 font-antonio" style="color: #DDB892; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2); ">About</h1>
-            <h2 class="up fw-light text-uppercase pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">About me</h2>
-          </div>
+          <h2 class="up fw-light text-uppercase position-absolute z-1 top-50 start-50 translate-middle pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">About me</h2>
         </div>
       </div>
 
@@ -51,7 +51,6 @@ onMounted(() => {
             <h1 class="up display-1 font-antonio fw-900 border-top border-secondary" style="font-size: 55vmin;">01.</h1>
         </div>
         <div class="up col-lg-7 left-center p-5">
-          <h3 class="up font-antonio fw-light text-uppercase w-100 pt-3">01. Intro</h3>
            <h1 class="up lh-1 text-uppercase font-antonio fw-900">I'm a frontend developer and visual/UI designer. I love animation, color, typography, layout, and interactivity. I'm self-taught and have broad experience working on marketing and development teams at both startups and established firms. I make digital products, improve processes, and am passionate about all things design.</h1>
         </div>
       </div>
@@ -62,7 +61,7 @@ onMounted(() => {
         </div>
 
         <div class="up col-lg-12 left-center p-5">
-            <h3 class="up font-antonio fw-light text-uppercase border-top border-secondary w-100 pt-3">02. What I do</h3>
+            <h3 class="up font-antonio fw-900 border-top border-secondary w-100 pt-3">02.</h3>
            <h1 class="up ls-1 lh-1 text-uppercase font-antonio display-1 fw-900">I specialize in building and designing interactive, responsive websites and web applications. I use a variety of technologies to craft overall digital experiences - from layout and animation to branding, messaging and copy editing.</h1>
         </div>
       </div>
@@ -72,16 +71,14 @@ onMounted(() => {
             <h1 class="up display-1 text-secondary font-antonio fw-900 border-top border-secondary" style="font-size: 55vmin;">03.</h1>
         </div>
         <div class="up col-lg-7 left-center p-5">
-          <h3 class="up font-antonio fw-light text-uppercase w-100 pt-3">03. Mission</h3>
-
            <h1 class="up lh-1 text-uppercase font-antonio fw-900 fs-1">I help companies and individuals create bold, engaging digital products. I'm a lateral thinker who's always innovating, seeking to improve, and learning new technologies to make better things.</h1>
         </div>
       </div>
 
     <div class="row m-2 p-0 min-vh-100 position-relative">
         <div class="up col-lg-12 d-flex flex-column justify-content-center align-items-end text-end p-5">
-          <h3 class="up font-antonio fw-light text-uppercase border-top border-secondary w-100 pt-3">04. Background</h3>
-          <h1 class="up ls-1 lh-1 text-uppercase font-antonio display-1 fw-900">I have a diverse, multi-disciplinary background that draws on experience in music, art, ecology, parenting, writing, and a belief in ethics and data privacy.</h1>
+            <h3 class="up font-antonio fw-900 border-top border-secondary w-100 pt-3">04.</h3>
+            <h1 class="up ls-1 lh-1 text-uppercase font-antonio display-1 fw-900">I have a diverse, multi-disciplinary background that draws on experience in music, art, ecology, parenting, writing, and a belief in ethics and data privacy.</h1>
         </div>
       </div>
 
@@ -90,10 +87,9 @@ onMounted(() => {
             <h1 class="up display-1 text-secondary font-antonio fw-900 border-top border-secondary" style="font-size: 55vmin;">05.</h1>
         </div>
         <div class="up col-lg-7 left-center p-5">
-          <h3 class="up font-antonio fw-light text-uppercase w-100 pt-3">05. Work</h3>
            <h1 class="up lh-1 text-uppercase font-antonio fw-900 fs-1">Explore some of my work from a variety of spaces using a range of frameworks, build tools, designs, and approches.</h1>
            <router-link to="/work">
-                <button class="btn ps-0" type="button">
+                <button class="btn stretched-link ps-0" type="button">
                     <i class="fs-1 bi bi-plus-circle text-secondary"></i>
                 </button>
             </router-link>

@@ -4,11 +4,6 @@ import gsap from 'gsap'
 import Nav from './components/TheNav.vue'
 import Footer from './components/TheFooter.vue'
 
-// const beforeEnter = (el) => {
-//   el.style.opacity = '0'
-//   el.style.transform = 'translateY(-100px)'
-// }
-
 const beforeEnter = (el) => {
       gsap.set("nav", { y: -100, opacity: 0 });
       gsap.set("#footer", { y: 100, opacity: 0 });
@@ -68,6 +63,10 @@ const leave = (el, done) => {
 </template>
 
 <style scoped>
+
+/* nav a.router-link-exact-active {
+  color: grey;
+} */
 
 /* nav {
   width: 100%;

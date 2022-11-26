@@ -11,11 +11,10 @@
 <div class="row rounded-5 my-3 mx-0 py-3" v-for="(item, index) in repos" :key="index" style="background: #EDE0D4" :style="index % 2 != 0 ? 'background: #EDE0D4' : index % 2 === 0 ? 'background: #DDB892' : ''">    
     <div class="col-lg-6 left-center order-2 order-lg-1">
         <div class="m-0 m-lg-3 p-4">
-            <!-- <h1 class="fw-bold lh-1 ls-1 mb-3">{{ repoTitles[index] }}</h1> -->
             <div class="">
                 <!-- get title and genre from titles array -->
                 <h5>{{ titles[index].microtitle }}</h5>
-            <h1 class="fw-bold lh-1 ls-1 mb-3">{{ titles[index].title }}</h1>
+                <h1 class="fw-bold lh-1 ls-1 mb-3">{{ titles[index].title }}</h1>
             </div>
             <p class="h5 fw-bold pb-3">{{ item.description }}</p>
             <a :href="item.html_url" target="_blank" class="me-2">
@@ -26,17 +25,9 @@
             </a>
         </div>
     </div>
-
-<div class="col-lg-6 center-center order-1 order-lg-2">
-    <img :src="images[index]" alt="">
-    <!-- <img v-if="index === 0" src="https://raw.githubusercontent.com/masonmedia-projects/decentral/master/assets/img/dc_browser_screen.png" class="" alt="...">
-    <img v-if="index === 1" src="https://raw.githubusercontent.com/masonmedia-projects/warren-yen-portfolio/master/img/wy_browser_screen.png" class="card-img-top" alt="...">
-    <img v-if="index === 2" src="https://raw.githubusercontent.com/masonmedia-projects/copetin/master/img/copetin_browser_ss.png" class="card-img-top" alt="...">
-    <img v-if="index === 3" src="https://raw.githubusercontent.com/masonmedia-projects/neil-whitford/master/assets/img/neil_whitford_browser_ss.png" class="card-img-top" alt="...">
-    <img v-if="index === 4" src="https://raw.githubusercontent.com/masonmedia-projects/oakwood-guitar-school/master/static/ogs_social_banner.png" class="card-img-top" alt="...">
-    <img v-if="index === 5" src="https://raw.githubusercontent.com/masonmedia-projects/vue-shopping-cart/master/public/ldt-homepage.png" class="card-img-top" alt="...">
-    <img v-if="index === 6" src="https://raw.githubusercontent.com/masonmedia-projects/vue-vite-jmc/master/public/jmc-homepage.png" class="card-img-top" alt="..."> -->
-</div>
+    <div class="col-lg-6 center-center order-1 order-lg-2">
+        <img :src="images[index]" alt="">
+    </div>
 </div>
 
 <!-- <div class="col-lg-12" v-for="(item, index) in repos" :key="index">
