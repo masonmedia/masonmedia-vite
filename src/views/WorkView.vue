@@ -1,5 +1,106 @@
+<script setup>
+import { ref, onBeforeMount } from 'vue'
+import useAnimation from '../stores/useAnimation'
+const repos = ref([]);
+const url = 'https://api.github.com/orgs/masonmedia-projects/repos';
+
+const { animate } = useAnimation();
+
+fetch(url)
+.then(response => response.json())
+.then((data) => {
+    repos.value = data;
+    console.log(repos.value)
+})
+
+// image paths
+const imgUrl = new URL('@/assets/img/angles.svg', import.meta.url).href
+
+const accordionItems = document.querySelectorAll('.accordion-collapse')
+const acc = document.getElementById('accordionFlushExample')
+
+accordionItems.forEach((el)=>{
+    el.addEventListener('shown.bs.collapse',(e)=>{
+        var scrollOffset = acc.scrollTop + el.parentNode.offsetTop
+        acc.scroll({
+            top: scrollOffset,
+            left: 0, 
+            behavior: 'smooth'
+        })
+    })
+})
+
+const titles = [
+    {
+        "microtitle": "Blockchain/Crypto Wallet",
+        "title": "Decentral Inc.",
+        "stack": "HTML, CSS, PHP, SWUP, AOS, Bootstrap 4",
+        "active": false
+    },
+    {
+        "microtitle": "UX/UI Designer",
+        "title": "Warren Yen",
+        "stack": "HTML, SCSS, PHP, SWUP, Parcel bundler, Bootstrap 4",
+        "active": false
+    },
+    {
+        "microtitle": "Gourmet Cuisine",
+        "title": "Copetín",
+        "stack": "HTML, CSS, Bootstrap 4",
+        "active": false
+    },
+    {
+        "microtitle": "Musician",
+        "title": "Neil Whitford",
+        "stack": "HTML, PHP, SWUP, Parcel bundler, Bootstrap 4",
+        "active": false
+    },
+    {
+        "microtitle": "Music School",
+        "title": "Oakwood Guitar School",
+        "stack": "React/Gatsby, GraphQL, Markdown, React Bootstrap, React Reveal",
+        "active": false
+
+    },
+    {
+        "microtitle": "Education/Ecommerce",
+        "title": "Leadership Development App",
+        "stack": "Vue, Vue CLI, BootstrapVue, SCSS, Vuex, LMS, i18n",
+        "active": false
+    },
+    {
+        "microtitle": "Communications",
+        "title": "Jen Mason Consulting",
+        "stack": "Vue, Vite, Bootstrap 5, SCSS, GSAP, Cockpit CMS, Netlify",
+        "active": false
+    },
+    {
+        "microtitle": "Social Media",
+        "title": "creator",
+        "stack": "Vue, Vite, Bootstrap 5, Pinia, HTML, SCSS, API consumption",
+        "active": false
+    }
+]
+
+const images = [
+    "https://raw.githubusercontent.com/masonmedia-projects/decentral/master/assets/img/dc_browser_screen.png",
+    "https://raw.githubusercontent.com/masonmedia-projects/warren-yen-portfolio/master/img/wy_browser_screen.png",
+    "https://raw.githubusercontent.com/masonmedia-projects/copetin/master/img/copetin_browser_ss.png",
+    "https://raw.githubusercontent.com/masonmedia-projects/neil-whitford/master/assets/img/neil_whitford_browser_ss.png",
+    "https://raw.githubusercontent.com/masonmedia-projects/oakwood-guitar-school/master/static/ogs_social_banner.png",
+    "https://raw.githubusercontent.com/masonmedia-projects/vue-shopping-cart/master/public/ldt-homepage.png",
+    "https://raw.githubusercontent.com/masonmedia-projects/vue-vite-jmc/master/public/jmc-homepage.png",
+    "https://raw.githubusercontent.com/masonmedia-projects/viral-nation-demo/master/public/vn-homepage.png"
+]
+
+onBeforeMount(() => {
+    animate()
+})
+
+</script>
+
 <template>
-    <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4 bg-dark text-light min-vh-100">
+    <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4 bg-dark text-light min-vh-100" :style="{ 'background' : 'url('+ imgUrl +') center repeat'}">
         
 <!-- work -->
     <div class="row m-0 position-relative min-vh-100">
@@ -88,104 +189,6 @@
     </div>
 </div>
 </template>
-
-<script setup>
-import { ref, onBeforeMount } from 'vue'
-import useAnimation from '../stores/useAnimation'
-const repos = ref([]);
-const url = 'https://api.github.com/orgs/masonmedia-projects/repos';
-
-const { animate } = useAnimation();
-
-fetch(url)
-.then(response => response.json())
-.then((data) => {
-    repos.value = data;
-    console.log(repos.value)
-})
-
-const accordionItems = document.querySelectorAll('.accordion-collapse')
-const acc = document.getElementById('accordionFlushExample')
-
-accordionItems.forEach((el)=>{
-    el.addEventListener('shown.bs.collapse',(e)=>{
-        var scrollOffset = acc.scrollTop + el.parentNode.offsetTop
-        acc.scroll({
-            top: scrollOffset,
-            left: 0, 
-            behavior: 'smooth'
-        })
-    })
-})
-
-const titles = [
-    {
-        "microtitle": "Blockchain/Crypto Wallet",
-        "title": "Decentral Inc.",
-        "stack": "HTML, CSS, PHP, SWUP, AOS, Bootstrap 4",
-        "active": false
-    },
-    {
-        "microtitle": "UX/UI Designer",
-        "title": "Warren Yen",
-        "stack": "HTML, SCSS, PHP, SWUP, Parcel bundler, Bootstrap 4",
-        "active": false
-    },
-    {
-        "microtitle": "Gourmet Cuisine",
-        "title": "Copetín",
-        "stack": "HTML, CSS, Bootstrap 4",
-        "active": false
-    },
-    {
-        "microtitle": "Musician",
-        "title": "Neil Whitford",
-        "stack": "HTML, PHP, SWUP, Parcel bundler, Bootstrap 4",
-        "active": false
-    },
-    {
-        "microtitle": "Music School",
-        "title": "Oakwood Guitar School",
-        "stack": "React/Gatsby, GraphQL, Markdown, React Bootstrap, React Reveal",
-        "active": false
-
-    },
-    {
-        "microtitle": "Education/Ecommerce",
-        "title": "Leadership Development App",
-        "stack": "Vue, Vue CLI, BootstrapVue, SCSS, Vuex, LMS, i18n",
-        "active": false
-    },
-    {
-        "microtitle": "Communications",
-        "title": "Jen Mason Consulting",
-        "stack": "Vue, Vite, Bootstrap 5, SCSS, GSAP, Cockpit CMS, Netlify",
-        "active": false
-    },
-    {
-        "microtitle": "Social Media",
-        "title": "creator",
-        "stack": "Vue, Vite, Bootstrap 5, Pinia, HTML, SCSS, API consumption",
-        "active": false
-    }
-]
-
-const images = [
-    "https://raw.githubusercontent.com/masonmedia-projects/decentral/master/assets/img/dc_browser_screen.png",
-    "https://raw.githubusercontent.com/masonmedia-projects/warren-yen-portfolio/master/img/wy_browser_screen.png",
-    "https://raw.githubusercontent.com/masonmedia-projects/copetin/master/img/copetin_browser_ss.png",
-    "https://raw.githubusercontent.com/masonmedia-projects/neil-whitford/master/assets/img/neil_whitford_browser_ss.png",
-    "https://raw.githubusercontent.com/masonmedia-projects/oakwood-guitar-school/master/static/ogs_social_banner.png",
-    "https://raw.githubusercontent.com/masonmedia-projects/vue-shopping-cart/master/public/ldt-homepage.png",
-    "https://raw.githubusercontent.com/masonmedia-projects/vue-vite-jmc/master/public/jmc-homepage.png",
-    "https://raw.githubusercontent.com/masonmedia-projects/viral-nation-demo/master/public/vn-homepage.png"
-]
-
-onBeforeMount(() => {
-    animate()
-})
-
-</script>
 
 <style lang="scss" scoped>
 

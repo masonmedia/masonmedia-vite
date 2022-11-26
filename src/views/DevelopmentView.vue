@@ -4,6 +4,9 @@ import { onMounted } from 'vue'
 import useAnimation from '../stores/useAnimation'
 const { animate } = useAnimation();
 
+// image paths
+const imgUrl = new URL('@/assets/img/angles.svg', import.meta.url).href
+
 onMounted(() => {
   animate();
 })
@@ -12,7 +15,7 @@ onMounted(() => {
 <template>
   <!-- <div class="pt-3 pt-lg-5 mt-3 mt-lg-5"> -->
     <div>
-    <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4 bg-dark text-secondary" style="background: url('src/assets/img/angles.svg') center repeat; background-size: 100%">
+    <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4 bg-dark text-secondary" style="background-size: 100%" :style="{ 'background' : 'url('+ imgUrl +') center repeat'}">
       <div class="row m-0">
         <div class="up col-lg-12 min-vh-100 pb-5 m-0 center-center position-relative">
           <h1 class="up fw-900 lh-1 pb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">Code</h1>

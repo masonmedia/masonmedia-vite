@@ -83,7 +83,10 @@ a:hover {
     color: rgb(221, 184, 146);
 }
 
-.nav-link, .navbar-brand, i, .btn-close {
+.nav-link, 
+.navbar-brand, 
+i, 
+.nav-link:focus {
     font-weight: 900;
     color: #7F5539;
 }
