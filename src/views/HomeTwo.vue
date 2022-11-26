@@ -1,13 +1,13 @@
 <script setup>
 import { onMounted } from 'vue'
-// import gsap from 'gsap'
-// import ScrollTrigger from "gsap/ScrollTrigger";
-// gsap.registerPlugin(ScrollTrigger);
+import gsap from 'gsap'
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import useAnimation from '../stores/useAnimation'
+const { animate } = useAnimation();
 
 // image paths
 const imgUrl = new URL('@/assets/img/mm_banner_sand.jpg', import.meta.url).href
-const { animate } = useAnimation();
 
 function bigOdds() {
 const array = ['green', 'red', 'orange', 'pink', 'black'];

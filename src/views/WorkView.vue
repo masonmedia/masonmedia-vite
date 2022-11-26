@@ -90,7 +90,7 @@
 </template>
 
 <script setup>
-import { ref, onBeforeUpdate } from 'vue'
+import { ref, onBeforeMount } from 'vue'
 import useAnimation from '../stores/useAnimation'
 const repos = ref([]);
 const url = 'https://api.github.com/orgs/masonmedia-projects/repos';
@@ -181,7 +181,7 @@ const images = [
     "https://raw.githubusercontent.com/masonmedia-projects/viral-nation-demo/master/public/vn-homepage.png"
 ]
 
-onBeforeUpdate(() => {
+onBeforeMount(() => {
     animate()
 })
 
