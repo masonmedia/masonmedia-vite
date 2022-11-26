@@ -34,25 +34,25 @@ const titles = [
     {
         "microtitle": "Blockchain/Crypto Wallet",
         "title": "Decentral Inc.",
-        "stack": "HTML, CSS, PHP, SWUP, AOS, Bootstrap 4",
+        "stack": "HTML, CSS, JS, PHP, SWUP, AOS, Bootstrap 4",
         "active": false
     },
     {
         "microtitle": "UX/UI Designer",
         "title": "Warren Yen",
-        "stack": "HTML, SCSS, PHP, SWUP, Parcel bundler, Bootstrap 4",
+        "stack": "HTML, SCSS, PHP, JS, SWUP, Parcel bundler, Bootstrap 4",
         "active": false
     },
     {
         "microtitle": "Gourmet Cuisine",
         "title": "Copetín",
-        "stack": "HTML, CSS, Bootstrap 4",
+        "stack": "HTML, CSS, Bootstrap 4, JS",
         "active": false
     },
     {
         "microtitle": "Musician",
         "title": "Neil Whitford",
-        "stack": "HTML, PHP, SWUP, Parcel bundler, Bootstrap 4",
+        "stack": "HTML, PHP, SWUP, JS, Parcel bundler, Bootstrap 4",
         "active": false
     },
     {
