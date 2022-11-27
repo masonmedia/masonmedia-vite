@@ -51,8 +51,8 @@ onMounted(() => {
             <h1 class="up display-1 font-antonio fw-900 border-top border-secondary" style="font-size: 55vmin;">01.</h1>
         </div>
         <div class="up col-lg-7 left-center p-5">
-          <h3 class="up font-antonio fw-light text-uppercase w-100 pt-3">01. Intro</h3>
-           <h1 class="up lh-1 text-uppercase font-antonio fw-900">I'm a frontend developer and visual/UI designer. I love animation, color, typography, layout, and interactivity. I'm self-taught and have broad experience working on marketing and development teams at both startups and established firms. I make digital products, improve processes, and am passionate about all things design.</h1>
+          <h3 class="up font-antonio fw-light text-uppercase">01. Intro</h3>
+           <h1 class="up lh-1 text-uppercase font-antonio fw-900">I'm a frontend developer & visual designer. I love animation, typography, layout, and interactivity. I have broad experience working on marketing and development teams at both startups and established firms. I'm a creative lateral thinker, innovator, and am passionate about building digital experiences.</h1>
         </div>
       </div>
       
