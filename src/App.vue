@@ -5,6 +5,7 @@ import Nav from './components/TheNav.vue'
 import Footer from './components/TheFooter.vue'
 
 const beforeEnter = (el) => {
+      // gsap.set(".wipe", { height: '10000px', opacity: 0 });
       gsap.set("nav", { y: -100, opacity: 0 });
       gsap.set("footer", { y: 100, opacity: 0 });
       gsap.set(el, {
@@ -14,6 +15,7 @@ const beforeEnter = (el) => {
 }
 
 const enter = (el, done) => {
+      // gsap.to(".wipe", { height: '0', opacity: 1 });
       gsap.to("nav", { y: 0, opacity: 1 });
       gsap.to("footer", { y: 0, opacity: 1 });
       gsap.to(el, {
@@ -26,6 +28,7 @@ const enter = (el, done) => {
 }
 
 const leave = (el, done) => {
+      // gsap.to(".wipe", { height: '100vh', opacity: 1 });
       gsap.to("nav", { y: -100, opacity: 0 });
       gsap.to("footer", { y: 100, opacity: 0 });
       gsap.to(el, {
@@ -40,7 +43,8 @@ const leave = (el, done) => {
 </script>
 
 <template>
-<div class="overflow-hidden">
+<div class="overflow-hidden position-relative">
+  <div class="wipe position-absolute w-100 bg-warning z-1"></div>
   <header>
     <Nav></Nav>
   </header>
