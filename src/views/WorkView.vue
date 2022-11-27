@@ -125,18 +125,18 @@ onBeforeMount(() => {
                     {{ titles[index].title }}
                     </h1> -->
                     <div class="up row" v-if="repos"
-                    type="button" data-bs-toggle="collapse" :data-bs-target="'#item_' + index" aria-expanded="false" aria-controls="flush-collapseOne">
+                    data-bs-toggle="collapse" :data-bs-target="'#item_' + index" aria-expanded="false" aria-controls="flush-collapseOne">
                         <div class="col-lg-5 left-center order-2 order-lg-1 font-antonio">
                             <div class="m-0 m-lg-3 p-4">
                                 <!-- get title and genre from titles array -->
                                 <h5 class="up font-antonio">{{ titles[index].microtitle }}</h5>
                                 <h1 class="up fw-bold lh-1 ls-1 mb-4 text-uppercase display-2 font-antonio" style="color: #7F5539">{{ titles[index].title }}</h1>
-                                <button class="btn btn-sm btn-outline-light px-4 me-2">more</button>
+                                <button role="button" class="btn btn-sm btn-outline-light px-4 me-2">more</button>
                                 <a :href="item.html_url" target="_blank" class="me-2">
-                                    <button class="btn btn-sm btn-outline-light px-4 ">code</button>
+                                    <button role="button" class="btn btn-sm btn-outline-light px-4 ">code</button>
                                 </a>
                                 <a :href="item.homepage" target="_blank">
-                                    <button class="btn btn-sm btn-outline-light px-4">site</button>
+                                    <button role="button" class="btn btn-sm btn-outline-light px-4">site</button>
                                 </a>
                             </div>
                         </div>
