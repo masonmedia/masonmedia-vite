@@ -53,9 +53,9 @@ onMounted(() => {
         </div>
       </div>
 
-      <hr class="text-secondary w-75 mx-auto">
+      <hr class="up text-secondary w-75 mx-auto">
 
-      <div class="row p-0 min-vh-sm-75 min-vh-md-100 position-relative">
+      <div class="row p-0 min-vh-100 position-relative">
         <div class="position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
             <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">about</h1>
         </div>
@@ -73,9 +73,9 @@ onMounted(() => {
 
       <!-- dev -->
 
-      <hr class="text-secondary w-75 mx-auto">
+      <hr class="up text-secondary w-75 mx-auto">
 
-      <div class="row p-0 min-vh-sm-75 min-vh-md-100 position-relative">
+      <div class="row p-0 min-vh-100 position-relative">
         <div class="position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
             <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">coding</h1>
         </div>
@@ -91,10 +91,10 @@ onMounted(() => {
         </div>
       </div>
 
-      <hr class="text-secondary w-75 mx-auto">
+      <hr class="up text-secondary w-75 mx-auto">
 
     <!-- design -->
-    <div class="row p-0 min-vh-sm-75 min-vh-md-100 position-relative">
+    <div class="row p-0 min-vh-100 position-relative">
         <div class="up position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
             <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">design</h1>
         </div>
@@ -111,10 +111,10 @@ onMounted(() => {
         </div>
       </div>
 
-      <hr class="text-secondary w-75 mx-auto">
+      <hr class="up text-secondary w-75 mx-auto">
 
     <!-- work -->
-    <div class="row p-0 min-vh-sm-75 min-vh-md-100 position-relative">
+    <div class="row p-0 min-vh-100 position-relative">
         <div class="up position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
             <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">Work</h1>
         </div>
@@ -130,10 +130,10 @@ onMounted(() => {
         </div>
       </div>
 
-      <hr class="text-secondary w-75 mx-auto">
+      <hr class="up text-secondary w-75 mx-auto">
 
     <!-- contact -->
-      <div class="row p-0 min-vh-sm-75 min-vh-md-100 position-relative">
+      <div class="row p-0 min-vh-100 position-relative">
         <div class="position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
             <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">Contact</h1>
         </div>
