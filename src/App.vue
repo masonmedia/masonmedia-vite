@@ -6,7 +6,7 @@ import Footer from './components/TheFooter.vue'
 
 const beforeEnter = (el) => {
       gsap.set("nav", { y: -100, opacity: 0 });
-      gsap.set("#footer", { y: 100, opacity: 0 });
+      gsap.set("footer", { y: 100, opacity: 0 });
       gsap.set(el, {
         opacity: 0,
         y: -50
@@ -15,7 +15,7 @@ const beforeEnter = (el) => {
 
 const enter = (el, done) => {
       gsap.to("nav", { y: 0, opacity: 1 });
-      gsap.to("#footer", { y: 0, opacity: 1 });
+      gsap.to("footer", { y: 0, opacity: 1 });
       gsap.to(el, {
         opacity: 1,
         y: 0,
@@ -27,7 +27,7 @@ const enter = (el, done) => {
 
 const leave = (el, done) => {
       gsap.to("nav", { y: -100, opacity: 0 });
-      gsap.to("#footer", { y: 100, opacity: 0 });
+      gsap.to("footer", { y: 100, opacity: 0 });
       gsap.to(el, {
         opacity: 0,
         y: 50,
