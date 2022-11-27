@@ -8,6 +8,20 @@
     min-height: 50vh;
 }
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    .min-vh-sm-75 {
+        min-height: 75vh;
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .min-vh-md-100 {
+        min-height: 100vh;
+    }
+ }
+
 // width
 
 .w-md-50 {

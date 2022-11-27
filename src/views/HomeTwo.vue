@@ -6,9 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 import useAnimation from '../stores/useAnimation'
 const { animate } = useAnimation();
 
-// image paths
-const imgUrl = new URL('@/assets/img/mm_banner_sand.jpg', import.meta.url).href
-
 function bigOdds() {
 const array = ['green', 'red', 'orange', 'pink', 'black'];
 // const oddItems = array.filter((color, index) => index % 2 === 0);
@@ -46,7 +43,6 @@ onMounted(() => {
               <span class="up" v-for="(item, index) in mason" :key="index">{{ item }}</span>
           </h1>
 
-
           <div class="position-absolute z-1 top-50 start-50 translate-middle ">
             <h1 class="up fw-light text-uppercase mb-2 mb-lg-4 pb-3 font-antonio" style="color: #DDB892; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2); ">
                 <span class="up" v-for="(item, index) in mason" :key="index">{{ item }}</span>
@@ -59,7 +55,7 @@ onMounted(() => {
 
       <hr class="text-secondary w-75 mx-auto">
 
-      <div class="row m-2 p-0 min-vh-100 position-relative">
+      <div class="row p-0 min-vh-sm-75 min-vh-md-100 position-relative">
         <div class="position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
             <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">about</h1>
         </div>
@@ -79,7 +75,7 @@ onMounted(() => {
 
       <hr class="text-secondary w-75 mx-auto">
 
-      <div class="row m-2 p-0 min-vh-100 position-relative">
+      <div class="row p-0 min-vh-sm-75 min-vh-md-100 position-relative">
         <div class="position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
             <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">coding</h1>
         </div>
@@ -98,7 +94,7 @@ onMounted(() => {
       <hr class="text-secondary w-75 mx-auto">
 
     <!-- design -->
-    <div class="row m-2 p-0 min-vh-100 position-relative">
+    <div class="row p-0 min-vh-sm-75 min-vh-md-100 position-relative">
         <div class="up position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
             <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">design</h1>
         </div>
@@ -117,27 +113,8 @@ onMounted(() => {
 
       <hr class="text-secondary w-75 mx-auto">
 
-    <!-- design -->
-    <!-- <div class="row m-2 p-0 min-vh-100 position-relative">
-        <div class="up position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
-            <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">copy</h1>
-        </div>
-
-        <div class="up col-lg-8 offset-lg-2 center-center p-5">
-            <h5 class="up font-antonio">copy writing & editing</h5>
-            <h1 class="up ls-1 lh-1 text-uppercase font-antonio display-3">I write and edit copy for a wide variety of contexts from website content to blog posts & social media, all with a focus on SEO and UX.</h1>
-            <router-link :to="$router.options.routes[1]">
-                <button class="btn stretched-link ps-0" type="button">
-                    <i class="fs-1 bi bi-plus-circle text-secondary"></i>
-                </button>
-            </router-link>
-        </div>
-      </div> -->
-
-      <!-- <hr class="text-secondary w-75 mx-auto"> -->
-
     <!-- work -->
-    <div class="row m-2 p-0 min-vh-100 position-relative">
+    <div class="row p-0 min-vh-sm-75 min-vh-md-100 position-relative">
         <div class="up position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
             <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">Work</h1>
         </div>
@@ -156,7 +133,7 @@ onMounted(() => {
       <hr class="text-secondary w-75 mx-auto">
 
     <!-- contact -->
-      <div class="row m-2 p-0 min-vh-100 position-relative">
+      <div class="row p-0 min-vh-sm-75 min-vh-md-100 position-relative">
         <div class="position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
             <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">Contact</h1>
         </div>

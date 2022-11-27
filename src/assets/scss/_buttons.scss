@@ -9,3 +9,7 @@
   background-color: #138496;
   border-color: #117a8b;
 }
+
+button:focus, .btn:focus {
+  outline:0;
+}
