@@ -1,43 +1,42 @@
 <template>
     <footer>
         <div id="footer" class="container-fluid p-0">
-            <div class="row p-5" style="background: #7F5539; color: #DDB892">
-                <div class="col-lg-3 col-md-6 left-center">
-                    <ul class="list-unstyled fs-4 fw-bold">
-                        <li>
-                            <router-link class="nav-item" to="/">Home</router-link>
-                        </li>
-                        <li>
-                            <router-link class="nav-item" to="/projects">Projects</router-link>
-                        </li>
-                        <li>
-                            <router-link class="nav-item" to="/development">Development</router-link>
-                        </li>
-                        <li>
-                            <router-link class="nav-item" to="/design">Design</router-link>
-                        </li>
+            <div class="row p-5 font-antonio" style="background: #7F5539; color: #DDB892">
+                <div class="col-lg-3 col-md-6 top-center">
+                    <ul class="list-unstyled fs-4 fw-bold text-uppercase">
+                        <router-link v-for="(route, index) in router.options.routes" :key="index"
+                            :to="route.path">
+                            <li class="nav-item d-flex flex-column">
+                                {{ route.name }}
+                            </li>
+                        </router-link>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <ul class="list-unstyled fs-4 fw-bold">
-                        <li>
-                            <a href="https://github.com/masonmedia/" target="_blank">Github</a>
-                        </li>
-                        <li>
-                            <a href="https://medium.com/@andrewmasonmedia" target="_blank">Medium</a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/andrewmasonmedia/" target="_blank">Linkedin</a>
-                        </li>
-                        <li>
-                            <a href="https://www.behance.net/andrewmasonmedia" target="_blank">Behance</a>
-                        </li>
+                <div class="col-lg-3 col-md-6 top-center">
+                    <ul class="list-unstyled fs-4 fw-bold text-uppercase">
+                        <a href="https://github.com/masonmedia/" target="_blank">
+                            <li class="nav-item">Github</li>
+                        </a>
+                        <a href="https://medium.com/@andrewmasonmedia" target="_blank">
+                            <li class="nav-item">Medium</li>
+                        </a>
+                        <a href="https://www.linkedin.com/in/andrewmasonmedia/" target="_blank">
+                            <li class="nav-item">Linkedin</li>
+                        </a>
+                        <a href="https://www.behance.net/andrewmasonmedia" target="_blank">
+                            <li class="nav-item">Behance</li>
+                        </a>
+                        <a href="mailto:bassfx@duck.com" target="_blank">
+                            <li class="nav-item">Email</li>
+                        </a>
                     </ul>
                 </div>
                 <div class="col-lg-6 top-center py-3 py-lg-0">
                     <ul class="list-unstyled">
-                        <li class="fw-bold pb-2">Privacy</li>
-                        <li>This site does not collect user or visitor data of any kind. It does not track referrals, follow user movement through the site, monitor IP addresses, collect or use analytics, set cookies or otherwise make use of visitor behaviour.</li>
+                        <li class="fs-4 nav-item font-antonio fw-bold pb-2">Privacy</li>
+                        <li>This site does not track or collect visitor data. It does not use analytics, track referrals, follow user movement through the site, monitor IP addresses, set cookies or otherwise track visitor behaviour.</li>
+                        <li class="fs-5 fw-bold mt-2">
+                            <i class="bi bi-shield-lock-fill"></i> Mason Media {{ year }}</li>
                     </ul>
                 </div>
             </div>
@@ -46,14 +45,10 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-import gsap from 'gsap'
+import { useRoute, useRouter } from "vue-router";
+const location = useRoute();
+const router = useRouter();
 
-onMounted(() => {
-//     gsap.from('#footer', {
-//     duration: 1.5,
-//     opacity: 0,
-//     y: -10,
-//   })
-})
+const date = new Date().toLocaleString(); // day, month, year + time
+const year = new Date().getFullYear()
 </script>

@@ -17,25 +17,11 @@
             <div class="container-fluid">
                 <router-link class="navbar-brand font-antonio text-uppercase fs-4" style="color: #7F5539" to="/">M.</router-link>
                 <ul class="nav justify-content-end font-antonio text-uppercase fs-4">
-                    <li class="nav-item">
-                        <router-link class="nav-link" to="/about">about</router-link>
-                        <!-- <a class="nav-link" aria-current="page" href="#about">about</a> -->
-                    </li>
-                    <li class="nav-item">
-                        <router-link class="nav-link" to="/design">design</router-link>
-                        <!-- <a class="nav-link" href="#design">design</a> -->
-                    </li>
-                    <li class="nav-item">
-                        <router-link class="nav-link" to="/development">development</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link class="nav-link" to="/work">projects</router-link>
-                         <!-- <a class="nav-link" href="#projects">projects</a> -->
-                    </li>
-                    <li class="nav-item">
-                        <!-- <router-link class="nav-link" aria-current="page" to="/">contact</router-link> -->
-                         <a class="nav-link" href="mailto:andrewmasonmedia@gmail.com">contact</a>
-                    </li>
+                    <router-link class="nav-link" v-for="(route, index) in router.options.routes" :key="index"
+                    :to="route.path">
+                        {{ route.name }}
+                    </router-link>
+                    <a class="nav-link" href="mailto:andrewmasonmedia@gmail.com">Contact</a>
                 </ul>
             </div>   
         </nav>
@@ -51,7 +37,6 @@
             <div class="offcanvas-body d-flex flex-column align-items-start justify-content-end py-5">
                 <ul class="nav">
                     <li class="nav-item fw-bold text-uppercase"
-                    style="font-size: 6vmin; line-height: 6vmin;"
                     data-bs-dismiss="offcanvas">
                         <router-link class="nav-link" v-for="(route, index) in router.options.routes.slice(0,5)" :key="index"
                         :to="route.path">
@@ -90,6 +75,12 @@ i,
     font-weight: 900;
     color: #7F5539;
 }
+
+.offcanvas-body .nav-link {
+    font-size: 8vmin;
+    line-height: 8vmin;
+}
+
 .btn-close, .offcanvas-header .btn-close {
     color: #7F5539 !important;
 }

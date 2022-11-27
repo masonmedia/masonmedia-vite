@@ -38,7 +38,7 @@ onMounted(() => {
           
           <!-- <h2 class="up fw-light text-uppercase position-absolute z-1 top-50 start-50 translate-middle pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">About me</h2> -->
           <div class="position-absolute z-1 top-50 start-50 translate-middle ">
-            <h1 class="up fw-light text-uppercase mb-5 font-antonio" style="color: #DDB892; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2); ">About</h1>
+            <h1 class="up fw-light text-uppercase mb-2 mb-lg-4 pb-3 font-antonio" style="color: #DDB892; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2);">About</h1>
             <h2 class="up fw-light text-uppercase pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">About me</h2>
           </div>
         </div>

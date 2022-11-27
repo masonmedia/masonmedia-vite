@@ -25,6 +25,8 @@ console.log(odds); // [0, 2, 4]
 
 bigOdds()
 
+const mason = ['m', 'a', 's', 'o', 'n']
+
 onMounted(() => {
     animate();
     gsap.from("body", {
@@ -39,12 +41,16 @@ onMounted(() => {
     <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4 bg-dark text-light">
       <div class="row m-0">
         <div class="up col-lg-12 min-vh-100 pb-5 m-0 center-center">
-          <h1 class="up fw-900 lh-1 pb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">Mason</h1>
-          
-          <!-- <h2 class="up fw-light text-uppercase position-absolute z-1 top-50 start-50 translate-middle pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">Developer. Designer. Writer.</h2> -->
+          <!-- <h1 class="up fw-900 lh-1 pb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">Mason</h1> -->
+          <h1 class="up fw-900 lh-1 pb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">
+              <span class="up" v-for="(item, index) in mason" :key="index">{{ item }}</span>
+          </h1>
+
 
           <div class="position-absolute z-1 top-50 start-50 translate-middle ">
-            <h1 class="up fw-light text-uppercase mb-2 mb-lg-4 pb-3 font-antonio" style="color: #DDB892; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2); ">Mason</h1>
+            <h1 class="up fw-light text-uppercase mb-2 mb-lg-4 pb-3 font-antonio" style="color: #DDB892; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2); ">
+                <span class="up" v-for="(item, index) in mason" :key="index">{{ item }}</span>
+            </h1>
             <h2 class="up fw-light text-uppercase pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">Developer. Designer. Writer.</h2>
           </div>
 

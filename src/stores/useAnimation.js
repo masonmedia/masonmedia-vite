@@ -11,7 +11,7 @@ export default function useAnimation () {
                 y: 70,
                 opacity: 0,
                 duration: 1,
-                stagger: 0.3,
+                stagger: 0.5,
                 ease: "power2.inOut",
                 scrollTrigger: {
                 trigger: layer,
