@@ -3,7 +3,7 @@
         <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4 text-secondary w-100 d-lg-none d-flex bg-dark position-relative z-1">
             <!-- <div class="w-100 d-lg-none d-flex fixed-top bg-dark"> -->
                 <!-- brand -->
-                <router-link class="navbar-brand p-3 fw-900 fs-5" to="/">m.</router-link>
+                <router-link class="navbar-brand p-3 fw-900 font-antonio text-uppercase fs-5" to="/">M.</router-link>
                 <!-- menu -->
                 <button class="btn ms-auto my-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
                     <i class="fs-2 bi bi-justify"></i>
@@ -15,8 +15,8 @@
         <!-- <nav class="navbar p-3 fixed-top d-none d-lg-block w-100" style="background: #D6CCC2"> -->
         <!-- <nav class="navbar p-3 fixed-top d-none d-lg-block w-100" :class="location.path === '/' ? 'border-bottom border-secondary' : 'bg-light border-bottom'" :style="location.path === '/' ? 'background: #D6CCC2' : ''"> -->
             <div class="container-fluid">
-                <router-link class="navbar-brand" to="/">m.</router-link>
-                <ul class="nav justify-content-end">
+                <router-link class="navbar-brand font-antonio text-uppercase fs-4" style="color: #7F5539" to="/">M.</router-link>
+                <ul class="nav justify-content-end font-antonio text-uppercase fs-4">
                     <li class="nav-item">
                         <router-link class="nav-link" to="/about">about</router-link>
                         <!-- <a class="nav-link" aria-current="page" href="#about">about</a> -->
@@ -42,7 +42,7 @@
 
         <div class="offcanvas offcanvas-end border-bottom w-100 font-antonio bg-dark" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title fw-900" style="color: #7F5539">m.</h5>
+                <h5 class="offcanvas-title font-antonio text-uppercase fw-900" style="color: #7F5539">m.</h5>
                 <!-- <button type="button" class="btn-close text-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
                 <button class="btn pt-0 pe-0" role="button" data-bs-dismiss="offcanvas" aria-label="Close">
                     <i class="bi bi-x-lg fs-4"></i>
