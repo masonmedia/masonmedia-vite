@@ -21,7 +21,7 @@
                     :to="route.path">
                         {{ route.name }}
                     </router-link>
-                    <a class="nav-link" href="mailto:andrewmasonmedia@gmail.com">Contact</a>
+                    <a class="nav-link" href="mailto:bassfx@duck.com">Contact</a>
                 </ul>
             </div>   
         </nav>
@@ -42,7 +42,7 @@
                         :to="route.path">
                             {{ route.name }}
                         </router-link>
-                        <a class="nav-link" href="mailto:andrewmasonmedia@gmail.com">Contact</a>
+                        <a class="nav-link" href="mailto:bassfx@duck.com">Contact</a>
                     </li>
                 </ul>
             </div>
