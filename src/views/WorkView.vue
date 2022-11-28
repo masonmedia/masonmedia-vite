@@ -69,6 +69,12 @@ const titles = [
         "active": false
     },
     {
+        "microtitle": "Todo List App",
+        "title": "Vue Todos",
+        "stack": "Vuejs, Bootstrap 5, BootstrapVue, JS, SCSS",
+        "active": false
+    },
+    {
         "microtitle": "Communications",
         "title": "Jen Mason Consulting",
         "stack": "Vue, Vite, Bootstrap 5, SCSS, GSAP, Cockpit CMS, Netlify",
@@ -79,7 +85,7 @@ const titles = [
         "title": "creator",
         "stack": "Vue, Vite, Bootstrap 5, Pinia, HTML, SCSS, API consumption",
         "active": false
-    }
+    },
 ]
 
 const images = [
@@ -89,9 +95,12 @@ const images = [
     "https://raw.githubusercontent.com/masonmedia-projects/neil-whitford/master/assets/img/neil_whitford_browser_ss.png",
     "https://raw.githubusercontent.com/masonmedia-projects/oakwood-guitar-school/master/static/ogs_social_banner.png",
     "https://raw.githubusercontent.com/masonmedia-projects/vue-shopping-cart/master/public/ldt-homepage.png",
+    "https://raw.githubusercontent.com/masonmedia-projects/vue-todos/master/public/mm_vue_todos_screen.png",
     "https://raw.githubusercontent.com/masonmedia-projects/vue-vite-jmc/master/public/jmc-homepage.png",
     "https://raw.githubusercontent.com/masonmedia-projects/viral-nation-demo/master/public/vn-homepage.png"
+    
 ]
+// vue-todos/src/assets/mm_vue_todos_screen.png
 
 onBeforeMount(() => {
     animate()
@@ -147,7 +156,7 @@ onBeforeMount(() => {
                     </div>
 
                     <!-- <hr :class="index === 7 ? 'd-none' : ''" class="w-100 mt-3 mb-0" style="color: rgb(127, 85, 57);"> -->
-                    <div class="border-bottom" :class="index === 7 ? 'd-none' : ''" style="height: 2px; border-color: rgb(127, 85, 57) !important;"></div>
+                    <div class="border-bottom" :class="index === 8 ? 'd-none' : ''" style="height: 2px; border-color: rgb(127, 85, 57) !important;"></div>
 
                     <!-- accordion body -->
                     <div :id="'item_' + index" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
