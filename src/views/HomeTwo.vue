@@ -66,13 +66,6 @@ gsap.from("h1, h2", {
             </h1>
           </div>
 
-          <!-- <div class="p-5">
-          <div class="box p-5 h-25 bg-success"></div>
-          <div class="box p-5 h-25 bg-danger"></div>
-          <div class="box p-5 h-25 bg-primary"></div>
-          <div class="box p-5 h-25 bg-warning"></div>
-      </div> -->
-
           <div class="position-relative">
             <h1 class="fw-light text-uppercase mb-2 mb-lg-4 pb-3 font-antonio" style="color: #DDB892; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2); ">
                 <span class="title" v-for="(item, index) in mason" :key="index">{{ item }}</span>
@@ -81,7 +74,6 @@ gsap.from("h1, h2", {
                 <span class="title">Developer.</span>
                 <span class="title">Designer.</span>
                 <span class="title">Writer.</span>
-                <span class="title">Musician.</span>
               </h2>
           </div>
         </div>
@@ -96,7 +88,7 @@ gsap.from("h1, h2", {
 
         <div class="up col-lg-8 offset-lg-2 center-center p-5">
             <h3 class="up text-uppercase fw-light font-antonio" style="color: #ffffff95">about me</h3>
-            <h1 class="up ls-1 lh-1 text-uppercase display-2 font-antonio">Hi, I'm Andrew. I'm a passionate frontend developer, visual designer & musician.</h1>
+            <h1 class="up ls-1 lh-1 text-uppercase display-2 font-antonio">Hi, I'm Andrew. I'm a passionate frontend developer, visual designer, writer & musician.</h1>
             <router-link to="/about">
                 <button class="btn ps-0" type="button">
                     <i class="fs-1 bi bi-plus-circle text-secondary"></i>
