@@ -44,7 +44,7 @@ const leave = (el, done) => {
 
 <template>
 <div class="overflow-hidden position-relative">
-  <div class="wipe position-absolute w-100 bg-warning z-1"></div>
+  <!-- <div class="wipe position-absolute w-100 bg-warning z-1"></div> -->
   <header>
     <Nav></Nav>
   </header>

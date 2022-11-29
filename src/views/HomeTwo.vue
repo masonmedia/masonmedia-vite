@@ -30,32 +30,66 @@ onMounted(() => {
         duration: 1,
         opacity: 0,
     });
+
+//     const ml = gsap.timeline(); 
+// ml.from(".title", { duration: 1, y: 100 })
+//   .from(".title", { duration: 1, backgroundColor: "#f38630" }, "+=0.5") 
+//   .from(".title", { duration: 1, x: 0, rotation: -360 }, "+=0.5");
+
+var yMove = 50;
+gsap.from("h1, h2", {
+  delay: 0.5,
+  color: 'transparent',
+  opacity: 0,
+  duration: 0.7,
+  ease: 'power1.inOut',
+  stagger: 0.2,
+  y: function(i, elem, boxes) {
+    return boxes % 2 === 1 ? -yMove : yMove;
+  },
+});
+
 })
 </script>
 
 <template>
   <div>
     <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4 bg-dark text-light">
-      <div class="row m-0">
-        <div class="up col-lg-12 min-vh-100 pb-5 m-0 center-center">
-          <!-- <h1 class="up fw-900 lh-1 pb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">Mason</h1> -->
-          <h1 class="up fw-900 lh-1 pb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">
-              <span class="up" v-for="(item, index) in mason" :key="index">{{ item }}</span>
-          </h1>
-
-          <div class="position-absolute z-1 top-50 start-50 translate-middle ">
-            <h1 class="up fw-light text-uppercase mb-2 mb-lg-4 pb-3 font-antonio" style="color: #DDB892; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2); ">
-                <span class="up" v-for="(item, index) in mason" :key="index">{{ item }}</span>
+      <div class="row m-0 position-relative">
+        <div class="col-lg-12 min-vh-100 pb-5 m-0 center-center">
+          <!-- <h1 class="title fw-900 lh-1 pb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">
+              <span v-for="(item, index) in mason" :key="index">{{ item }}</span>
+          </h1> -->
+          <div class="position-absolute z-0 top-50 start-50 translate-middle">
+            <h1 class="fw-900 lh-1 pb-5 mb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; -webkit-text-stroke: 1px #7F5539; color: transparent">
+              <span class="title" v-for="(item, index) in mason" :key="index">{{ item }}</span>
             </h1>
-            <h2 class="up fw-light text-uppercase pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">Developer. Designer. Writer.</h2>
           </div>
 
+          <!-- <div class="p-5">
+          <div class="box p-5 h-25 bg-success"></div>
+          <div class="box p-5 h-25 bg-danger"></div>
+          <div class="box p-5 h-25 bg-primary"></div>
+          <div class="box p-5 h-25 bg-warning"></div>
+      </div> -->
+
+          <div class="position-relative">
+            <h1 class="fw-light text-uppercase mb-2 mb-lg-4 pb-3 font-antonio" style="color: #DDB892; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2); ">
+                <span class="title" v-for="(item, index) in mason" :key="index">{{ item }}</span>
+            </h1>
+            <h2 class="fw-light text-uppercase pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">
+                <span class="title">Developer.</span>
+                <span class="title">Designer.</span>
+                <span class="title">Writer.</span>
+                <span class="title">Musician.</span>
+              </h2>
+          </div>
         </div>
       </div>
 
       <hr class="up text-secondary w-75 mx-auto">
 
-      <div class="row p-0 min-vh-100 position-relative">
+      <div class="row p-0 min-vh-700 position-relative">
         <div class="position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
             <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">about</h1>
         </div>
@@ -75,7 +109,7 @@ onMounted(() => {
 
       <hr class="up text-secondary w-75 mx-auto">
 
-      <div class="row p-0 min-vh-100 position-relative">
+      <div class="row p-0 min-vh-700 position-relative">
         <div class="position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
             <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">coding</h1>
         </div>
@@ -94,7 +128,7 @@ onMounted(() => {
       <hr class="up text-secondary w-75 mx-auto">
 
     <!-- design -->
-    <div class="row p-0 min-vh-100 position-relative">
+    <div class="row p-0 min-vh-700 position-relative">
         <div class="up position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
             <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">design</h1>
         </div>
@@ -159,7 +193,5 @@ onMounted(() => {
 </template>
 
 <style>
-.font-antonio {
-    font-family: 'Antonio', Arial, Helvetica, sans-serif
-}
+
 </style>

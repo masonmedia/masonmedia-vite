@@ -16,19 +16,19 @@ fetch(url)
 // image paths
 const imgUrl = new URL('@/assets/img/angles.svg', import.meta.url).href
 
-const accordionItems = document.querySelectorAll('.accordion-collapse')
-const acc = document.getElementById('accordionFlushExample')
+// const accordionItems = document.querySelectorAll('.accordion-collapse')
+// const acc = document.getElementById('accordionFlushExample')
 
-accordionItems.forEach((el)=>{
-    el.addEventListener('shown.bs.collapse',(e)=>{
-        var scrollOffset = acc.scrollTop + el.parentNode.offsetTop
-        acc.scroll({
-            top: scrollOffset,
-            left: 0, 
-            behavior: 'smooth'
-        })
-    })
-})
+// accordionItems.forEach((el)=>{
+//     el.addEventListener('shown.bs.collapse',(e)=>{
+//         var scrollOffset = acc.scrollTop + el.parentNode.offsetTop
+//         acc.scroll({
+//             top: scrollOffset,
+//             left: 0, 
+//             behavior: 'smooth'
+//         })
+//     })
+// })
 
 const titles = [
     {
@@ -126,13 +126,10 @@ onBeforeMount(() => {
 
       <div class="container">
           <div class="row px-3 px-md-4">
-              <div class="accordion accordion-flush bg-dark" id="accordionFlushExample">
-                <div class="up accordion-item border-0 pb-3 bg-dark text-light" :class="repos.length-1 ? 'mt-3' : 'my-3'"
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="up accordion-item border-0 pb-3 text-light" :class="repos.length-1 ? 'mt-3' : 'my-3'"
+                style="background: transparent"
                 v-for="(item, index) in repos" :key="index">
-                    <!-- <h1 class="up fw-bold lh-1 ls-1 mb-4 text-uppercase display-2 font-antonio border-bottom "
-                    type="button" data-bs-toggle="collapse" :data-bs-target="'#item_' + index" aria-expanded="false" aria-controls="flush-collapseOne">
-                    {{ titles[index].title }}
-                    </h1> -->
                     <div class="up row" v-if="repos"
                     data-bs-toggle="collapse" :data-bs-target="'#item_' + index" aria-expanded="false" aria-controls="flush-collapseOne">
                         <div class="col-lg-5 left-center order-2 order-lg-1 font-antonio">
@@ -160,7 +157,7 @@ onBeforeMount(() => {
 
                     <!-- accordion body -->
                     <div :id="'item_' + index" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body border-bottom py-5" style="border-color: rgb(127, 85, 57) !important;">
+                    <div class="accordion-body border-bottom py-5 bg-dark" style="border-color: rgb(127, 85, 57) !important;">
                         <h5 class="up font-antonio pb-3"
                         style="color: lightgrey;">{{ titles[index].stack }}</h5>
                         <h2 class="fw-bold font-antonio" style="letter-spacing: -1px;">{{ item.description }}</h2>
