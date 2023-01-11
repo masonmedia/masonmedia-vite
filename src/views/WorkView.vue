@@ -98,9 +98,7 @@ const images = [
     "https://raw.githubusercontent.com/masonmedia-projects/vue-todos/master/public/mm_vue_todos_screen.png",
     "https://raw.githubusercontent.com/masonmedia-projects/vue-vite-jmc/master/public/jmc-homepage.png",
     "https://raw.githubusercontent.com/masonmedia-projects/viral-nation-demo/master/public/vn-homepage.png"
-    
 ]
-// vue-todos/src/assets/mm_vue_todos_screen.png
 
 onBeforeMount(() => {
     animate()
@@ -133,7 +131,7 @@ onBeforeMount(() => {
                     <div class="up row" v-if="repos"
                     data-bs-toggle="collapse" :data-bs-target="'#item_' + index" aria-expanded="false" aria-controls="flush-collapseOne">
                         <div class="col-lg-5 left-center order-2 order-lg-1 font-antonio">
-                            <div class="m-0 m-lg-3 p-4">
+                            <div class="m-0 m-lg-3 p-4" v-if="titles[index]">
                                 <!-- get title and genre from titles array -->
                                 <h5 class="up font-antonio">{{ titles[index].microtitle }}</h5>
                                 <h1 class="up fw-bold lh-1 ls-1 mb-4 text-uppercase display-2 font-antonio" style="color: #7F5539">{{ titles[index].title }}</h1>
@@ -152,12 +150,12 @@ onBeforeMount(() => {
                         </div>
                     </div>
 
-                    <!-- <hr :class="index === 7 ? 'd-none' : ''" class="w-100 mt-3 mb-0" style="color: rgb(127, 85, 57);"> -->
                     <div class="border-bottom" :class="index === 8 ? 'd-none' : ''" style="height: 2px; border-color: rgb(127, 85, 57) !important;"></div>
 
                     <!-- accordion body -->
                     <div :id="'item_' + index" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body border-bottom py-5 bg-dark" style="border-color: rgb(127, 85, 57) !important;">
+                    <div class="accordion-body border-bottom py-5 bg-dark" style="border-color: rgb(127, 85, 57) !important;"
+                    v-if="titles[index]">
                         <h5 class="up font-antonio pb-3"
                         style="color: lightgrey;">{{ titles[index].stack }}</h5>
                         <h2 class="fw-bold font-antonio" style="letter-spacing: -1px;">{{ item.description }}</h2>
