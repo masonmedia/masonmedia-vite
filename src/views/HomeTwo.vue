@@ -1,9 +1,9 @@
 <script setup>
 import { onMounted } from 'vue'
+import useAnimation from '../stores/useAnimation'
 import gsap from 'gsap'
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-import useAnimation from '../stores/useAnimation'
 const { animate } = useAnimation();
 
 function bigOdds() {

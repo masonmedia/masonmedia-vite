@@ -1,27 +1,10 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { onMounted } from 'vue'
+import useAnimation from '../stores/useAnimation'
 import gsap from 'gsap'
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-import Modal from '@/components/TheModal.vue'
-import About from '@/components/Pages/AboutView.vue'
-import Aboutpage from '@/components/Pages/About.md'
-import Designpage from '@/components/Pages/Design.md'
-import Devpage from '@/components/Pages/Development.md'
-import Projects from '@/components/Pages/Projects.vue'
-
-// image paths
-const imgUrl = new URL('@/assets/img/mm_banner_sand.jpg', import.meta.url).href
-
-// fetch data
-const repos = ref([]);
-const url = 'https://api.github.com/orgs/masonmedia-projects/repos';
-fetch(url)
-.then(response => response.json())
-.then((data) => {
-    repos.value = data
-    console.log(data)
-})
+const { animate } = useAnimation();
 
 function bigOdds() {
 const array = ['green', 'red', 'orange', 'pink', 'black'];
@@ -39,153 +22,109 @@ console.log(odds); // [0, 2, 4]
 
 bigOdds()
 
+const mason = ['m', 'a', 's', 'o', 'n']
+
 onMounted(() => {
+    animate();
     gsap.from("body", {
         duration: 1,
         opacity: 0,
     });
-    gsap.utils.toArray(".up").forEach(layer => {
-        gsap.from(layer, {
-            y: 70,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.3,
-            ease: "power2.inOut",
-            scrollTrigger: {
-            trigger: layer,
-            // scrub: true,
-            toggleActions: 'play none none reverse',
-            start: "top bottom",
-            // start:"top 100%",
-            end:"bottom top",
-          }
-        });
-    })
+
+//     const ml = gsap.timeline(); 
+// ml.from(".title", { duration: 1, y: 100 })
+//   .from(".title", { duration: 1, backgroundColor: "#f38630" }, "+=0.5") 
+//   .from(".title", { duration: 1, x: 0, rotation: -360 }, "+=0.5");
+
+var yMove = 50;
+gsap.from("h1, h2", {
+  delay: 0.5,
+  color: 'transparent',
+  opacity: 0,
+  duration: 0.7,
+  ease: 'power1.inOut',
+  stagger: 0.2,
+  y: function(i, elem, boxes) {
+    return boxes % 2 === 1 ? -yMove : yMove;
+  },
+});
+
 })
 </script>
 
 <template>
   <div>
-    <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4">
-      <div class="row m-3 p-0">
-        <div class="up col-lg-12 min-vh-75 rounded-5 p-5 m-0 center-center" style="background-size: cover; background-color: #7F5539;"
-        :style="{ 'background' : 'linear-gradient(#00000050, #00000050), url(' + imgUrl + ')' }">
-        <!-- <div class="up col-lg-12 min-vh-75 rounded-5 p-5 m-0 center-center" style="background: linear-gradient(#00000050, #00000050), url('https://images.unsplash.com/photo-1570257374937-1d2db29c7f12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1554&q=80'); background-size: cover; background-color: #7F5539;"> -->
-        <!-- <div class="up col-lg-12 min-vh-75 rounded-5 p-5 m-0 left-center" style="background-color: #EDEDE9; background: url('https://picsum.photos/id/38/1200/600') center; background-size: cover"> -->
-          <!-- <h1 class="up fw-bold lh-1 display-1" style="color: #E6CCB2; letter-spacing: -5px">andrew<span style="color: #EDE0D4">mason</span></h1> -->
-          <h1 class="up fw-900 lh-1 display-1 mb-0" style="color: #D5BDAF; letter-spacing: -15px; font-size: 25vmin;filter: drop-shadow(2px 2px 5px #000)">mason</h1>
-          <!-- <h2 class="h5 fw-900 ">Developer. Designer. Writer.</h2> -->
-          <!-- <h1 class="fw-bold lh-1 display-1" style="color: #E6CCB2; letter-spacing: -5px">mason<span style="color: #B08968">media</span></h1> -->
-          <!-- <h1 class="fw-900 ls-1 lh-1 display-1" style="-webkit-text-stroke: 1px #E6CCB2; color: transparent">mason.</h1> -->
-          <h2 class="up h4 fw-bold text-lowercase" style="color: #EDE0D4; filter: drop-shadow(2px 2px 5px #000); letter-spacing: -1px">Developer. Designer. Writer.</h2>
+    <div class="container-fluid px-0 pt-0 pt-lg-5">
+      <div class="row m-0 position-relative">
+        <div class="col-lg-12 min-vh-100 p-5 m-0 left-center">
+            <!-- <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin; ">Hi. I'm Andrew. I help create awesome brands and modern websites.</h1> -->
+            <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin; ">Hi, I'm Andrew. I'm a passionate frontend developer & visual designer driven to create beautiful and effective digital experiences.</h1>
+        </div>
+      </div>
 
+      <!-- <img class="w-100" src="https://images.unsplash.com/photo-1551376347-075b0121a65b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8d2FsbHBhcGVyLGxhbmRzY2FwZXx8fHx8fDE2NzQwNTQyNTQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt=""> -->
+      <img class="w-100 up" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?wallpaper,landscape" alt="">
+
+      <div class="row p-0 min-vh-100">
+
+        <div class="up col-lg-12 left-center p-5 text-dark min-vh-100">
+            <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin;">I create websites, CMS<span class="text-lowercase">s</span>, user interfaces, and ecommerce solutions with interactive animation, current technologies, and modern design trends.</h1>
+            <router-link to="/about">
+                <button class="btn ps-0" type="button">
+                    <i class="fs-1 bi bi-plus-circle text-secondary"></i>
+                </button>
+            </router-link>
         </div>
       </div>
-      <div class="row m-2 p-0" id="about">
-        <div class="up col-lg-8 p-0">
-            <div class="up left-center p-4 p-lg-5 m-2 min-vh-75 rounded-5" style="background: #D5BDAF; color: grey;">
-                <h5 class="up">about</h5>
-                <h1 class="up ls-1 lh-1 fw-bold display-3">Hi, I'm Andrew. I'm a passionate frontend developer, designer & musician.</h1>
-                <router-link :to="$router.options.routes[1]">
-                    <button class="btn stretched-link ps-0" type="button">
-                        <i class="fs-1 bi bi-plus-circle text-secondary"></i>
-                    </button>
-                </router-link>
-                <!-- <button class="btn btn-secondary rounded-5 px-4 mt-3 fw-bold" type="button" data-bs-toggle="modal" data-bs-target="#aboutModal">more</button>
-                <Modal modalId="aboutModal" modalDismiss="modal" modalBackground="background: #D6CCC2">
-                    <Aboutpage></Aboutpage>
-                </Modal> -->
-            </div>
-        </div>
-        <div class="up col-lg-4 p-0">
-             <div class="up m-2">
-                <img src="https://picsum.photos/id/42/1200/600" class="w-100 rounded-5 img-full min-vh-75" alt="">
-             </div>
-        </div>
-      </div>
+
+      <img class="w-100" src="https://images.unsplash.com/photo-1458724029936-2cc6ee38f5ef?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8Z3JlZW4sbGFuZHNjYXBlfHx8fHx8MTY3NDA1NzE2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="">
 
       <!-- dev -->
 
-      <div class="up row m-3 p-0 rounded-5" style="background: #F5EBE0; color: #B08968;">
-        <div class="col-lg-10 min-vh-75 rounded-5 p-4 p-lg-5 m-0 left-center">
-            <h5>development</h5>
-            <h1 class="ls-1 lh-1 fw-bold display-3">I build websites & web applications from scratch using a variety of modern tools and frameworks.</h1>
-            <router-link :to="$router.options.routes[2]">
-                <button class="btn stretched-link ps-0" type="button">
-                    <i class="fs-1 bi bi-plus-circle" style="color: #B08968"></i>
+      <div class="row p-0 min-vh-700">
+        <div class="up col-lg-12 left-center p-5">
+            <h1 class="up ls-1 lh-1 fw-bold text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">I've worked across a variety of industries from blockchain to education and financial services, building strong partnerships & treading new ground with each project.</h1>
+        </div>
+      </div>
+
+      <img class="w-100" src="https://images.unsplash.com/photo-1587734361993-0033759da68b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29mZmVlfHx8fHx8MTY3NDA1NzgyNA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="">
+
+    <!-- work -->
+    <div class="row p-0 min-vh-100">
+        <div class="up col-lg-10 left-center p-5">
+            <h1 class="up ls-1 lh-1 fw-bold text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">Explore some of my work from a variety of spaces using a range of technologies, build tools, designs, and approches.</h1>
+            <router-link to="/work">
+                <button class="btn ps-0" type="button">
+                    <i class="fs-1 bi bi-plus-circle text-secondary"></i>
                 </button>
             </router-link>
-            <!-- <button class="btn btn-secondary rounded-5 px-4 mt-3 fw-bold" type="button" data-bs-toggle="modal" data-bs-target="#designModal">more</button> -->
-                <!-- <Modal modalId="designModal" modalDismiss="modal" modalBackground="background: rgb(245, 235, 224);">
-                    <Designpage />
-                </Modal> -->
         </div>
       </div>
 
-    <!-- design -->
-      <div id="development" class="row m-2 p-0">
-        <div class="up col-lg-4 p-0">
-             <div class="m-2">
-                <img src="https://picsum.photos/id/56/1200/600" class="w-100 rounded-5 img-full min-vh-75" alt="">
-             </div>
-        </div>
-        <div class="up col-lg-8 p-0">
-            <div class="left-center p-5 m-2 min-vh-75 rounded-5" style="background: #B08968;">
-                <h5 class="up text-dark">design</h5>
-                <h1 class="up ls-1 lh-1 fw-bold display-3">I design user interfaces, imagery, and assets for websites, social media, and print.</h1>
-                <router-link :to="$router.options.routes[3]">
-                    <button class="btn stretched-link ps-0" type="button">
-                        <i class="fs-1 bi bi-plus-circle text-dark"></i>
-                    </button>
-                </router-link>
-                <!-- <button class="btn btn-dark rounded-5 px-4 mt-3 fw-bold" type="button" data-bs-toggle="modal" data-bs-target="#dev">more</button>
-                <Modal modalId="dev" modalDismiss="modal" modalBackground="background: rgb(176, 137, 104)" class="text-dark">
-                    <Devpage></Devpage>
-                </Modal> -->
+      <img class="w-100" src="https://source.unsplash.com/1200x600?sand" alt="">
+
+    <!-- contact -->
+      <div class="row p-0 min-vh-100 position-relative">
+        <div class="up col-lg-8 offset-lg-2 center-center p-5">
+            <h3 class="up font-antonio text-uppercase fw-light" style="color: #ffffff95">Get in touch</h3>
+            <h1 class="up ls-1 lh-1 fw-bold text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">Reach out for more info or to chat about your next project.</h1>
+            <div class="mt-3 d-flex align-items-center">
+                <a href="https://medium.com/@andrewmasonmedia" target="_blank">
+                    <i class="display-4 bi bi-medium text-secondary me-4"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/andrewmasonmedia/" target="_blank">
+                    <i class="display-4 bi bi-linkedin text-secondary me-4"></i>
+                </a>
+                <a href="mailto:andrewmasonmedia@gmail.com">
+                    <i class="display-4 bi bi-envelope text-secondary"></i>
+                </a>
             </div>
-        </div>
-      </div>
-
-      <div id="projects" class="up row m-3 p-0 rounded-5" style="background: #E6CCB2; color: #B08968;">
-        <div class="up col-lg-10 min-vh-75 rounded-5 p-5 m-0 left-center">
-            <h5 class="up">projects</h5>
-            <h1 class="up ls-1 lh-1 fw-bold display-3">Explore sample projects from a variety of spaces using a range of build tools, designs, and contexts.</h1>
-            <router-link :to="$router.options.routes[4]">
-                <button class="btn stretched-link ps-0" type="button">
-                    <i class="fs-1 bi bi-plus-circle" style="color: #B08968"></i>
-                </button>
-            </router-link>
-            <!-- <button class="btn btn-secondary rounded-5 px-4 mt-3 fw-bold" style="background: #B08968; border: 1px solid #B08968 !important" type="button" data-bs-toggle="modal" data-bs-target="#projectsModal">more</button> -->
-                <!-- <Modal modalId="projectsModal" modalDismiss="modal" modalBackground="background: rgb(245, 235, 224);">
-                    <Projects />
-                </Modal> -->
-        </div>
-      </div>
-
-      <div id="contact" class="row m-2 p-0">
-        <div class="up col-lg-8 p-0">
-            <div class="up left-center p-5 m-2 min-vh-75 rounded-5" style="background: #E3D5CA; color: grey;">
-                <h5 class="up">contact</h5>
-                <h1 class="up ls-1 lh-1 fw-bold display-3">Reach out for more info or to chat about your next project.</h1>
-                <div class="mt-2 d-flex align-items-center">
-                    <a href="https://medium.com/@andrewmasonmedia" target="_blank">
-                        <i class="fs-1 bi bi-medium text-secondary me-3"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/andrewmasonmedia/" target="_blank">
-                        <i class="fs-1 bi bi-linkedin text-secondary me-3"></i>
-                    </a>
-                    <a href="mailto:andrewmasonmedia@gmail.com">
-                        <i class="fs-1 bi bi-envelope text-secondary"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 p-0">
-             <div class="up m-2">
-                <img src="https://picsum.photos/id/76/1200/600" class="w-100 rounded-5 img-full min-vh-75" alt="">
-             </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<style>
+
+</style>

@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div id="footer" class="container-fluid p-0">
-            <div class="row p-5 font-antonio" style="background: #7F5539; color: #DDB892">
+            <div class="row p-5 font-antonio bg-dark text-light">
                 <div class="col-lg-3 col-md-6 top-center">
                     <ul class="list-unstyled fs-4 fw-bold text-uppercase">
                         <router-link v-for="(route, index) in router.options.routes" :key="index"

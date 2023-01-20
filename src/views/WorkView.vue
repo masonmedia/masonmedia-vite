@@ -107,10 +107,11 @@ onBeforeMount(() => {
 </script>
 
 <template>
-    <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4 bg-dark text-light min-vh-100" :style="{ 'background' : 'url('+ imgUrl +') center repeat'}">
+    <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4 min-vh-100">
+    <!-- <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4 min-vh-100" :style="{ 'background' : 'url('+ imgUrl +') center repeat'}"> -->
         
 <!-- work -->
-    <div class="row m-0 position-relative min-vh-100">
+    <!-- <div class="row m-0 position-relative min-vh-100">
         <div class="up col-lg-12 pb-5 m-0 center-center">
           <h1 class="up fw-900 lh-1 pb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">Work</h1>
           
@@ -120,12 +121,54 @@ onBeforeMount(() => {
           </div>
          
         </div>
+      </div> -->
+
+      <div class="row m-0">
+        <div class="up col-lg-12 p-5 min-vh-50 m-0 left-center"> 
+          <h1 class="fw-bold lh-1 ls-1 text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">Work</h1>
+        </div>
+        <div class="col-sm-12 w-100 m-0">
+          <img class="w-100" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?sky" alt="">
+        </div>
       </div>
 
       <div class="container">
           <div class="row px-3 px-md-4">
+            <div class="col-sm-12 py-5">
+                <h1 class="fw-bold lh-1 ls-1 text-uppercase font-antonio" style="letter-spacing: -3px; font-size: 9vmin;">Explore some of my work below. All projects were built coded from scratch using a variety of technologies. *In some cases live production sites are not maintained or controlled by me, and for others I've used custom hosting solutions to ensure original project parameters are presented.</h1>
+            </div>
+
+            <hr class="w-100 text-secondary">
+
+            <div class="col-lg-4 p-4">
+                <h3 class="h2 font-antonio text-uppercase fw-bold ls-1">Intro</h3>
+                <p class="text-uppercase">The projects below were built from scratch using a range of technologies, design approaches, UX/UI goals, and deployment solutions.</p>
+            </div>
+            <div class="col-lg-4 p-4">
+                <h3 class="h2 font-antonio text-uppercase fw-bold ls-1">Languages</h3>
+                <p class="text-uppercase">HTML5, CSS3, SASS, JAVASCRIPT, (SOME) PHP, WORDPRESS, HEADLESS CMS, API CONSUMPTION, JSON DATA STRUCTURE DESIGN, AODA/A11Y, I18N, SEO.</p>
+            </div>
+            <div class="col-lg-4 p-4">
+                <h3 class="h2 font-antonio text-uppercase fw-bold ls-1">Animation</h3>
+                <p class="text-uppercase">Greensock Animation Platform (GSAP), AOS (animate on scroll), animate.css, animista, CSS Keyframes and Transitions.</p>
+            </div>
+            <div class="col-lg-4 p-4">
+                <h3 class="h2 font-antonio text-uppercase fw-bold ls-1">Project Management</h3>
+                <p>GITHUB, BITBUCKET, ASANA, CLICKUP, AGILE, GOOGLE SUITE, MICROSOFT 365, ZOOM, SLACK, MARKETING CRM (PARDOT, HUBSPOT, MAILCHIMP, SENDGRID)</p>
+            </div>
+            <div class="col-lg-4 p-4">
+                <h3 class="h2 font-antonio text-uppercase fw-bold ls-1">Deployment</h3>
+                <p>SHARED HOSTING, CPANEL, CLOUD HOSTING (NETLIFY, VERCEL, GITHUB PAGES, ETC), DOMAIN MANAGEMENT, DNS, LOAD SPEED OPTIMIZATION.</p>
+            </div>
+            <div class="col-lg-4 p-4">
+                <h3 class="h2 font-antonio text-uppercase fw-bold ls-1">Current</h3>
+                <p>MY LATEST TECH STACK FOCUS INCLUDES VUE 3, PINIA, BOOTSTRAP 5+, SASS, GSAP, AND CLOUD DEPLOYMENT USING NETLIFY, GITHUB PAGES, & CLOUDFLARE PAGES.</p>
+            </div>
+
+            <hr class="w-100 text-secondary">
+
               <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="up accordion-item border-0 pb-3 text-light" :class="repos.length-1 ? 'mt-3' : 'my-3'"
+                <div class="up accordion-item border-0 pb-3" :class="repos.length-1 ? 'mt-3' : 'my-3'"
                 style="background: transparent"
                 v-for="(item, index) in repos" :key="index">
                     <div class="up row" v-if="repos"
@@ -135,12 +178,12 @@ onBeforeMount(() => {
                                 <!-- get title and genre from titles array -->
                                 <h5 class="up font-antonio">{{ titles[index].microtitle }}</h5>
                                 <h1 class="up fw-bold lh-1 ls-1 mb-4 text-uppercase display-2 font-antonio" style="color: #7F5539">{{ titles[index].title }}</h1>
-                                <button role="button" class="btn btn-sm btn-outline-light px-4 me-2">more</button>
-                                <a :href="item.html_url" target="_blank" class="me-2">
-                                    <button role="button" class="btn btn-sm btn-outline-light px-4 ">code</button>
+                                <button role="button" class="btn btn-dark px-4 py-2 me-2 rounded-3">more</button>
+                                <a :href="item.html_url" target="_blank">
+                                    <button role="button" class="btn btn-dark px-4 py-2 me-2 rounded-3">code</button>
                                 </a>
                                 <a :href="item.homepage" target="_blank">
-                                    <button role="button" class="btn btn-sm btn-outline-light px-4">site</button>
+                                    <button role="button" class="btn btn-dark px-4 py-2 me-2 rounded-3">site</button>
                                 </a>
                             </div>
                         </div>
@@ -154,11 +197,13 @@ onBeforeMount(() => {
 
                     <!-- accordion body -->
                     <div :id="'item_' + index" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body border-bottom py-5 bg-dark" style="border-color: rgb(127, 85, 57) !important;"
+                    <div class="accordion-body border-bottom py-5" style="border-color: rgb(127, 85, 57) !important;"
                     v-if="titles[index]">
-                        <h5 class="up font-antonio pb-3"
-                        style="color: lightgrey;">{{ titles[index].stack }}</h5>
-                        <h2 class="fw-bold font-antonio" style="letter-spacing: -1px;">{{ item.description }}</h2>
+                    <div class="pe-0 pe-md-3">
+                        <h5 class="up font-antonio pb-3 text-secondary">{{ titles[index].stack }}</h5>
+                        <h2 class="h1 fw-bold font-antonio text-uppercase" style="letter-spacing: -2px;">{{ item.description }}</h2>
+                        </div>
+
                     </div>
                     </div>
                 </div>
