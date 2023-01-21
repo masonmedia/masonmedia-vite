@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import useAnimation from '../stores/useAnimation'
 
 // image paths
@@ -7,6 +7,13 @@ const imgUrl = new URL('@/assets/img/angles.svg', import.meta.url).href
 
 // import animation
 const { animate } = useAnimation();
+
+// check img loaded
+let isLoaded = ref(false);
+function loadImage() {
+    isLoaded.value = true
+    console.log('image loaded = ' + isLoaded.value)
+}
 
 function bigOdds() {
 const array = ['green', 'red', 'orange', 'pink', 'black'];
@@ -46,7 +53,12 @@ onMounted(() => {
           </div> -->
         </div>
         <div class="col-sm-12 w-100 m-0">
-          <img class="w-100" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?sand" alt="">
+          <!-- <img class="w-100" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?sand" alt=""> -->
+
+          <TransitionGroup name="fade" mode="out-in">
+                <div :key="1"  @load="loadImage" v-show="!isLoaded" class="w-100 min-vh-50 bg-secondary"></div>
+                <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in w-100" src="https://source.unsplash.com/1200x500?sand" alt="">
+            </TransitionGroup>
         </div>
       </div>
 

@@ -1,10 +1,17 @@
 <script setup>
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import useAnimation from '../stores/useAnimation'
 import gsap from 'gsap'
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const { animate } = useAnimation();
+
+// check img loaded
+let isLoaded = ref(false);
+function loadImage() {
+    isLoaded.value = true
+    console.log('image loaded = ' + isLoaded.value)
+}
 
 function bigOdds() {
 const array = ['green', 'red', 'orange', 'pink', 'black'];
@@ -63,7 +70,12 @@ gsap.from("h1, h2", {
       </div>
 
       <!-- <img class="w-100" src="https://images.unsplash.com/photo-1551376347-075b0121a65b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8d2FsbHBhcGVyLGxhbmRzY2FwZXx8fHx8fDE2NzQwNTQyNTQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt=""> -->
-      <img class="w-100 up" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?wallpaper,landscape" alt="">
+      <!-- <img class="w-100 up" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?wallpaper,landscape" alt=""> -->
+
+      <TransitionGroup name="fade" mode="out-in">
+        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="w-100 min-vh-50 bg-secondary"></div>
+        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in w-100" src="https://source.unsplash.com/1200x500?clouds" alt="">
+    </TransitionGroup>
 
       <div class="row p-0 min-vh-100">
 
