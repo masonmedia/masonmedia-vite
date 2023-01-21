@@ -16,19 +16,12 @@ fetch(url)
 // image paths
 const imgUrl = new URL('@/assets/img/angles.svg', import.meta.url).href
 
-// const accordionItems = document.querySelectorAll('.accordion-collapse')
-// const acc = document.getElementById('accordionFlushExample')
-
-// accordionItems.forEach((el)=>{
-//     el.addEventListener('shown.bs.collapse',(e)=>{
-//         var scrollOffset = acc.scrollTop + el.parentNode.offsetTop
-//         acc.scroll({
-//             top: scrollOffset,
-//             left: 0, 
-//             behavior: 'smooth'
-//         })
-//     })
-// })
+// check img loaded
+let isLoaded = ref(false);
+function loadImage() {
+    isLoaded.value = true
+    console.log('image loaded = ' + isLoaded.value)
+}
 
 const titles = [
     {
@@ -128,40 +121,49 @@ onBeforeMount(() => {
           <h1 class="fw-bold lh-1 ls-1 text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">Work</h1>
         </div>
         <div class="col-sm-12 w-100 m-0">
-          <img class="w-100" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?sky" alt="">
+           
+            <TransitionGroup name="fade" mode="out-in">
+                <div :key="1"  @load="loadImage" v-show="!isLoaded" class="w-100 min-vh-50 bg-secondary"></div>
+                <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in w-100" src="https://source.unsplash.com/1200x500?sky" alt="">
+            </TransitionGroup>
+
+          <!-- image loaded = {{ isLoaded }} -->
+          <!-- <h1 :class="isLoaded ? 'bg-danger' : 'bg-yellow'">Hello</h1>
+          <h1 v-if="isLoaded">loaded</h1>
+          <h1 v-else>not loaded</h1> -->
         </div>
       </div>
 
       <div class="container">
           <div class="row px-3 px-md-4">
             <div class="col-sm-12 py-5">
-                <h1 class="fw-bold lh-1 ls-1 text-uppercase font-antonio" style="letter-spacing: -3px; font-size: 9vmin;">Explore some of my work below. All projects were built coded from scratch using a variety of technologies. *In some cases live production sites are not maintained or controlled by me, and for others I've used custom hosting solutions to ensure original project parameters are presented.</h1>
+                <h1 class="fw-bold lh-1 ls-1 text-uppercase font-antonio" style="letter-spacing: -3px; font-size: 9vmin;">Explore some of my work below. All projects were built from scratch using a variety of technologies. *In some cases live production sites are not maintained or controlled by me, and for others I've used custom hosting solutions to ensure original project parameters are presented.</h1>
             </div>
 
             <hr class="w-100 text-secondary">
 
             <div class="col-lg-4 p-4">
-                <h3 class="h2 font-antonio text-uppercase fw-bold ls-1">Intro</h3>
+                <h3 class="h2 font-antonio text-uppercase fw-bold ls-base">Intro</h3>
                 <p class="text-uppercase">The projects below were built from scratch using a range of technologies, design approaches, UX/UI goals, and deployment solutions.</p>
             </div>
             <div class="col-lg-4 p-4">
-                <h3 class="h2 font-antonio text-uppercase fw-bold ls-1">Languages</h3>
+                <h3 class="h2 font-antonio text-uppercase fw-bold ls-base">Languages</h3>
                 <p class="text-uppercase">HTML5, CSS3, SASS, JAVASCRIPT, (SOME) PHP, WORDPRESS, HEADLESS CMS, API CONSUMPTION, JSON DATA STRUCTURE DESIGN, AODA/A11Y, I18N, SEO.</p>
             </div>
             <div class="col-lg-4 p-4">
-                <h3 class="h2 font-antonio text-uppercase fw-bold ls-1">Animation</h3>
+                <h3 class="h2 font-antonio text-uppercase fw-bold ls-base">Animation</h3>
                 <p class="text-uppercase">Greensock Animation Platform (GSAP), AOS (animate on scroll), animate.css, animista, CSS Keyframes and Transitions.</p>
             </div>
             <div class="col-lg-4 p-4">
-                <h3 class="h2 font-antonio text-uppercase fw-bold ls-1">Project Management</h3>
+                <h3 class="h2 font-antonio text-uppercase fw-bold ls-base">Project Management</h3>
                 <p>GITHUB, BITBUCKET, ASANA, CLICKUP, AGILE, GOOGLE SUITE, MICROSOFT 365, ZOOM, SLACK, MARKETING CRM (PARDOT, HUBSPOT, MAILCHIMP, SENDGRID)</p>
             </div>
             <div class="col-lg-4 p-4">
-                <h3 class="h2 font-antonio text-uppercase fw-bold ls-1">Deployment</h3>
+                <h3 class="h2 font-antonio text-uppercase fw-bold ls-base">Deployment</h3>
                 <p>SHARED HOSTING, CPANEL, CLOUD HOSTING (NETLIFY, VERCEL, GITHUB PAGES, ETC), DOMAIN MANAGEMENT, DNS, LOAD SPEED OPTIMIZATION.</p>
             </div>
             <div class="col-lg-4 p-4">
-                <h3 class="h2 font-antonio text-uppercase fw-bold ls-1">Current</h3>
+                <h3 class="h2 font-antonio text-uppercase fw-bold ls-base">Current</h3>
                 <p>MY LATEST TECH STACK FOCUS INCLUDES VUE 3, PINIA, BOOTSTRAP 5+, SASS, GSAP, AND CLOUD DEPLOYMENT USING NETLIFY, GITHUB PAGES, & CLOUDFLARE PAGES.</p>
             </div>
 
