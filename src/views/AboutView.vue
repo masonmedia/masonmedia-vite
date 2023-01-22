@@ -52,15 +52,12 @@ onMounted(() => {
             <h2 class="up fw-light text-uppercase pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">About me</h2>
           </div> -->
         </div>
-        <div class="col-sm-12 w-100 m-0">
-          <!-- <img class="w-100" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?sand" alt=""> -->
-
-          <TransitionGroup name="fade" mode="out-in">
-                <div :key="1"  @load="loadImage" v-show="!isLoaded" class="w-100 min-vh-50 bg-secondary"></div>
-                <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in w-100" src="https://source.unsplash.com/1200x500?sand" alt="">
-            </TransitionGroup>
-        </div>
       </div>
+
+      <TransitionGroup name="fade" mode="out-in">
+        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?sand" alt="">
+    </TransitionGroup>
 
       <div class="row">
         <div class="col-lg-5 p-5 top-center">
@@ -68,7 +65,7 @@ onMounted(() => {
         </div>
         <div class="up col-lg-7 left-center p-5">
           <h3 class="up font-antonio fw-light text-uppercase">Intro</h3>
-           <h1 class="up lh-1 text-uppercase font-antonio fw-900">I'm a frontend developer, designer, writer, & musician. I love animation, typography, layout, and interactivity. I have broad experience working on marketing and development teams at both startups and established firms. I'm a creative lateral thinker, innovator, and am passionate about building digital experiences.</h1>
+           <h1 class="up lh-1 ls-base text-uppercase font-antonio fw-900 pe-0 pe-lg-3">I'm a frontend developer, designer, writer, & musician. I love animation, typography, layout, and interactivity. I have broad experience working on marketing and development teams at both startups and established firms. I'm a creative lateral thinker, innovator, and am passionate about building digital experiences.</h1>
         </div>
       </div>
 
@@ -86,7 +83,10 @@ onMounted(() => {
         </div>
       </div>
 
-      <img class="w-100" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?tree" alt="">
+      <TransitionGroup name="fade" mode="out-in">
+        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?tree" alt="">
+    </TransitionGroup>
 
       <!-- <div class="row">
         <div class="col-lg-5 p-5 top-center">
@@ -105,11 +105,14 @@ onMounted(() => {
         </div>
         <div class="up col-lg-7 left-center p-5">
           <h3 class="up font-antonio fw-light text-uppercase">Background</h3>
-           <h1 class="up lh-1 text-uppercase font-antonio fw-900" style="letter-spacing: -5px; font-size: 10vmin;">I have a diverse background that contributes to a broad, unique skillset. My experience draws on influences spanning music, art, ecology, writing, parenting, and a belief in ethics and data privacy.</h1>
+           <h1 class="up lh-1 ls-1 display-4 text-uppercase font-antonio fw-900">I have a diverse background that contributes to a broad, unique skillset. My experience draws on influences spanning music, art, ecology, writing, parenting, and a belief in ethics and data privacy.</h1>
         </div>
       </div>
 
-      <img class="w-100" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?green" alt="">
+      <TransitionGroup name="fade" mode="out-in">
+        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?green" alt="">
+    </TransitionGroup>
 
       <div class="row">
         <div class="col-lg-5 p-5 top-center">
@@ -126,7 +129,10 @@ onMounted(() => {
         </div>
       </div>
 
-      <img class="w-100" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?minimal,white" alt="">
+      <TransitionGroup name="fade" mode="out-in">
+        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?minimal,white" alt="">
+    </TransitionGroup>
 
       <!-- contact -->
       <div class="row p-0 min-vh-100 position-relative">

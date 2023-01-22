@@ -1,6 +1,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import useAnimation from '../stores/useAnimation'
+import gsap from 'gsap'
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 const { animate } = useAnimation();
 
 // check img loaded
@@ -70,8 +73,8 @@ gsap.from("h1, h2", {
       <!-- <img class="w-100 up" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?wallpaper,landscape" alt=""> -->
 
       <TransitionGroup name="fade" mode="out-in">
-        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="w-100 min-vh-50 bg-secondary"></div>
-        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in w-100" src="https://source.unsplash.com/1200x500?clouds" alt="">
+        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?clouds" alt="">
     </TransitionGroup>
 
       <div class="row p-0 min-vh-100">
@@ -86,7 +89,10 @@ gsap.from("h1, h2", {
         </div>
       </div>
 
-      <img class="w-100" src="https://images.unsplash.com/photo-1458724029936-2cc6ee38f5ef?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8Z3JlZW4sbGFuZHNjYXBlfHx8fHx8MTY3NDA1NzE2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="">
+      <TransitionGroup name="fade" mode="out-in">
+        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://images.unsplash.com/photo-1458724029936-2cc6ee38f5ef?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8Z3JlZW4sbGFuZHNjYXBlfHx8fHx8MTY3NDA1NzE2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="">
+    </TransitionGroup>
 
       <!-- dev -->
 
@@ -96,7 +102,11 @@ gsap.from("h1, h2", {
         </div>
       </div>
 
-      <img class="w-100" src="https://images.unsplash.com/photo-1587734361993-0033759da68b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29mZmVlfHx8fHx8MTY3NDA1NzgyNA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="">
+      <TransitionGroup name="fade" mode="out-in">
+        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://images.unsplash.com/photo-1587734361993-0033759da68b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29mZmVlfHx8fHx8MTY3NDA1NzgyNA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="">
+    </TransitionGroup>
+      
 
     <!-- work -->
     <div class="row p-0 min-vh-100">
@@ -110,7 +120,10 @@ gsap.from("h1, h2", {
         </div>
       </div>
 
-      <img class="w-100" src="https://source.unsplash.com/1200x600?sand" alt="">
+      <TransitionGroup name="fade" mode="out-in">
+        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?sand" alt="">
+    </TransitionGroup>
 
     <!-- contact -->
       <div class="row p-0 min-vh-100 position-relative">

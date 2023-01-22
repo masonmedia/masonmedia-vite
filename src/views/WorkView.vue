@@ -120,19 +120,12 @@ onBeforeMount(() => {
         <div class="up col-lg-12 p-5 min-vh-50 m-0 left-center"> 
           <h1 class="fw-bold lh-1 ls-1 text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">Work</h1>
         </div>
-        <div class="col-sm-12 w-100 m-0">
-           
-            <TransitionGroup name="fade" mode="out-in">
-                <div :key="1"  @load="loadImage" v-show="!isLoaded" class="w-100 min-vh-50 bg-secondary"></div>
-                <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in w-100" src="https://source.unsplash.com/1200x500?sky" alt="">
-            </TransitionGroup>
-
-          <!-- image loaded = {{ isLoaded }} -->
-          <!-- <h1 :class="isLoaded ? 'bg-danger' : 'bg-yellow'">Hello</h1>
-          <h1 v-if="isLoaded">loaded</h1>
-          <h1 v-else>not loaded</h1> -->
-        </div>
       </div>
+
+      <TransitionGroup name="fade" mode="out-in">
+        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?sky" alt="">
+    </TransitionGroup>
 
       <div class="container">
           <div class="row px-3 px-md-4">
