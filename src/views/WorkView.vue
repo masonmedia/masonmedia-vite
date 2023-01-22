@@ -1,10 +1,13 @@
 <script setup>
 import { ref, onBeforeMount } from 'vue'
 import useAnimation from '../stores/useAnimation'
+import useImageLoader from '../stores/useImageLoader'
 const repos = ref([]);
 const url = 'https://api.github.com/orgs/masonmedia-projects/repos';
 
 const { animate } = useAnimation();
+// check image loaded
+const { isLoaded, loadImage } = useImageLoader();
 
 fetch(url)
 .then(response => response.json())
@@ -15,13 +18,6 @@ fetch(url)
 
 // image paths
 const imgUrl = new URL('@/assets/img/angles.svg', import.meta.url).href
-
-// check img loaded
-let isLoaded = ref(false);
-function loadImage() {
-    isLoaded.value = true
-    console.log('image loaded = ' + isLoaded.value)
-}
 
 const titles = [
     {
@@ -182,17 +178,18 @@ onBeforeMount(() => {
                                 </a>
                             </div>
                         </div>
-
                         <div class="up col-lg-7 center-center order-1 order-lg-2">
                             <img :src="images[index]" alt="">
                         </div>
                     </div>
 
-                    <div class="border-bottom" :class="index === 8 ? 'd-none' : ''" style="height: 2px; border-color: rgb(127, 85, 57) !important;"></div>
+                    <hr class="w-100 bg-secondary">
+
+                    <!-- <div class="border-bottom" :class="index === 8 ? 'border-0' : ''"></div> -->
 
                     <!-- accordion body -->
                     <div :id="'item_' + index" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body border-bottom py-5" style="border-color: rgb(127, 85, 57) !important;"
+                    <div class="accordion-body border-bottom py-5" :class="index === 8 ? 'border-0' : ''"
                     v-if="titles[index]">
                     <div class="pe-0 pe-md-3">
                         <h5 class="up font-antonio pb-3 text-secondary">{{ titles[index].stack }}</h5>

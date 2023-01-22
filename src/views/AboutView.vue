@@ -1,19 +1,14 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import useAnimation from '../stores/useAnimation'
+import useImageLoader from '../stores/useImageLoader'
 
 // image paths
 const imgUrl = new URL('@/assets/img/angles.svg', import.meta.url).href
 
 // import animation
 const { animate } = useAnimation();
-
-// check img loaded
-let isLoaded = ref(false);
-function loadImage() {
-    isLoaded.value = true
-    console.log('image loaded = ' + isLoaded.value)
-}
+const { isLoaded, loadImage } = useImageLoader();
 
 function bigOdds() {
 const array = ['green', 'red', 'orange', 'pink', 'black'];
@@ -69,7 +64,10 @@ onMounted(() => {
         </div>
       </div>
 
-      <img class="w-100" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?dunes" alt="">
+      <TransitionGroup name="fade" mode="out-in">
+        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?abstract" alt="">
+    </TransitionGroup>
       
       <div class="row m-2 p-0 min-vh-100 position-relative">
         <!-- <div class="position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
@@ -120,7 +118,7 @@ onMounted(() => {
         </div>
         <div class="up col-lg-7 left-center p-5">
           <h3 class="up font-antonio fw-light text-uppercase">Work</h3>
-           <h1 class="up lh-1 text-uppercase font-antonio fw-900" style="letter-spacing: -5px; font-size: 10vmin;">Explore some of my work from a variety of spaces using a range of frameworks, build tools, designs, and approches.</h1>
+           <h1 class="up lh-1 ls-1 text-uppercase font-antonio fw-900" style="font-size: 10vmin;">Explore some of my work from a variety of spaces using a range of frameworks, build tools, designs, and approches.</h1>
            <router-link to="/work">
                 <button class="btn ps-0" type="button">
                     <i class="fs-1 bi bi-plus-circle text-secondary"></i>

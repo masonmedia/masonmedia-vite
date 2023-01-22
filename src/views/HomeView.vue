@@ -1,17 +1,14 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { onMounted } from 'vue'
 import useAnimation from '../stores/useAnimation'
+import useImageLoader from '../stores/useImageLoader'
 import gsap from 'gsap'
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const { animate } = useAnimation();
 
-// check img loaded
-let isLoaded = ref(false);
-function loadImage() {
-    isLoaded.value = true
-    console.log('image loaded = ' + isLoaded.value)
-}
+// check image loaded
+const { isLoaded, loadImage } = useImageLoader();
 
 function bigOdds() {
 const array = ['green', 'red', 'orange', 'pink', 'black'];
