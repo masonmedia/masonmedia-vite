@@ -136,7 +136,7 @@ onBeforeMount(() => {
 
       <div class="container">
           <div class="row px-3 px-md-4">
-            <div class="col-sm-12 py-5">
+            <div class="col-sm-11 py-5">
                 <h1 class="fw-bold lh-1 ls-1 text-uppercase font-antonio" style="letter-spacing: -3px; font-size: 9vmin;">Explore some of my work below. All projects were built from scratch using a variety of technologies. *In some cases live production sites are not maintained or controlled by me, and for others I've used custom hosting solutions to ensure original project parameters are presented.</h1>
             </div>
 

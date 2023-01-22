@@ -1,9 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import useAnimation from '../stores/useAnimation'
-import gsap from 'gsap'
-import ScrollTrigger from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 const { animate } = useAnimation();
 
 // check img loaded
@@ -80,7 +77,7 @@ gsap.from("h1, h2", {
       <div class="row p-0 min-vh-100">
 
         <div class="up col-lg-12 left-center p-5 text-dark min-vh-100">
-            <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin;">I create websites, CMS<span class="text-lowercase">s</span>, user interfaces, and ecommerce solutions with interactive animation, current technologies, and modern design trends.</h1>
+            <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin;">I combine the art of design with the art of programming, creating websites, CMS<span class="text-lowercase">s</span>, and user interfaces, with interactive animation, current technologies & modern design trends.</h1>
             <router-link to="/about">
                 <button class="btn ps-0" type="button">
                     <i class="fs-1 bi bi-plus-circle text-secondary"></i>
