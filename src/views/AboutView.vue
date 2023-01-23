@@ -49,10 +49,19 @@ onMounted(() => {
         </div>
       </div>
 
-      <TransitionGroup name="fade" mode="out-in">
+      <div class="row m-0">
+        <div class="col-sm-12 p-0 min-vh-50">
+          <TransitionGroup name="fade" mode="out-in">
+            <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://source.unsplash.com/1200x500?sand" alt="">
+        </TransitionGroup>
+        </div>
+      </div>
+
+      <!-- <TransitionGroup name="fade" mode="out-in">
         <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?sand" alt="">
-    </TransitionGroup>
+        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vh-50 min-vw-100" src="https://source.unsplash.com/1200x500?sand" alt="">
+    </TransitionGroup> -->
 
       <div class="row">
         <div class="col-lg-5 p-5 top-center">
@@ -64,10 +73,14 @@ onMounted(() => {
         </div>
       </div>
 
-      <TransitionGroup name="fade" mode="out-in">
-        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?abstract" alt="">
-    </TransitionGroup>
+      <div class="row m-0">
+        <div class="col-sm-12 p-0 min-vh-50">
+          <TransitionGroup name="fade" mode="out-in">
+            <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://source.unsplash.com/1200x500?abstract" alt="">
+        </TransitionGroup>
+        </div>
+      </div>
       
       <div class="row m-2 p-0 min-vh-100 position-relative">
         <!-- <div class="position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
@@ -81,10 +94,14 @@ onMounted(() => {
         </div>
       </div>
 
-      <TransitionGroup name="fade" mode="out-in">
-        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?tree" alt="">
-    </TransitionGroup>
+      <div class="row m-0">
+        <div class="col-sm-12 p-0 min-vh-50">
+          <TransitionGroup name="fade" mode="out-in">
+            <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://source.unsplash.com/1200x500?tree" alt="">
+        </TransitionGroup>
+        </div>
+      </div>
 
       <!-- <div class="row">
         <div class="col-lg-5 p-5 top-center">
@@ -107,10 +124,14 @@ onMounted(() => {
         </div>
       </div>
 
-      <TransitionGroup name="fade" mode="out-in">
-        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?green" alt="">
-    </TransitionGroup>
+      <div class="row m-0">
+        <div class="col-sm-12 p-0 min-vh-50">
+          <TransitionGroup name="fade" mode="out-in">
+            <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://source.unsplash.com/1200x500?green" alt="">
+        </TransitionGroup>
+        </div>
+      </div>    
 
       <div class="row">
         <div class="col-lg-5 p-5 top-center">
@@ -127,10 +148,19 @@ onMounted(() => {
         </div>
       </div>
 
-      <TransitionGroup name="fade" mode="out-in">
+      <!-- <TransitionGroup name="fade" mode="out-in">
         <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
         <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?minimal,white" alt="">
-    </TransitionGroup>
+    </TransitionGroup> -->
+
+      <div class="row m-0">
+        <div class="col-sm-12 p-0 min-vh-50">
+          <TransitionGroup name="fade" mode="out-in">
+            <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://source.unsplash.com/1200x500?minimal,white" alt="">
+        </TransitionGroup>
+        </div>
+      </div>
 
       <!-- contact -->
       <div class="row p-0 min-vh-100 position-relative">

@@ -69,13 +69,16 @@ gsap.from("h1, h2", {
       <!-- <img class="w-100" src="https://images.unsplash.com/photo-1551376347-075b0121a65b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8d2FsbHBhcGVyLGxhbmRzY2FwZXx8fHx8fDE2NzQwNTQyNTQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt=""> -->
       <!-- <img class="w-100 up" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?wallpaper,landscape" alt=""> -->
 
-      <TransitionGroup name="fade" mode="out-in">
-        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?clouds" alt="">
-    </TransitionGroup>
+    <div class="row m-0">
+        <div class="col-sm-12 p-0 min-vh-50">
+        <TransitionGroup name="fade" mode="out-in">
+            <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://source.unsplash.com/1200x500?clouds" alt="">
+        </TransitionGroup>
+        </div>
+    </div>
 
       <div class="row p-0 min-vh-100">
-
         <div class="up col-lg-12 left-center p-5 text-dark min-vh-100">
             <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin;">I combine the art of design with the art of programming, creating websites, CMS<span class="text-lowercase">s</span>, and user interfaces, with interactive animation, current technologies & modern design trends.</h1>
             <router-link to="/about">
@@ -86,10 +89,14 @@ gsap.from("h1, h2", {
         </div>
       </div>
 
-      <TransitionGroup name="fade" mode="out-in">
-        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://images.unsplash.com/photo-1458724029936-2cc6ee38f5ef?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8Z3JlZW4sbGFuZHNjYXBlfHx8fHx8MTY3NDA1NzE2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="">
-    </TransitionGroup>
+        <div class="row m-0">
+            <div class="col-sm-12 p-0 min-vh-50">
+            <TransitionGroup name="fade" mode="out-in">
+                <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+                <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://images.unsplash.com/photo-1458724029936-2cc6ee38f5ef?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8Z3JlZW4sbGFuZHNjYXBlfHx8fHx8MTY3NDA1NzE2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="">
+            </TransitionGroup>
+            </div>
+        </div>
 
       <!-- dev -->
 
@@ -99,13 +106,17 @@ gsap.from("h1, h2", {
         </div>
       </div>
 
-      <TransitionGroup name="fade" mode="out-in">
-        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://images.unsplash.com/photo-1587734361993-0033759da68b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29mZmVlfHx8fHx8MTY3NDA1NzgyNA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="">
-    </TransitionGroup>
-      
+        <div class="row m-0">
+            <div class="col-sm-12 p-0 min-vh-50">
+            <TransitionGroup name="fade" mode="out-in">
+                <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+                <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://images.unsplash.com/photo-1587734361993-0033759da68b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29mZmVlfHx8fHx8MTY3NDA1NzgyNA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="">
+            </TransitionGroup>
+            </div>
+        </div>
 
     <!-- work -->
+
     <div class="row p-0 min-vh-100">
         <div class="up col-lg-10 left-center p-5">
             <h1 class="up ls-1 lh-1 fw-bold text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">Explore some of my work from a variety of spaces using a range of technologies, build tools, designs, and approches.</h1>
@@ -117,10 +128,14 @@ gsap.from("h1, h2", {
         </div>
       </div>
 
-      <TransitionGroup name="fade" mode="out-in">
-        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?sand" alt="">
-    </TransitionGroup>
+        <div class="row m-0">
+            <div class="col-sm-12 p-0 min-vh-50">
+            <TransitionGroup name="fade" mode="out-in">
+                <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+                <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://source.unsplash.com/1200x500?abstract,sand" alt="">
+            </TransitionGroup>
+            </div>
+        </div>
 
     <!-- contact -->
       <div class="row p-0 min-vh-100 position-relative">

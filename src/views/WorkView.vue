@@ -118,10 +118,14 @@ onBeforeMount(() => {
         </div>
       </div>
 
-      <TransitionGroup name="fade" mode="out-in">
-        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?sky" alt="">
-    </TransitionGroup>
+        <div class="row m-0">
+            <div class="col-sm-12 p-0 min-vh-50">
+            <TransitionGroup name="fade" mode="out-in">
+                <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
+                <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://source.unsplash.com/1200x500?sky" alt="">
+            </TransitionGroup>
+            </div>
+        </div>
 
       <div class="container">
           <div class="row px-3 px-md-4">
@@ -183,13 +187,11 @@ onBeforeMount(() => {
                         </div>
                     </div>
 
-                    <hr class="w-100 bg-secondary">
-
-                    <!-- <div class="border-bottom" :class="index === 8 ? 'border-0' : ''"></div> -->
+                    <div class="border-bottom" :class="index === 8 ? 'border-0' : ''"></div>
 
                     <!-- accordion body -->
                     <div :id="'item_' + index" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body border-bottom py-5" :class="index === 8 ? 'border-0' : ''"
+                    <div class="accordion-body py-5" :class="index === 8 ? 'border-0' : ''"
                     v-if="titles[index]">
                     <div class="pe-0 pe-md-3">
                         <h5 class="up font-antonio pb-3 text-secondary">{{ titles[index].stack }}</h5>
