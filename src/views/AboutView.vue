@@ -53,7 +53,7 @@ onMounted(() => {
         <div class="col-sm-12 p-0 min-vh-50">
           <TransitionGroup name="fade" mode="out-in">
             <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://source.unsplash.com/1200x500?sand" alt="">
+            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://images.unsplash.com/photo-1480365443306-930b898cb434?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" alt="">
         </TransitionGroup>
         </div>
       </div>

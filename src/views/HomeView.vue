@@ -73,7 +73,8 @@ gsap.from("h1, h2", {
         <div class="col-sm-12 p-0 min-vh-50">
         <TransitionGroup name="fade" mode="out-in">
             <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://source.unsplash.com/1200x500?clouds" alt="">
+            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+            <!-- <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://source.unsplash.com/1200x500?clouds" alt=""> -->
         </TransitionGroup>
         </div>
     </div>
@@ -82,8 +83,8 @@ gsap.from("h1, h2", {
         <div class="up col-lg-12 left-center p-5 text-dark min-vh-100">
             <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin;">I combine the art of design with the art of programming, creating websites, CMS<span class="text-lowercase">s</span>, and user interfaces, with interactive animation, current technologies & modern design trends.</h1>
             <router-link to="/about">
-                <button class="btn ps-0" type="button">
-                    <i class="fs-1 bi bi-plus-circle text-secondary"></i>
+                <button class="btn btn-dark btn-lg mt-3 font-antonio text-uppercase" type="button">
+                    More
                 </button>
             </router-link>
         </div>
@@ -121,8 +122,8 @@ gsap.from("h1, h2", {
         <div class="up col-lg-10 left-center p-5">
             <h1 class="up ls-1 lh-1 fw-bold text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">Explore some of my work from a variety of spaces using a range of technologies, build tools, designs, and approches.</h1>
             <router-link to="/work">
-                <button class="btn ps-0" type="button">
-                    <i class="fs-1 bi bi-plus-circle text-secondary"></i>
+                <button class="btn btn-dark btn-lg mt-3 font-antonio text-uppercase" type="button">
+                More
                 </button>
             </router-link>
         </div>
