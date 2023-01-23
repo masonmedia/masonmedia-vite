@@ -187,7 +187,7 @@ onBeforeMount(() => {
                         </div>
                     </div>
 
-                    <div class="border-bottom" :class="index === 8 ? 'border-0' : ''"></div>
+                    <!-- <div class="border-bottom" :class="index === 8 ? 'border-0' : ''"></div> -->
 
                     <!-- accordion body -->
                     <div :id="'item_' + index" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
