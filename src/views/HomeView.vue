@@ -40,18 +40,18 @@ onMounted(() => {
 //   .from(".title", { duration: 1, backgroundColor: "#f38630" }, "+=0.5") 
 //   .from(".title", { duration: 1, x: 0, rotation: -360 }, "+=0.5");
 
-var yMove = 50;
-gsap.from("h1, h2", {
-  delay: 0.5,
-  color: 'transparent',
-  opacity: 0,
-  duration: 0.7,
-  ease: 'power1.inOut',
-  stagger: 0.2,
-  y: function(i, elem, boxes) {
-    return boxes % 2 === 1 ? -yMove : yMove;
-  },
-});
+// var yMove = 50;
+// gsap.from("h1, h2", {
+//   delay: 0.5,
+//   color: 'transparent',
+//   opacity: 0,
+//   duration: 0.7,
+//   ease: 'power1.inOut',
+//   stagger: 0.2,
+//   y: function(i, elem, boxes) {
+//     return boxes % 2 === 1 ? -yMove : yMove;
+//   },
+// });
 
 })
 </script>
