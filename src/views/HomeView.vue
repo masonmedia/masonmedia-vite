@@ -24,16 +24,12 @@ function myFunction(item, index, arr) {
 console.log(odds); // [0, 2, 4]
 }
 
-bigOdds()
+// bigOdds();
 
 const mason = ['m', 'a', 's', 'o', 'n']
 
 onMounted(() => {
     animate();
-    gsap.from("body", {
-        duration: 1,
-        opacity: 0,
-    });
 
 //     const ml = gsap.timeline(); 
 // ml.from(".title", { duration: 1, y: 100 })
@@ -59,31 +55,34 @@ onMounted(() => {
 <template>
   <div>
     <div class="container-fluid px-0 pt-0 pt-lg-5">
-      <div class="row m-0 position-relative">
-        <div class="col-lg-12 min-vh-100 p-5 m-0 left-center">
-            <!-- <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin; ">Hi. I'm Andrew. I help create awesome brands and modern websites.</h1> -->
-            <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin; ">Hi, I'm Andrew. I'm a passionate frontend developer & visual designer driven to create beautiful and effective digital experiences.</h1>
+      <div class="row min-vh-100 m-0e">
+        <div class="col-lg-8 offset-md-2 d-flex flex-column justify-content-center align-items-center text-center p-5">
+            <h5 class="fs-3 text-secondary mb-3">mason</h5>
+            <!-- <h5 class="fs-3 text-secondary mb-3">🅼🅰🆂🅾🅽</h5> -->
+            <h1 class="display-1 lh-1 fw-bold" style="letter-spacing: -3px;">Frontend Developer, Visual Designer, Writer, Musician.</h1>
+            <p class="fs-4 text-secondary mt-3">Hi, I'm Andrew. I'm a passionate frontend developer & visual designer driven to create beautiful and effective digital experiences.</p>
         </div>
+        <!-- <div class="col-lg-12 min-vh-100 m-0 center-center">
+            <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin; ">🅼🅰🆂🅾🅽</h1>
+            <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin; ">Hi, I'm Andrew. I'm a passionate frontend developer & visual designer driven to create beautiful and effective digital experiences.</h1>
+        </div> -->
       </div>
-
-      <!-- <img class="w-100" src="https://images.unsplash.com/photo-1551376347-075b0121a65b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8d2FsbHBhcGVyLGxhbmRzY2FwZXx8fHx8fDE2NzQwNTQyNTQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt=""> -->
-      <!-- <img class="w-100 up" height="600" width="1200" style="background: lightgrey" src="https://source.unsplash.com/1200x600?wallpaper,landscape" alt=""> -->
 
     <div class="row m-0">
         <div class="col-sm-12 p-0 min-vh-50">
         <TransitionGroup name="fade" mode="out-in">
             <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
             <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
-            <!-- <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://source.unsplash.com/1200x500?clouds" alt=""> -->
         </TransitionGroup>
         </div>
     </div>
 
       <div class="row p-0 min-vh-100">
-        <div class="up col-lg-12 left-center p-5 text-dark min-vh-100">
-            <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin;">I combine the art of design with the art of programming, creating websites, CMS<span class="text-lowercase">s</span>, and user interfaces, with interactive animation, current technologies & modern design trends.</h1>
+        <div class="up col-lg-10 left-center p-5 text-dark min-vh-100">
+            <h5 class="fs-3 text-secondary mb-3">Programming + Design</h5>
+            <h1 class="display-4 lh-1 fw-bold" style="letter-spacing: -3px;">I combine the art of design with the art of programming, creating websites, CMSs, and user interfaces, with interactive animation, current technologies & modern design trends</h1>
             <router-link to="/about">
-                <button class="btn btn-dark btn-lg mt-3 font-antonio text-uppercase" type="button">
+                <button class="btn btn-dark mt-3 px-4 fw-bold" type="button">
                     More
                 </button>
             </router-link>
@@ -102,8 +101,14 @@ onMounted(() => {
       <!-- dev -->
 
       <div class="row p-0 min-vh-700">
-        <div class="up col-lg-12 left-center p-5">
-            <h1 class="up ls-1 lh-1 fw-bold text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">I've worked across a variety of industries from blockchain to education and financial services, building strong partnerships & treading new ground with each project.</h1>
+        <div class="up col-lg-10 left-center p-5">
+            <h5 class="fs-3 text-secondary mb-3">Work</h5>
+            <h1 class="display-4 lh-1 fw-bold" style="letter-spacing: -3px;">I've worked across a variety of industries from blockchain to education and financial services, building strong partnerships & treading new ground with each project.</h1>
+            <router-link to="/work">
+                <button class="btn btn-dark mt-3 px-4 fw-bold" type="button">
+                    More
+                </button>
+            </router-link>
         </div>
       </div>
 
@@ -120,10 +125,11 @@ onMounted(() => {
 
     <div class="row p-0 min-vh-100">
         <div class="up col-lg-10 left-center p-5">
-            <h1 class="up ls-1 lh-1 fw-bold text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">Explore some of my work from a variety of spaces using a range of technologies, build tools, designs, and approches.</h1>
-            <router-link to="/work">
-                <button class="btn btn-dark btn-lg mt-3 font-antonio text-uppercase" type="button">
-                More
+            <h5 class="fs-3 text-secondary mb-3">Blog</h5>
+            <h1 class="display-4 lh-1 fw-bold" style="letter-spacing: -3px;">I have an extensive background in copy and content writing which has lead to blogging about my experiences and journey as a frontend developer. I write about coding, design, javascript, and other topics.</h1>
+            <router-link to="/blog">
+                <button class="btn btn-dark mt-3 px-4 fw-bold" type="button">
+                    More
                 </button>
             </router-link>
         </div>
@@ -141,8 +147,11 @@ onMounted(() => {
     <!-- contact -->
       <div class="row p-0 min-vh-100 position-relative">
         <div class="up col-lg-8 offset-lg-2 center-center p-5">
-            <h3 class="up font-antonio text-uppercase fw-light" style="color: #ffffff95">Get in touch</h3>
-            <h1 class="up ls-1 lh-1 fw-bold text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">Reach out for more info or to chat about your next project.</h1>
+            <h5 class="fs-3 text-secondary mb-3">Get in touch</h5>
+            <h1 class="display-4 lh-1 fw-bold" style="letter-spacing: -3px;">Reach out for more info or to chat about your next project.</h1>
+
+            <!-- <h3 class="up font-antonio text-uppercase fw-light" style="color: #ffffff95">Get in touch</h3>
+            <h1 class="up ls-1 lh-1 fw-bold text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">Reach out for more info or to chat about your next project.</h1> -->
             <div class="mt-3 d-flex align-items-center">
                 <a href="https://medium.com/@andrewmasonmedia" target="_blank">
                     <i class="display-4 bi bi-medium text-secondary me-4"></i>

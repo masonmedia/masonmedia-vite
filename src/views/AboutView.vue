@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import useAnimation from '../stores/useAnimation'
 import useImageLoader from '../stores/useImageLoader'
 
@@ -34,11 +34,9 @@ onMounted(() => {
 <template>
   <div>
     <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4">
-    <!-- <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4" style="background-size: 100%" :style="{ 'background' : 'url('+ imgUrl +') center repeat'}"> -->
       <div class="row m-0">
         <div class="up col-lg-12 p-5 min-vh-50 m-0 left-center"> 
-
-          <h1 class="fw-bold lh-1 ls-1 text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">About me</h1>
+          <h1 class="display-1 fw-bold lh-1 ls-1" style="letter-spacing: -5px;">About me</h1>
           <!-- <h1 class="up fw-900 lh-1 pb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">About me</h1> -->
           
           <!-- <h2 class="up fw-light text-uppercase position-absolute z-1 top-50 start-50 translate-middle pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">About me</h2> -->
@@ -64,12 +62,9 @@ onMounted(() => {
     </TransitionGroup> -->
 
       <div class="row">
-        <div class="col-lg-5 p-5 top-center">
-            <h1 class="up display-1 font-antonio fw-900" style="font-size: 55vmin;">01.</h1>
-        </div>
-        <div class="up col-lg-7 left-center p-5">
-          <h3 class="up font-antonio fw-light text-uppercase">Intro</h3>
-           <h1 class="up lh-1 ls-base text-uppercase font-antonio fw-900 pe-0 pe-lg-3">I'm a frontend developer, designer, writer, & musician. I love animation, typography, layout, and interactivity. I have broad experience working on marketing and development teams at both startups and established firms. I'm a creative lateral thinker, innovator, and am passionate about building digital experiences.</h1>
+        <div class="up col-lg-7 offset-lg-5 min-vh-75 left-center p-5">
+          <h5 class="fs-3 text-secondary mb-3">Intro</h5>
+          <h1 class="fs-1 lh-1 pe-lg-5" style="letter-spacing: -3px;">I'm a frontend developer, designer, writer, & musician. I love animation, typography, layout, and interactivity. I have broad experience working on marketing and development teams at both startups and established firms. I'm a creative lateral thinker and am passionate about building digital experiences.</h1>
         </div>
       </div>
 
@@ -83,13 +78,13 @@ onMounted(() => {
       </div>
       
       <div class="row m-2 p-0 min-vh-100 position-relative">
-        <!-- <div class="position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
-            <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #00000010">02.</h1>
-        </div> -->
+        <div class="up col-lg-10 left-center p-5">
+          <h5 class="up fs-3 text-secondary mb-3">What I do</h5>
+          <h1 class="display-4 fw-bold lh-1 pe-lg-5" style="letter-spacing: -3px;">I specialize in UI and visual design, coding custom interactive websites and web applications, creating blog and CMS solutions, designing APIs and data structures, and exploring the latest technologies and build tools.</h1>
+      
 
-        <div class="up col-lg-12 left-center p-5">
-            <h3 class="up font-antonio fw-light text-uppercase w-100 pt-3">02. What I do</h3>
-           <h1 class="up ls-1 lh-1 text-uppercase font-antonio display-1 fw-900">I specialize in UI and visual design, coding custom interactive websites and web applications, creating blog and CMS solutions, designing API<span class="text-lowercase">s</span> and data structures, and exploring the latest technologies and build tools.</h1>
+            <!-- <h3 class="up font-antonio fw-light text-uppercase w-100 pt-3">02. What I do</h3>
+           <h1 class="up ls-1 lh-1 text-uppercase font-antonio display-1 fw-900">I specialize in UI and visual design, coding custom interactive websites and web applications, creating blog and CMS solutions, designing API<span class="text-lowercase">s</span> and data structures, and exploring the latest technologies and build tools.</h1> -->
            <!-- <h1 class="up ls-1 lh-1 text-uppercase font-antonio display-1 fw-900">I specialize in building and designing interactive, responsive websites, blogs, landing pages, and ecommerce solutions using a variety of modern technologies.</h1> -->
         </div>
       </div>
@@ -115,12 +110,10 @@ onMounted(() => {
       </div> -->
 
       <div class="row">
-        <div class="col-lg-5 p-5 top-center">
-            <h1 class="up display-1 font-antonio fw-900" style="font-size: 55vmin;">03.</h1>
-        </div>
-        <div class="up col-lg-7 left-center p-5">
-          <h3 class="up font-antonio fw-light text-uppercase">Background</h3>
-           <h1 class="up lh-1 ls-1 display-4 text-uppercase font-antonio fw-900">I have a diverse background that contributes to a broad, unique skillset. My experience draws on influences spanning music, art, ecology, writing, parenting, and a belief in ethics and data privacy.</h1>
+        <div class="up col-lg-8 offset-lg-2 center-center p-5">
+          <h5 class="fs-3 text-secondary mb-3">Background</h5>
+          <h1 class="display-1 lh-1 fw-bold" style="letter-spacing: -3px;">I have a diverse background that contributes to a broad, unique skillset.</h1>
+          <p class="fs-4 text-secondary mt-3">My experience draws on influences spanning music, art, ecology, writing, parenting, and a belief in ethics and data privacy.</p>
         </div>
       </div>
 
@@ -134,24 +127,18 @@ onMounted(() => {
       </div>    
 
       <div class="row">
-        <div class="col-lg-5 p-5 top-center">
-            <h1 class="up display-1 font-antonio fw-900" style="font-size: 55vmin;">04.</h1>
-        </div>
-        <div class="up col-lg-7 left-center p-5">
-          <h3 class="up font-antonio fw-light text-uppercase">Work</h3>
-           <h1 class="up lh-1 ls-1 text-uppercase font-antonio fw-900" style="font-size: 10vmin;">Explore some of my work from a variety of spaces using a range of frameworks, build tools, designs, and approches.</h1>
+        <div class="up offset-lg-5 col-lg-7 min-vh-75 left-center p-5">
+          <h5 class="fs-3 text-secondary mb-3">Work</h5>
+          <h1 class="display-4 lh-1 fw-bold pe-lg-4" style="letter-spacing: -3px;">Explore some of my work from a variety of spaces using a range of frameworks, build tools, designs, and approches.</h1>
+
+          <!-- <h3 class="up fw-light text-uppercase">Work</h3>
+           <h1 class="up lh-1 ls-1 text-uppercase font-antonio fw-900" style="font-size: 10vmin;">Explore some of my work from a variety of spaces using a range of frameworks, build tools, designs, and approches.</h1> -->
            <router-link to="/work">
-                <button class="btn ps-0" type="button">
-                    <i class="fs-1 bi bi-plus-circle text-secondary"></i>
+                <button class="btn btn-dark px-4 mt-3" type="button">Work
                 </button>
             </router-link>
         </div>
       </div>
-
-      <!-- <TransitionGroup name="fade" mode="out-in">
-        <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-        <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in min-vw-100" src="https://source.unsplash.com/1200x500?minimal,white" alt="">
-    </TransitionGroup> -->
 
       <div class="row m-0">
         <div class="col-sm-12 p-0 min-vh-50">
@@ -163,7 +150,7 @@ onMounted(() => {
       </div>
 
       <!-- contact -->
-      <div class="row p-0 min-vh-100 position-relative">
+      <!-- <div class="row p-0 min-vh-100 position-relative">
         <div class="up col-lg-8 offset-lg-2 center-center p-5">
             <h3 class="up font-antonio text-uppercase fw-light">05. Get in touch</h3>
             <h1 class="up ls-1 lh-1 fw-bold text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">Reach out for more info or to chat about your next project.</h1>
@@ -179,7 +166,7 @@ onMounted(() => {
                 </a>
             </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>

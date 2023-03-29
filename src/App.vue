@@ -40,7 +40,7 @@ import Footer from './components/TheFooter.vue'
 </script>
 
 <template>
-<div class="overflow-hidden position-relative">
+<div class="overflow-hidden page-fade">
   <header>
     <Nav></Nav>
   </header>

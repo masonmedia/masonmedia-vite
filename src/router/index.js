@@ -22,20 +22,22 @@ const router = createRouter({
     //   name: 'Development',
     //   component: () => import('../views/DevelopmentView.vue')
     // },
-    // {
-    //   path: '/design',
-    //   name: 'Design',
-    //   component: () => import('../views/DesignView.vue')
-    // },
     {
       path: '/work',
       name: 'Work',
       component: () => import('../views/WorkView.vue')
     },
+    {
+      path: '/blog',
+      name: 'Blog',
+      component: () => import('../views/BlogView.vue')
+    },
+    // {
+    //   path: '/blog/:title',
+    //   name: 'BlogDetail',
+    //   component: () => import('../views/BlogDetail.vue')
+    // },
   ],
-  // scrollBehavior () {
-  //   return { top: 0, left: 0 }
-  // }
     scrollBehavior() {
     return new Promise((resolve) => {
       // resolve({ left: 0, top: 0 })

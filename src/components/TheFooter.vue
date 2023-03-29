@@ -1,9 +1,9 @@
 <template>
     <footer>
         <div id="footer" class="container-fluid p-0">
-            <div class="row p-5 font-antonio bg-dark text-light">
+            <div class="row p-5 bg-dark text-light">
                 <div class="col-lg-3 col-md-6 top-center">
-                    <ul class="list-unstyled fs-4 fw-bold text-uppercase">
+                    <ul class="list-unstyled fs-4 fw-bold">
                         <router-link v-for="(route, index) in router.options.routes" :key="index"
                             :to="route.path">
                             <li class="nav-item d-flex flex-column">
@@ -13,7 +13,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 top-center">
-                    <ul class="list-unstyled fs-4 fw-bold text-uppercase">
+                    <ul class="list-unstyled fs-4 fw-bold">
                         <a href="https://github.com/masonmedia/" target="_blank">
                             <li class="nav-item">Github</li>
                         </a>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-lg-6 top-center py-3 py-lg-0">
                     <ul class="list-unstyled">
-                        <li class="fs-4 nav-item font-antonio fw-bold pb-2">Privacy</li>
+                        <li class="fs-4 nav-item fw-bold pb-2">Privacy</li>
                         <li>This site does not track or collect visitor data. It does not use analytics, track referrals, follow user movement through the site, monitor IP addresses, set cookies or otherwise track visitor behaviour.</li>
                         <li class="fs-5 fw-bold mt-2">
                             <i class="bi bi-shield-lock-fill"></i> Mason Media {{ year }}</li>
