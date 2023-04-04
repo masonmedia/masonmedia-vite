@@ -129,8 +129,8 @@ onBeforeMount(() => {
 
       <div class="container">
           <div class="row px-3 px-md-4">
-            <div class="col-lg-8 py-5">
-                <h1 class="fw-bold lh-1 ls-1" style="letter-spacing: -3px;">Explore some of my work below. All projects were built from scratch using a variety of technologies. <span class="text-secondary">*As a caveat, some live production sites I built are not maintained or controlled by me, and for others I've used custom hosting solutions to ensure original project parameters are presented.</span></h1>
+            <div class="col-lg-6 min-vh-50 left-center py-5">
+                <h1 class="fw-bold lh-1 ls-1" style="letter-spacing: -3px;">Explore some of my work below. All projects were built from scratch using a variety of technologies.</h1>
             </div>
 
             <hr class="w-100 text-secondary">

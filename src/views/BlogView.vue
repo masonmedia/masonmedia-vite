@@ -1,6 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-const posts = ref([]);
+import { ref, computed, onMounted } from 'vue'
+import postData from '../data/posts.json'
+
+// const posts = ref([]);
+
 // medium articles
 // https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@andrewmasonmedia
 // https://rss2json.com/#rss_url=https%3A%2F%2Fwww.theguardian.com%2Finternational%2Frss
@@ -14,17 +17,34 @@ function formatUrl(string) {
     return newUrl;
 }
 
-const url = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@andrewmasonmedia"
-function getPosts() {
-    fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-        posts.value = data;
-    })
+// const url = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@andrewmasonmedia"
+// function getPosts() {
+//     fetch(url)
+//     .then((response) => response.json())
+//     .then((data) => {
+//         posts.value = data;
+//     })
+//     console.log(posts.value)
+// }
+
+// const base_url = "https://techcrunch.com/wp-json/wp/v2/posts/";
+// const newsList = ref([]);
+// async function getNews() {
+//     let response = await fetch(base_url);
+//     newsList.value = await response.json();
+//     console.log(newsList.value)
+//   }
+
+  const base_url = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@andrewmasonmedia";
+async function getPosts() {
+    let response = await fetch(base_url);
+    posts.value = await response.json();
     console.log(posts.value)
-}
+  }
+
 onMounted(() => {
-    getPosts();
+    // getPosts();
+    // getNews();
 })
 
 </script>
@@ -39,21 +59,43 @@ onMounted(() => {
             </div>
             </div>
             <div class="row px-4 pb-4">
-            <div class="col-lg-4 p-0" v-for="(post, index) in posts.items" :key="index">
+            <!-- <div class="col-lg-4 p-0" v-for="(post, index) in newsList" :key="post.id"> -->
+            <div class="col-lg-4 p-0" v-for="(post, index) in postData.items" :key="index">
                 <div class="m-2 p-4 bg-dark text-light rounded-5 shadow">
+                    <!-- <img
+                    :src="post.jetpack_featured_media_url"
+                    alt=""
+                    class="img-fluid"
+                    />
+                    <p>{{ post.date }}</p>
+                    <router-link :to="'/blog/' + post.id">
+                        <button class="btn btn-outline-light">
+                            more
+                        </button>
+                    </router-link> -->
+
                 <img class="w-100 rounded-5 shadow mb-3" :src="post.thumbnail" alt="">
                 <h5 class="text-secondary">{{ post.pubDate.substr(0,10) }}</h5>
                 <span class="badge text-bg-secondary me-2 my-2" v-for="(item, index) in post.categories">{{ item }}</span>
                 <h2 class="fs-4 my-2" style="font-weight: 500; letter-spacing: -1px;">{{ post.title }}</h2>
                 <p v-html="post.content.slice(0, 200)"></p>
 
-                           <!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" :data-bs-target="'#item_' + formatUrl(post.title)">
-  More
-</button> -->
+                    <!-- Button trigger modal -->
+                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" :data-bs-target="'#item_' + formatUrl(post.title)">
+                    More
+                    </button> -->
                 <a :href="post.link" target="_blank">
                 <button class="btn btn-outline-light px-4 rounded-5">More</button>
                 </a>
+
+                <!-- <router-link :to="'/blog/' + post.pubDate">
+                    <button class="btn btn-primary px-4">More</button>
+                </router-link> -->
+                
+                <!-- works for local JSON with computed -->
+                <!-- <router-link :to="'/blog/' + post.id">
+                    <button class="btn btn-primary px-4">More</button>
+                </router-link> -->
                 <!-- <router-link :to="'/blog/' + post.title">
                     <button class="btn btn-primary px-4">More</button>
                 </router-link> -->
@@ -71,7 +113,8 @@ onMounted(() => {
         <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="container-fluid d-flex flex-column justify-content-center align-items-center modal-body">
+      <div class="container-fluid d-flex flex-column justify-content-center align-items-center modal-body"
+      >
         <div class="row min-vh-100">
             <div class="col-sm-12 p-5">
                 <h1 class="fw-bold mb-3">{{ post.title }}</h1>

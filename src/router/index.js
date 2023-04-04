@@ -31,11 +31,21 @@ const router = createRouter({
       path: '/blog',
       name: 'Blog',
       component: () => import('../views/BlogView.vue')
-    },
+    }
     // {
     //   path: '/blog/:title',
     //   name: 'BlogDetail',
     //   component: () => import('../views/BlogDetail.vue')
+    // }
+    // {
+    //   path: '/gitposts',
+    //   name: 'GitPosts',
+    //   component: () => import('../views/GitPosts.vue')
+    // },
+    // {
+    //   path: '/gitposts/:id',
+    //   name: 'GitPostDetail',
+    //   component: () => import('../views/GitPostDetail.vue')
     // },
   ],
     scrollBehavior() {

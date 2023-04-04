@@ -78,11 +78,11 @@ onMounted(() => {
     </div>
 
       <div class="row p-0 min-vh-100">
-        <div class="up col-lg-10 left-center p-5 text-dark min-vh-100">
-            <h5 class="fs-3 text-secondary mb-3">Programming + Design</h5>
-            <h1 class="display-4 lh-1 fw-bold" style="letter-spacing: -3px;">I combine the art of design with the art of programming, creating websites, CMSs, and user interfaces, with interactive animation, current technologies & modern design trends</h1>
+        <div class="col-lg-10 left-center p-5 text-dark min-vh-100">
+            <h5 class="up fs-3 text-secondary mb-3">Programming + Design</h5>
+            <h1 class="display-4 lh-1 fw-bold up" style="letter-spacing: -3px;">I combine the art of design with the art of programming, creating websites, CMSs, and user interfaces, with interactive animation, current technologies & modern design trends</h1>
             <router-link to="/about">
-                <button class="btn btn-dark mt-3 px-4 fw-bold" type="button">
+                <button class="up btn btn-dark mt-3 px-4 fw-bold" type="button">
                     More
                 </button>
             </router-link>
@@ -101,11 +101,11 @@ onMounted(() => {
       <!-- dev -->
 
       <div class="row p-0 min-vh-700">
-        <div class="up col-lg-10 left-center p-5">
-            <h5 class="fs-3 text-secondary mb-3">Work</h5>
-            <h1 class="display-4 lh-1 fw-bold" style="letter-spacing: -3px;">I've worked across a variety of industries from blockchain to education and financial services, building strong partnerships & treading new ground with each project.</h1>
+        <div class="col-lg-10 left-center p-5">
+            <h5 class="up fs-3 text-secondary mb-3">Work</h5>
+            <h1 class="up display-4 lh-1 fw-bold" style="letter-spacing: -3px;">I've worked across a variety of industries from blockchain to education and financial services, building strong partnerships & treading new ground with each project.</h1>
             <router-link to="/work">
-                <button class="btn btn-dark mt-3 px-4 fw-bold" type="button">
+                <button class="up btn btn-dark mt-3 px-4 fw-bold" type="button">
                     More
                 </button>
             </router-link>
@@ -124,11 +124,11 @@ onMounted(() => {
     <!-- work -->
 
     <div class="row p-0 min-vh-100">
-        <div class="up col-lg-10 left-center p-5">
-            <h5 class="fs-3 text-secondary mb-3">Blog</h5>
-            <h1 class="display-4 lh-1 fw-bold" style="letter-spacing: -3px;">I have an extensive background in copy and content writing which has lead to blogging about my experiences and journey as a frontend developer. I write about coding, design, javascript, and other topics.</h1>
+        <div class="col-lg-10 left-center p-5">
+            <h5 class="up fs-3 text-secondary mb-3">Blog</h5>
+            <h1 class="up display-4 lh-1 fw-bold" style="letter-spacing: -3px;">I have an extensive background in copy and content writing which has lead to blogging about my experiences and journey as a frontend developer. I write about coding, design, javascript, and other topics.</h1>
             <router-link to="/blog">
-                <button class="btn btn-dark mt-3 px-4 fw-bold" type="button">
+                <button class="up btn btn-dark mt-3 px-4 fw-bold" type="button">
                     More
                 </button>
             </router-link>
@@ -146,13 +146,13 @@ onMounted(() => {
 
     <!-- contact -->
       <div class="row p-0 min-vh-100 position-relative">
-        <div class="up col-lg-8 offset-lg-2 center-center p-5">
-            <h5 class="fs-3 text-secondary mb-3">Get in touch</h5>
-            <h1 class="display-4 lh-1 fw-bold" style="letter-spacing: -3px;">Reach out for more info or to chat about your next project.</h1>
+        <div class="col-lg-8 offset-lg-2 center-center p-5">
+            <h5 class="up fs-3 text-secondary mb-3">Get in touch</h5>
+            <h1 class="up display-4 lh-1 fw-bold" style="letter-spacing: -3px;">Reach out for more info or to chat about your next project.</h1>
 
             <!-- <h3 class="up font-antonio text-uppercase fw-light" style="color: #ffffff95">Get in touch</h3>
             <h1 class="up ls-1 lh-1 fw-bold text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">Reach out for more info or to chat about your next project.</h1> -->
-            <div class="mt-3 d-flex align-items-center">
+            <div class="up mt-3 d-flex align-items-center">
                 <a href="https://medium.com/@andrewmasonmedia" target="_blank">
                     <i class="display-4 bi bi-medium text-secondary me-4"></i>
                 </a>
