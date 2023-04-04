@@ -1,23 +1,30 @@
 {
-  ":name": "FrontAid CMS Example Model",
-  ":description": "This is a simple example of a FrontAid CMS model. You can change and extend it according to your needs, for example add new fields or restructure it. You can edit this file by cloning this repository and update it with your local editor and push it back into this Git repository. ",
-  "custom-field": {
-    ":description": "This example text is used as a description.",
-    ":type": "line"
-  },
-  "custom-object": {
-    "custom-line": {
+    ":name": "Example Website",
+    "name": {
+      ":description": "Website name",
       ":type": "line"
     },
-    "custom-text": {
-      ":type": "text"
-    }
-  },
-  "custom-list": {
-    ":items": {
-      "custom-list-item": {
-        ":type": "line"
+    "home_page": {
+      ":description": "Content for the index page",
+      "title": {":type": "line"},
+      "text":  {":type": "text"}
+    },
+    "blog": {
+      ":description": "Blog posts",
+      ":items": {
+        "id": {":type": "line"},
+        "slug": {":type": "line"},
+        "categories": {
+            ":items": {
+                "1": {":type": "line"},
+                "2": {":type": "line"},
+                "3": {":type": "line"},
+                "4": {":type": "line"},
+                "5": {":type": "line"}
+              }
+          },
+        "title": {":type": "line"},
+        "body":  {":type": "text", ":richtext": true}
       }
     }
   }
-}
