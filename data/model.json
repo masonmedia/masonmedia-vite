@@ -14,12 +14,13 @@
     ":items": {
       "id": {":type": "line"},
       "slug": {":type": "line"},
-        ":name": "Image",
-        "imageFieldExample": {
-        ":type": "image"
-      },
+      "image": {":type": "image"},
       "title": {":type": "line"},
-      "body":  {":type": "text", ":richtext": true}
+      "body":  {":type": "text", ":richtext": true},
+      "categories": {
+        "exampleField1": {":type": "line"},
+        "exampleField2": {":type": "line"}
+      }
       }
     }
   }
