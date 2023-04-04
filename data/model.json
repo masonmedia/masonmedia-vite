@@ -5,7 +5,7 @@
       ":type": "line"
     },
     "home_page": {
-      ":description": "Content for the index page",
+      ":description": "Content for the Home page",
       "title": {":type": "line"},
       "text":  {":type": "text"}
     },
@@ -14,8 +14,10 @@
       ":items": {
         "id": {":type": "line"},
         "slug": {":type": "line"},
-        "categories": {
+        ":items": {
+          "categories": {
             ":items": {
+              ":description": "Categories",
                 "1": {":type": "line"},
                 "2": {":type": "line"},
                 "3": {":type": "line"},
@@ -23,8 +25,13 @@
                 "5": {":type": "line"}
               }
           },
+          ":name": "Image",
+            "imageFieldExample": {
+            ":type": "image"
+        },
         "title": {":type": "line"},
         "body":  {":type": "text", ":richtext": true}
+        }
       }
     }
   }
