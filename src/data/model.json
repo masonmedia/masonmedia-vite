@@ -24,7 +24,8 @@
                 "4": {":type": "line"},
                 "5": {":type": "line"}
               }
-          },
+          }
+        },
           ":name": "Image",
             "imageFieldExample": {
             ":type": "image"
@@ -34,4 +35,3 @@
         }
       }
     }
-  }
