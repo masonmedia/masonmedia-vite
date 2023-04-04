@@ -15,8 +15,11 @@
       "id": {":type": "line"},
       "slug": {":type": "line"},
       "categories": {
-        "exampleField1": {":type": "line"},
-        "exampleField2": {":type": "line"}
+        "cat1": {":type": "line"},
+        "cat2": {":type": "line"},
+        "cat3": {":type": "line"},
+        "cat4": {":type": "line"},
+        "cat5": {":type": "line"}
         },
       "imageUrl": {":type": "line"},
       "image": {":type": "image"},
