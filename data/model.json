@@ -14,24 +14,22 @@
       ":items": {
         "id": {":type": "line"},
         "slug": {":type": "line"},
-        ":items": {
-          "categories": {
-            ":items": {
-              ":description": "Categories",
-                "1": {":type": "line"},
-                "2": {":type": "line"},
-                "3": {":type": "line"},
-                "4": {":type": "line"},
-                "5": {":type": "line"}
-              }
-          },
-          ":name": "Image",
-            "imageFieldExample": {
-            ":type": "image"
+        "categories": {
+          ":items": {
+            ":description": "Categories",
+              "1": {":type": "line"},
+              "2": {":type": "line"},
+              "3": {":type": "line"},
+              "4": {":type": "line"},
+              "5": {":type": "line"}
+            }
         },
+        ":name": "Image",
+        "imageFieldExample": {
+        ":type": "image"
+    },
         "title": {":type": "line"},
         "body":  {":type": "text", ":richtext": true}
         }
       }
     }
-  }
