@@ -24,10 +24,10 @@
               "5": {":type": "line"}
             }
         },
-        ":name": "Image",
-        "imageFieldExample": {
-        ":type": "image"
-    },
+          ":name": "Image",
+          "imageFieldExample": {
+          ":type": "image"
+        },
         "title": {":type": "line"},
         "body":  {":type": "text", ":richtext": true}
         }
