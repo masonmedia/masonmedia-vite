@@ -15,13 +15,19 @@
         "id": {":type": "line"},
         "date": {":type": "line"},
         "slug": {":type": "line"},
-            "imageUrl": {
+        "imageUrl": {
             ":type": "line"
           },
-          ":name": "Image",
-            "image": {
-              ":type": "image"
-            },
+          "image": {
+            ":type": "image"
+          },
+          "categories": {
+            "cat1": {":type": "line"},
+            "cat2": {":type": "line"},
+            "cat3": {":type": "line"},
+            "cat4": {":type": "line"},
+            "cat5": {":type": "line"}
+          },
         "title": {":type": "line"},
         "body":  {":type": "text", ":richtext": true}
         }
