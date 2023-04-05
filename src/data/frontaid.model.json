@@ -15,17 +15,13 @@
         "id": {":type": "line"},
         "date": {":type": "line"},
         "slug": {":type": "line"},
-        "categories": {
-          "cat1": {":type": "line"},
-          "cat2": {":type": "text"},
-          "cat3": {":type": "text"},
-          "cat4": {":type": "text"},
-          "cat5": {":type": "text"}
-        },
+            "imageUrl": {
+            ":type": "line"
+          },
           ":name": "Image",
-          "imageFieldExample": {
-          ":type": "image"
-        },
+            "image": {
+              ":type": "image"
+            },
         "title": {":type": "line"},
         "body":  {":type": "text", ":richtext": true}
         }
