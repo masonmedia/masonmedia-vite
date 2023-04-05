@@ -2,7 +2,7 @@
 import { ref, computed, onMounted } from 'vue'
 import postData from '../data/posts.json'
 
-// const posts = ref([]);
+const posts = ref([]);
 
 // medium articles
 // https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@andrewmasonmedia
@@ -36,14 +36,14 @@ function formatUrl(string) {
 //   }
 
   const base_url = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@andrewmasonmedia";
-async function getPosts() {
+    async function getPosts() {
     let response = await fetch(base_url);
     posts.value = await response.json();
     console.log(posts.value)
   }
 
 onMounted(() => {
-    // getPosts();
+    getPosts();
     // getNews();
 })
 
@@ -59,8 +59,8 @@ onMounted(() => {
             </div>
             </div>
             <div class="row px-4 pb-4">
-            <!-- <div class="col-lg-4 p-0" v-for="(post, index) in newsList" :key="post.id"> -->
-            <div class="col-lg-4 p-0" v-for="(post, index) in postData.items" :key="index">
+            <div class="col-lg-4 p-0" v-for="(post, index) in posts.items" :key="post.id">
+            <!-- <div class="col-lg-4 p-0" v-for="(post, index) in postData.items" :key="index"> -->
                 <div class="m-2 p-4 bg-dark text-light rounded-5 shadow">
                     <!-- <img
                     :src="post.jetpack_featured_media_url"

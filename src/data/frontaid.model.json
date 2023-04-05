@@ -13,16 +13,14 @@
       ":description": "Blog posts",
       ":items": {
         "id": {":type": "line"},
+        "date": {":type": "line"},
         "slug": {":type": "line"},
         "categories": {
-          ":items": {
-            ":description": "Categories",
-              "1": {":type": "line"},
-              "2": {":type": "line"},
-              "3": {":type": "line"},
-              "4": {":type": "line"},
-              "5": {":type": "line"}
-            }
+          "cat1": {":type": "line"},
+          "cat2": {":type": "text"},
+          "cat3": {":type": "text"},
+          "cat4": {":type": "text"},
+          "cat5": {":type": "text"}
         },
           ":name": "Image",
           "imageFieldExample": {
