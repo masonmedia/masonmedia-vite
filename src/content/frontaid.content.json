@@ -1,6 +1,19 @@
 {
   "blog": [
     {
+      "categories2": [
+        {
+          "category": "routing"
+        },
+        {
+          "category": "tech"
+        },
+        {
+          "category": "vuejs"
+        }
+      ]
+    },
+    {
       "id": "1",
       "date": "Thursday April 6, 2023",
       "slug": "my-first-post",
