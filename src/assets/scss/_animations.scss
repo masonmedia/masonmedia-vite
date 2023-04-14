@@ -54,6 +54,32 @@
   opacity: 0;
 }
 
+// nav nested animation
+
+.slide-fade-enter-active .navbar,
+.slide-fade-leave-active .navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-fade-enter-from .navbar,
+.slide-fade-leave-to .navbar {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+// footer nested animation
+
+.slide-fade-enter-active footer,
+.slide-fade-leave-active footer {
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-fade-enter-from footer,
+.slide-fade-leave-to footer {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
 // .slide-fade-enter-active h1 {
 //   transition-delay: 0.25s;
 // }

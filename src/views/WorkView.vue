@@ -100,67 +100,83 @@ onBeforeMount(() => {
     <!-- <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4 min-vh-100" :style="{ 'background' : 'url('+ imgUrl +') center repeat'}"> -->
         
 <!-- work -->
-    <!-- <div class="row m-0 position-relative min-vh-100">
-        <div class="up col-lg-12 pb-5 m-0 center-center">
-          <h1 class="up fw-900 lh-1 pb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">Work</h1>
-          
-          <div class="position-absolute z-1 top-50 start-50 translate-middle ">
-            <h1 class="up fw-light text-uppercase mb-2 mb-lg-4 pb-3 font-antonio" style="color: #DDB892; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2); ">Work</h1>
-            <h2 class="up fw-light text-uppercase pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">Selection of projects</h2>
-          </div>
-         
-        </div>
-      </div> -->
 
-      <div class="row m-0">
-        <div class="up col-lg-12 p-5 min-vh-50 m-0 left-center"> 
-          <h1 class="display-1 fw-bold lh-1 ls-1" style="letter-spacing: -5px;">Work</h1>
+      <div class="row row min-vh-100 m-3 rounded-5 shadow bg-dark text-light">
+        <div class="col-lg-8 offset-lg-2 d-flex flex-column justify-content-center align-items-center text-center p-5">
+            <h5 class="fs-3 mb-3">What I do</h5>
+            <h1 class="display-4 lh-1 fw-bold" style="letter-spacing: -3px;">The projects below use a variety of technologies and span a range of spaces from small business to software and blockchain companies.</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-chevron-down mt-4" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
         </div>
       </div>
 
-        <div class="row m-0">
+        <!-- <div class="row m-0">
             <div class="col-sm-12 p-0 min-vh-50">
             <TransitionGroup name="fade" mode="out-in">
                 <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
                 <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1483&q=80" alt="">
             </TransitionGroup>
             </div>
+        </div> -->
+
+        <!-- <div class="row m-3 rounded-5 min-vh-75" style="background-color: rgba(0,0,0,0.05)">
+        <div class="up col-lg-6 p-5 m-0 left-center"> 
+            <h1 class="fw-bold lh-1 ls-1" style="letter-spacing: -3px;">Explore some of my work below. All projects were built from scratch using a variety of technologies.</h1>
         </div>
+      </div> -->
 
-      <div class="container">
-          <div class="row px-3 px-md-4">
-            <div class="col-lg-6 min-vh-50 left-center py-5">
+      <div class="container-fluid">
+          <div class="row py-3 m-3">
+            <!-- <div class="col-lg-6 min-vh-50 left-center py-5">
                 <h1 class="fw-bold lh-1 ls-1" style="letter-spacing: -3px;">Explore some of my work below. All projects were built from scratch using a variety of technologies.</h1>
-            </div>
+            </div> -->
 
-            <hr class="w-100 text-secondary">
+            <!-- <hr class="w-100 text-secondary"> -->
 
-            <div class="col-lg-4 p-4">
-                <h3 class="h2 fw-bold ls-base">Intro</h3>
-                <p class="text-uppercase">The projects below were built from scratch using a range of technologies, design approaches, UX/UI goals, and deployment solutions.</p>
+            <div class="col-lg-4 col-md-6 p-0">
+                <div class="bg-light border shadow m-2 p-5 rounded-5" style="min-height: 350px;">
+                    <h3 class="h2 fw-bold ls-base">Intro</h3>
+                    <p class="text-uppercase">The projects below were built from scratch using a range of technologies, design approaches, UX/UI goals, and deployment solutions.</p>
+                </div>
+                <!-- <h3 class="h2 fw-bold ls-base">Intro</h3>
+                <p class="text-uppercase">The projects below were built from scratch using a range of technologies, design approaches, UX/UI goals, and deployment solutions.</p> -->
             </div>
-            <div class="col-lg-4 p-4">
+            <div class="col-lg-4 col-md-6 p-0">
+                <div class="bg-light border shadow m-2 p-5 rounded-5" style="min-height: 350px;">
                 <h3 class="h2 fw-bold ls-base">Languages</h3>
                 <p class="text-uppercase">HTML5, CSS3, SASS, JAVASCRIPT, (SOME) PHP, WORDPRESS, HEADLESS CMS, API CONSUMPTION, JSON DATA STRUCTURE DESIGN, AODA/A11Y, I18N, SEO.</p>
+                </div>
             </div>
-            <div class="col-lg-4 p-4">
+            <div class="col-lg-4 col-md-6 p-0">
+                <div class="bg-light border shadow m-2 p-5 rounded-5" style="min-height: 350px;">
                 <h3 class="h2 fw-bold ls-base">Animation</h3>
                 <p class="text-uppercase">Greensock Animation Platform (GSAP), AOS (animate on scroll), animate.css, animista, CSS Keyframes and Transitions.</p>
+                </div>
             </div>
-            <div class="col-lg-4 p-4">
+            <div class="col-lg-4 col-md-6 p-0">
+                <div class="bg-light border shadow m-2 p-5 rounded-5" style="min-height: 350px;">
                 <h3 class="h2 fw-bold ls-base">Project Management</h3>
                 <p>GITHUB, BITBUCKET, ASANA, CLICKUP, AGILE, GOOGLE SUITE, MICROSOFT 365, ZOOM, SLACK, MARKETING CRM (PARDOT, HUBSPOT, MAILCHIMP, SENDGRID)</p>
+                </div>
             </div>
-            <div class="col-lg-4 p-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-light border shadow m-1 p-5 rounded-5" style="min-height: 350px;">
                 <h3 class="h2 fw-bold ls-base">Deployment</h3>
                 <p>SHARED HOSTING, CPANEL, CLOUD HOSTING (NETLIFY, VERCEL, GITHUB PAGES, ETC), DOMAIN MANAGEMENT, DNS, LOAD SPEED OPTIMIZATION.</p>
+                </div>
             </div>
-            <div class="col-lg-4 p-4">
+            <div class="col-lg-4 col-md-6 p-0">
+                <div class="bg-light border shadow m-2 p-5 rounded-5" style="min-height: 350px; background-color: hotpink;">
                 <h3 class="h2 fw-bold ls-base">Current</h3>
                 <p>MY LATEST TECH STACK FOCUS INCLUDES VUE 3, PINIA, BOOTSTRAP 5+, SASS, GSAP, AND CLOUD DEPLOYMENT USING NETLIFY, GITHUB PAGES, & CLOUDFLARE PAGES.</p>
+                </div>
+            </div>
             </div>
 
-            <hr class="w-100 text-secondary">
+            <div class="container">
+
+            <!-- <hr class="w-100 text-secondary"> -->
 
               <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="up accordion-item border-0 pb-3" :class="repos.length-1 ? 'mt-3' : 'my-3'"
@@ -172,7 +188,7 @@ onBeforeMount(() => {
                             <div class="m-0 m-lg-3 p-4" v-if="titles[index]">
                                 <!-- get title and genre from titles array -->
                                 <h5 class="up">{{ titles[index].microtitle }}</h5>
-                                <h1 class="up fw-bold lh-1 ls-1 mb-4 display-2" style="color: #7F5539; letter-spacing: -4px;">{{ titles[index].title }}</h1>
+                                <h1 class="up fw-bold lh-1 ls-1 mb-4 display-2" style="letter-spacing: -4px;">{{ titles[index].title }}</h1>
                                 <button role="button" class="btn btn-dark px-4 py-2 me-2 rounded-3">more</button>
                                 <a :href="item.html_url" target="_blank">
                                     <button role="button" class="btn btn-dark px-4 py-2 me-2 rounded-3">code</button>
@@ -232,7 +248,3 @@ onBeforeMount(() => {
     </div>
 </div>
 </template>
-
-<style lang="scss" scoped>
-
-</style>

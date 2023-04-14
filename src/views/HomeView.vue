@@ -54,21 +54,41 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="container-fluid px-0 pt-0 pt-lg-5">
-      <div class="row min-vh-100 m-0e">
-        <div class="col-lg-8 offset-md-2 d-flex flex-column justify-content-center align-items-center text-center p-5">
-            <h5 class="fs-3 text-secondary mb-3">mason</h5>
-            <!-- <h5 class="fs-3 text-secondary mb-3">🅼🅰🆂🅾🅽</h5> -->
+    <div class="container-fluid px-0 pt-0 pt-lg-5 mt-lg-4">
+      <div class="row row min-vh-100 bg-success text-light m-3 rounded-5 shadow">
+        <div class="col-lg-8 offset-lg-2 d-flex flex-column justify-content-center align-items-center text-center p-5">
+            <h5 class="fs-3 mb-3">Andrew Mason</h5>
+            <!-- <h5 class="fs-3 text-light mb-3">🅼🅰🆂🅾🅽</h5> -->
             <h1 class="display-1 lh-1 fw-bold" style="letter-spacing: -3px;">Frontend Developer, Visual Designer, Writer, Musician.</h1>
-            <p class="fs-4 text-secondary mt-3">Hi, I'm Andrew. I'm a passionate frontend developer & visual designer driven to create beautiful and effective digital experiences.</p>
+            <p class="fs-4 mt-3 mb-0">I'm a passionate frontend developer & visual designer driven to create beautiful and effective digital experiences.</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-chevron-down mt-4" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
         </div>
-        <!-- <div class="col-lg-12 min-vh-100 m-0 center-center">
-            <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin; ">🅼🅰🆂🅾🅽</h1>
-            <h1 class="fw-bold lh-1 font-antonio text-uppercase" style="letter-spacing: -5px; font-size: 15vmin; ">Hi, I'm Andrew. I'm a passionate frontend developer & visual designer driven to create beautiful and effective digital experiences.</h1>
-        </div> -->
       </div>
 
-    <div class="row m-0">
+      <!-- about -->
+
+      <div class="row p-0 min-vh-100 m-3 bg-warning rounded-5 shadow">
+        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch min-vh-75 p-5 left-center order-2 order-lg-1">
+            <h5 class="mb-3">About me</h5>
+            <h1 class="display-1 lh-1 fw-bold" style="letter-spacing: -3px;">Design + Development</h1>
+            <p class="fs-5 my-3 col-md-11">I combine the art of design with the art of programming, creating websites, CMSs, and user interfaces, with interactive animation, current technologies & modern design trends.</p>
+            <router-link to="/about">
+                <button class="btn btn-dark rounded-5 mt-3 px-4 fw-bold" type="button">
+                    More
+                </button>
+            </router-link>
+        </div>
+        <div class="col-lg-6 p-4 order-1 order-lg-2">
+            <TransitionGroup name="fade" mode="out-in">
+            <div :key="1" @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg rounded-5 col-12 img-full"></div>
+            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full rounded-5" src="https://images.unsplash.com/photo-1505484128222-46ced733ba01?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+        </TransitionGroup>
+        </div>
+      </div>
+
+    <!-- <div class="row m-0">
         <div class="col-sm-12 p-0 min-vh-50">
         <TransitionGroup name="fade" mode="out-in">
             <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
@@ -87,20 +107,20 @@ onMounted(() => {
                 </button>
             </router-link>
         </div>
-      </div>
+      </div> -->
 
-        <div class="row m-0">
+        <!-- <div class="row m-0">
             <div class="col-sm-12 p-0 min-vh-50">
             <TransitionGroup name="fade" mode="out-in">
                 <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
                 <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://images.unsplash.com/photo-1458724029936-2cc6ee38f5ef?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8Z3JlZW4sbGFuZHNjYXBlfHx8fHx8MTY3NDA1NzE2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="">
             </TransitionGroup>
             </div>
-        </div>
+        </div> -->
 
       <!-- dev -->
 
-      <div class="row p-0 min-vh-700">
+      <!-- <div class="row p-0 min-vh-700">
         <div class="col-lg-10 left-center p-5">
             <h5 class="fs-3 text-secondary mb-3">Work</h5>
             <h1 class="display-4 lh-1 fw-bold" style="letter-spacing: -3px;">I've worked across a variety of industries from blockchain to education and financial services, building strong partnerships & treading new ground with each project.</h1>
@@ -110,49 +130,67 @@ onMounted(() => {
                 </button>
             </router-link>
         </div>
-      </div>
+      </div> -->
 
-        <div class="row m-0">
-            <div class="col-sm-12 p-0 min-vh-50">
+      <!-- projects -->
+
+      <div class="row p-0 min-vh-100 m-3 rounded-5 shadow" style="background-color: darkturquoise;">
+        <div class="col-lg-6 p-4">
             <TransitionGroup name="fade" mode="out-in">
-                <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-                <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://images.unsplash.com/photo-1587734361993-0033759da68b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29mZmVlfHx8fHx8MTY3NDA1NzgyNA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="">
-            </TransitionGroup>
-            </div>
+            <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 rounded-5 img-full"></div>
+            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full rounded-5" src="https://images.unsplash.com/photo-1625834384234-fd4eb7fe121f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+        </TransitionGroup>
         </div>
-
-    <!-- work -->
-
-    <div class="row p-0 min-vh-100">
-        <div class="col-lg-10 left-center p-5">
-            <h5 class="fs-3 text-secondary mb-3">Blog</h5>
-            <h1 class="display-4 lh-1 fw-bold" style="letter-spacing: -3px;">I have an extensive background in copy and content writing which has lead to blogging about my experiences and journey as a frontend developer. I write about coding, design, javascript, and other topics.</h1>
-            <router-link to="/blog">
-                <button class="btn btn-dark mt-3 px-4 fw-bold" type="button">
+        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch min-vh-75 p-5 left-center">
+            <h5 class="mb-3">What I do</h5>
+            <h1 class="display-1 lh-1 fw-bold" style="letter-spacing: -3px;">Projects</h1>
+            <p class="fs-5 my-3 col-md-11">I've worked in a variety of spaces building projects using a range of technologies. I've worked in startups and established firms from blockchain to education, healthcare, and financial services. My current stack of choice is Vue 3, Bootstrap 5, GSAP animation, and Netlify cloud deployment.</p>
+            <router-link to="/work">
+                <button class="btn btn-dark rounded-5 mt-3 px-4 fw-bold" type="button">
                     More
                 </button>
             </router-link>
         </div>
       </div>
 
-        <div class="row m-0">
-            <div class="col-sm-12 p-0 min-vh-50">
-            <TransitionGroup name="fade" mode="out-in">
-                <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-                <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://source.unsplash.com/1200x500?abstract,sand" alt="">
-            </TransitionGroup>
-            </div>
+    <!-- blog -->
+
+    <div class="row p-0 min-vh-100 m-3 rounded-5 shadow" style="background-color: hotpink;">
+        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch min-vh-75 p-5 left-center order-2 order-lg-1">
+            <h5 class="mb-3">Blog</h5>
+            <h1 class="display-1 lh-1 fw-bold" style="letter-spacing: -3px;">Tech writing</h1>
+            <p class="fs-5 my-3 col-md-11">I have an extensive background in copy and content writing which has lead to blogging about my experience as a frontend developer. I write about coding, design, javascript, and other topics.</p>
+            <router-link to="/blog">
+                <button class="btn btn-dark rounded-5 mt-3 px-4 fw-bold" type="button">
+                    More
+                </button>
+            </router-link>
         </div>
+        <div class="col-lg-6 p-4 order-1 order-lg-2">
+            <TransitionGroup name="fade" mode="out-in">
+            <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 rounded-5 img-full"></div>
+            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full rounded-5" src="https://images.unsplash.com/photo-1540760938999-077b8231d890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="">
+        </TransitionGroup>
+        </div>
+      </div>
 
-    <!-- contact -->
-      <div class="row p-0 min-vh-100 position-relative">
-        <div class="col-lg-8 offset-lg-2 center-center p-5">
-            <h5 class="fs-3 text-secondary mb-3">Get in touch</h5>
-            <h1 class="display-4 lh-1 fw-bold" style="letter-spacing: -3px;">Reach out for more info or to chat about your next project.</h1>
+      <!-- contact -->
 
-            <!-- <h3 class="up font-antonio text-uppercase fw-light" style="color: #ffffff95">Get in touch</h3>
-            <h1 class="up ls-1 lh-1 fw-bold text-uppercase font-antonio" style="letter-spacing: -5px; font-size: 15vmin;">Reach out for more info or to chat about your next project.</h1> -->
-            <div class="mt-3 d-flex align-items-center">
+      <div class="row p-0 min-vh-100 bg-primary text-light m-3 rounded-5 shadow" style="">
+        <div class="col-lg-6 p-4">
+            <TransitionGroup name="fade" mode="out-in">
+            <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 rounded-5 img-full"></div>
+            <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full rounded-5" src="https://images.unsplash.com/photo-1656932850123-dbd64a854816?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1603&q=80" alt="">
+        </TransitionGroup>
+        </div>
+        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch min-vh-75 p-5 left-center">
+            <h5 class="mb-3">More</h5>
+            <h1 class="display-1 lh-1 fw-bold" style="letter-spacing: -3px;">Links + Resources</h1>
+            <p class="fs-5 my-3 col-md-11">Check out my <a href="https://github.com/masonmedia-projects/" target="_blank">Github</a>, <a href="https://www.behance.net/andrewmasonmedia" target="_blank">Behance</a>, and <a href="https://www.linkedin.com/in/andrewmasonmedia/" target="_blank">Linkedin</a> profiles for more info and samples of code, design, and work. Reach out for more info, to say Hi, or discuss your next project.</p>
+            <a href="mailto:bassfx@duck.com">
+                <button class="btn btn-light mt-3 px-4 rounded-5 fw-bold">Get in touch</button>
+            </a>
+            <!-- <div class="mt-3 d-flex align-items-center">
                 <a href="https://medium.com/@andrewmasonmedia" target="_blank">
                     <i class="display-4 bi bi-medium text-secondary me-4"></i>
                 </a>
@@ -162,13 +200,16 @@ onMounted(() => {
                 <a href="mailto:andrewmasonmedia@gmail.com">
                     <i class="display-4 bi bi-envelope text-secondary"></i>
                 </a>
-            </div>
+            </div> -->
         </div>
       </div>
+      
     </div>
   </div>
 </template>
 
-<style>
-
+<style scoped>
+a {
+    color: goldenrod;
+}
 </style>

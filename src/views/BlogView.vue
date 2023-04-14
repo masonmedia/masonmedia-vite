@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import postData from '../data/posts.json'
+// import postData from '../data/posts.json'
 
 const posts = ref([]);
 
@@ -42,8 +42,10 @@ function formatUrl(string) {
     console.log(posts.value)
   }
 
+  getPosts();
+
 onMounted(() => {
-    getPosts();
+    // getPosts();
     // getNews();
 })
 
@@ -59,7 +61,7 @@ onMounted(() => {
             </div>
             </div>
             <div class="row px-4 pb-4">
-            <div class="col-lg-4 p-0" v-for="(post, index) in posts.items" :key="post.id">
+            <div class="col-lg-4 p-0" v-for="(post, index) in posts.items.slice(0,9)" :key="post.id">
             <!-- <div class="col-lg-4 p-0" v-for="(post, index) in postData.items" :key="index"> -->
                 <div class="m-2 p-4 bg-dark text-light rounded-5 shadow">
                     <!-- <img

@@ -1,5 +1,9 @@
-p > a {
-  @extend .text-info;
+// p > a {
+//   @extend .text-info;
+// }
+
+a {
+  font-weight: bold;
 }
 
 /* text */
