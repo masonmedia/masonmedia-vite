@@ -56,7 +56,7 @@ onMounted(() => {
         <div class="row pt-4">
             <div class="col-lg-8 offset-lg-2 d-flex flex-column justify-content-center align-items-center text-center p-5">
                 <h5>mason media</h5>
-                <h1 class="display-1 lh-1 fw-bold" style="letter-spacing: -3px;">Thoughts on frontend development, code, Vuejs, Javascript, learning and more.</h1>
+                <h1 class="display-1 lh-1 ls-1 fw-900">Thoughts on frontend development, code, Vuejs, Javascript, learning and more.</h1>
                 <p class="fs-4 text-secondary mt-3 mb-0">A tech focused blog with a focus on Vuejs, javascript, frontend development, interviewing, jobs and more.</p>
             </div>
             </div>

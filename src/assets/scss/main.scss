@@ -7,6 +7,8 @@
 @import 'images';
 @import 'utilities';
 @import 'modal';
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 // @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 // @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500;700&display=swap');
@@ -27,8 +29,10 @@ body {
     // overflow-x: hidden;
     margin: 0 auto;
     // font-family: Avenir, 'Avenir Next LT Pro', Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-
+    // font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    // font-family: 'Schoolbell', Arial, Helvetica, sans-serif;
+    font-family: 'Archivo', Arial, Helvetica, sans-serif;
+    // font-family: 'Antonio', Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #222222;
@@ -45,3 +49,14 @@ a, a:hover {
 //     /* height: 100vh; */
 //     scroll-snap-align: start;
 //   }
+
+.bg-sunset {
+    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+}
+
+.bg-black {
+    background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}

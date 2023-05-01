@@ -19,6 +19,7 @@
 </template>
 
 <script setup>
+
 defineProps({
   microTitle: String,
   title: String,

@@ -3,10 +3,12 @@
         <div class="container-fluid px-0 pt-0 text-secondary w-100 d-lg-none d-flex position-relative z-1">
             <!-- <div class="w-100 d-lg-none d-flex fixed-top bg-dark"> -->
                 <!-- brand -->
-                <router-link class="navbar-brand p-3 fw-900 fs-5" to="/">M /</router-link>
+                <router-link class="p-3 fs-2" to="/">🅼</router-link>
                 <!-- menu -->
                 <button class="btn ms-auto my-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
-                    <i class="fs-2 bi bi-justify"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-justify-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
                 </button>
             <!-- </div> -->
         </div>
@@ -15,7 +17,7 @@
         <!-- <nav class="navbar p-3 fixed-top d-none d-lg-block w-100" style="background: #D6CCC2"> -->
         <!-- <nav class="navbar p-3 fixed-top d-none d-lg-block w-100" :class="location.path === '/' ? 'border-bottom border-secondary' : 'bg-light border-bottom'" :style="location.path === '/' ? 'background: #D6CCC2' : ''"> -->
             <div class="container-fluid">
-                <router-link class="navbar-brand fs-4" to="/">🅼</router-link>
+                <router-link class="fs-2" to="/">🅼</router-link>
                 <ul class="nav justify-content-end fs-5">
                     <router-link class="nav-link" v-for="(route, index) in router.options.routes" :key="index"
                     :to="route.path">
@@ -28,21 +30,23 @@
 
         <div class="offcanvas offcanvas-end border-bottom w-100 font-antonio" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title fw-900">M /</h5>
+                <h5 class="offcanvas-title fs-3">🅼</h5>
                 <!-- <button type="button" class="btn-close text-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
                 <button class="btn pt-0 pe-0" role="button" data-bs-dismiss="offcanvas" aria-label="Close">
-                    <i class="bi bi-x-lg fs-4"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                    </svg>
                 </button>
             </div>
             <div class="offcanvas-body d-flex flex-column align-items-start justify-content-end py-5">
                 <ul class="nav">
-                    <li class="nav-item fw-bold"
+                    <li class="lh-1 ls-1 fw-900"
                     data-bs-dismiss="offcanvas">
-                        <router-link class="nav-link" v-for="(route, index) in router.options.routes.slice(0,5)" :key="index"
+                        <router-link class="nav-link pb-1" v-for="(route, index) in router.options.routes.slice(0,5)" :key="index"
                         :to="route.path">
-                            {{ route.name }} //
+                            {{ route.name }}
                         </router-link>
-                        <a class="nav-link" href="mailto:bassfx@duck.com">Contact //</a>
+                        <a class="nav-link" href="mailto:bassfx@duck.com">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -52,12 +56,14 @@
 </template>
 
 <script setup>
+
 import { useRoute, useRouter } from "vue-router";
 const location = useRoute();
 const router = useRouter();
+
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 a {
     color: inherit;
@@ -70,17 +76,15 @@ a:hover {
 
 .nav-link, 
 .navbar-brand, 
-i, 
+.nav-item,
 .nav-link:focus {
-    // font-weight: 900;
-    font-weight: 700;
-    letter-spacing: -1px;
-    // color: #7F5539;
+    font-weight: bold;
 }
 
 .offcanvas-body .nav-link {
     font-size: 8vmin;
-    line-height: 8vmin;
+    font-weight: 900;
+    /* line-height: 8vmin; */
 }
 
 .btn-close, .offcanvas-header .btn-close {

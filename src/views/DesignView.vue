@@ -13,75 +13,35 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container-fluid px-0 pt-0 pt-lg-5 mt-0 mt-lg-4 bg-dark text-secondary" style="background-size: 100%" :style="{ 'background' : 'url('+ imgUrl +') center repeat'}">
-      <div class="row m-0">
-        <div class="up col-lg-12 min-vh-100 pb-5 m-0 center-center">
-          <h1 class="up fw-900 lh-1 pb-5 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">Design</h1>
+  <!-- style="background-size: 100%" :style="{ 'background' : 'url('+ imgUrl +') center repeat'}" -->
+  <div class="container-fluid">
+      <!-- <div class="row m-0">
+        <div class="col-lg-8 min-vh-100 m-0 center-center">
           
-          <!-- <h2 class="up fw-900 text-uppercase position-absolute z-1 top-50 start-50 translate-middle font-antonio pb-5" style="color: #DDB892; letter-spacing: -1px;">Design</h2> -->
+          <h1 class="up fw-900 lh-1 pb-5 text-uppercase" style="letter-spacing: -18px; font-size: 45vmin; transform: scale(1.9,2); font-weight: 400; color: #7F5539">Design</h1>
+          
           <div class="position-absolute z-1 top-50 start-50 translate-middle ">
-            <h1 class="up fw-light text-uppercase mb-2 mb-lg-4 pb-3 font-antonio" style="color: #DDB892; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2); ">Design</h1>
+            <h1 class="up text-uppercase mb-2 mb-lg-4 pb-3" style="color: #DDB892; letter-spacing: -5px; font-weight: 900; font-size: 15vmin; transform: scale(1.9,2); ">Design</h1>
             <h2 class="up fw-light text-uppercase pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">UI. UX. Graphic.</h2>
           </div>
-        </div>
-      </div>
 
-      <!-- <hr class="text-secondary w-75 mx-auto"> -->
+          <h1 class="display-1 lh-1 text-danger" style="color: #DDB892; letter-spacing: -5px; font-weight: 900; font-size: 25vmin;">Return of the Living Dad</h1>
+          
 
-      <div class="row">
-        <div class="col-lg-5 p-5 top-center">
-            <h1 class="up display-1 font-antonio fw-900 border-top border-secondary" style="font-size: 55vmin;">01.</h1>
         </div>
-        <div class="up col-lg-7 left-center p-5">
-          <h3 class="up font-antonio fw-light text-uppercase w-100 pt-3">01. UI design</h3>
-          <h1 class="up lh-1 text-uppercase font-antonio fw-900 display-3">I design and build user interfaces, websites, CMS<span class="text-lowercase">s</span>/blogs, and mobile applications.</h1>
-        </div>
-      </div>
-      
-      <div class="row m-2 p-0 min-vh-100 position-relative">
-        <!-- <div class="position-absolute z-0 w-100 top-50 start-50 translate-middle center-center pb-5">
-            <h1 class="up z-0 ls-1 lh-1 text-uppercase font-antonio" style="letter-spacing: -18px; font-size: 85vmin; font-weight: 400; color: #FFFFFF10">Ux</h1>
-        </div> -->
+      </div> -->
 
-        <div class="up col-lg-12 left-center p-5">
-            <h3 class="up font-antonio fw-light text-uppercase border-top border-secondary w-100 pt-3">02. UX design</h3>
-           <h1 class="up ls-1 lh-1 text-uppercase font-antonio display-1 fw-900">Years of design and development have given me a practical & functional understanding of user experience. I merge user input, stakeholder requirements, and information architecture into working prototypes for live applications.</h1>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-5 p-5 top-center">
-            <h1 class="up display-1 text-secondary font-antonio fw-900 border-top border-secondary" style="font-size: 55vmin;">03.</h1>
-        </div>
-        <div class="up col-lg-7 left-center p-5">
-          <h3 class="up font-antonio text-uppercase fw-light w-100 pt-3">03. Graphic design</h3>
-           <h1 class="up lh-1 text-uppercase font-antonio fw-900 display-3">I create custom images, graphics, backgrounds, logos, and use a variety of libraries to source project specific icons.</h1>
-        </div>
-      </div>
-
-    <div class="row m-2 p-0 min-vh-100 position-relative">
-
-        <div class="up col-lg-12 d-flex flex-column justify-content-center align-items-end text-end p-5">
-            <h3 class="up font-antonio fw-light text-uppercase border-top border-secondary w-100 pt-3">04. Image sourcing</h3>
-            <h1 class="up ls-1 lh-1 text-uppercase font-antonio display-1 fw-900">I also source and select imagery that is ideally suited to a specific brand, color palette, and theme.</h1>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-5 p-5 top-center">
-            <h1 class="up display-1 text-secondary font-antonio fw-900 border-top border-secondary" style="font-size: 55vmin;">05.</h1>
-        </div>
-        <div class="up col-lg-7 left-center p-5">
-          <h3 class="up font-antonio fw-light text-uppercase w-100">05. Work</h3>
-          <h1 class="up lh-1 text-uppercase font-antonio fw-900 display-3">Explore further design samples on the <router-link style="color: #7F5539" to="/work">work</router-link> page and on my <a href="https://www.behance.net/andrewmasonmedia" target="_blank" style="color: #7F5539">Bēhance</a> profile.</h1>
+      <div class="row min-vh-100 pt-5 bg-dark">
+        <div class="col-lg-8 offset-lg-2 center-center">
+          <!-- <h1 class="text-uppercase " style="filter: drop-shadow(5px 5px 10px #000); line-height: 0.8; letter-spacing: -5px; font-weight: 900; font-size: 30vmin;">KIDS F*#$!</h1> -->
+          <h1 class="text-uppercase " style="filter: drop-shadow(20px 20px 10px darkred); line-height: 0.8; letter-spacing: -5px; font-weight: 900; font-size: 20vmin;">Return of the living Dad</h1>
+          <!-- <h1 class="text-uppercase " style="filter: drop-shadow(5px 5px 10px #000); line-height: 0.8; letter-spacing: -5px; font-weight: 900; font-size: 25vmin;">Return <span>of</span><span>the</span>Living<span>Dad</span></h1> -->
+          <p class="h4 mt-3 text-light">I'm a Dad. Yes, it is like a Zombie movie. <br>These are my stories.</p>
         </div>
       </div>
 
     
     </div>
-  <!-- <div class="pt-3 pt-lg-5 mt-3 mt-lg-5">
-    <DesignPage />
-  </div> -->
 </template>
 
 <style>

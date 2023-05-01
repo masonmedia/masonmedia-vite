@@ -104,7 +104,7 @@ onBeforeMount(() => {
       <div class="row row min-vh-100 m-3 rounded-5 shadow bg-dark text-light">
         <div class="col-lg-8 offset-lg-2 d-flex flex-column justify-content-center align-items-center text-center p-5">
             <h5 class="fs-3 mb-3">What I do</h5>
-            <h1 class="display-4 lh-1 fw-bold" style="letter-spacing: -3px;">The projects below use a variety of technologies and span a range of spaces from small business to software and blockchain companies.</h1>
+            <h1 class="display-4 lh-1 ls-1 fw-900">The projects below use a variety of technologies and span a range of spaces from small business to software and blockchain companies.</h1>
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-chevron-down mt-4" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
             </svg>
@@ -188,7 +188,7 @@ onBeforeMount(() => {
                             <div class="m-0 m-lg-3 p-4" v-if="titles[index]">
                                 <!-- get title and genre from titles array -->
                                 <h5 class="up">{{ titles[index].microtitle }}</h5>
-                                <h1 class="up fw-bold lh-1 ls-1 mb-4 display-2" style="letter-spacing: -4px;">{{ titles[index].title }}</h1>
+                                <h1 class="up fw-900 lh-1 ls-1 mb-4 display-2" style="letter-spacing: -4px;">{{ titles[index].title }}</h1>
                                 <button role="button" class="btn btn-dark px-4 py-2 me-2 rounded-3">more</button>
                                 <a :href="item.html_url" target="_blank">
                                     <button role="button" class="btn btn-dark px-4 py-2 me-2 rounded-3">code</button>
