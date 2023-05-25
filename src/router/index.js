@@ -22,6 +22,11 @@ const router = createRouter({
     //   name: 'Design',
     //   component: () => import('../views/DesignView.vue')
     // },
+    // {
+    //   path: '/design/:id',
+    //   name: 'Detail',
+    //   component: () => import('../views/DesignDetail.vue')
+    // },
     {
       path: '/work',
       name: 'Work',
@@ -32,21 +37,6 @@ const router = createRouter({
       name: 'Blog',
       component: () => import('../views/BlogView.vue')
     }
-    // {
-    //   path: '/blog/:title',
-    //   name: 'BlogDetail',
-    //   component: () => import('../views/BlogDetail.vue')
-    // }
-    // {
-    //   path: '/gitposts',
-    //   name: 'GitPosts',
-    //   component: () => import('../views/GitPosts.vue')
-    // },
-    // {
-    //   path: '/gitposts/:id',
-    //   name: 'GitPostDetail',
-    //   component: () => import('../views/GitPostDetail.vue')
-    // },
   ],
     scrollBehavior() {
     return new Promise((resolve) => {

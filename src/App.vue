@@ -46,14 +46,14 @@ const leave = (el, done) => {
   </header>
 
   <router-view v-slot="{ Component }">
-    <!-- <transition 
-    name="slide-fade"
-    mode="out-in"> -->
     <transition 
+    name="slide-fade"
+    mode="out-in">
+    <!-- <transition 
     mode="out-in"
     @before-enter="beforeEnter"
     @enter="enter"
-    @leave="leave">
+    @leave="leave"> -->
       <component :is="Component" />
     </transition>
   </router-view>

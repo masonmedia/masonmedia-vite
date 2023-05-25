@@ -61,7 +61,7 @@ onMounted(() => {
             </div>
             </div>
             <div class="row px-4 pb-4">
-            <div class="col-lg-4 p-0" v-for="(post, index) in posts.items.slice(0,9)" :key="post.id">
+            <div class="col-lg-4 p-0" v-for="(post, index) in posts.items" :key="post.id">
             <!-- <div class="col-lg-4 p-0" v-for="(post, index) in postData.items" :key="index"> -->
                 <div class="m-2 p-4 bg-dark text-light rounded-5 shadow">
                     <!-- <img

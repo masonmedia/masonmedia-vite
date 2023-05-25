@@ -1,14 +1,16 @@
 
 <script setup>
-import { onMounted } from 'vue'
-import useAnimation from '../stores/useAnimation'
-const { animate } = useAnimation();
+import { onMounted } from 'vue';
+import posts from '../data/dummy.json';
+// import useAnimation from '../stores/useAnimation';
+// const { animate } = useAnimation();
 
 // image paths
-const imgUrl = new URL('@/assets/img/angles.svg', import.meta.url).href
-
+function getImageUrl(name, ext) {
+  return new URL(`../assets/img/${name}.${ext}`, import.meta.url).href
+}
 onMounted(() => {
-  animate();
+  // animate();
 })
 </script>
 
@@ -31,12 +33,28 @@ onMounted(() => {
         </div>
       </div> -->
 
-      <div class="row min-vh-100 pt-5 bg-dark">
+      <div class="row min-vh-100 mt-5" :style="{'background' : 'url('+ getImageUrl('splatter', 'png') +') center right no-repeat', 'background-size' : '100%'}">
         <div class="col-lg-8 offset-lg-2 center-center">
           <!-- <h1 class="text-uppercase " style="filter: drop-shadow(5px 5px 10px #000); line-height: 0.8; letter-spacing: -5px; font-weight: 900; font-size: 30vmin;">KIDS F*#$!</h1> -->
-          <h1 class="text-uppercase " style="filter: drop-shadow(20px 20px 10px darkred); line-height: 0.8; letter-spacing: -5px; font-weight: 900; font-size: 20vmin;">Return of the living Dad</h1>
-          <!-- <h1 class="text-uppercase " style="filter: drop-shadow(5px 5px 10px #000); line-height: 0.8; letter-spacing: -5px; font-weight: 900; font-size: 25vmin;">Return <span>of</span><span>the</span>Living<span>Dad</span></h1> -->
+          <h1 class="text-uppercase font-antonio" style="filter: drop-shadow(20px 20px 10px darkred); line-height: 0.8; letter-spacing: -5px; font-weight: 900; font-size: 20vmin;">Return of the living Dad</h1>
           <p class="h4 mt-3 text-light">I'm a Dad. Yes, it is like a Zombie movie. <br>These are my stories.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4" v-for="(post, index) in posts" :key="index">
+          <div class="p-3 m-3 rounded-4">
+            <h5 v-html="post.date"></h5>
+            <h2 class="fw-900 text-uppercase" v-html="post.title"></h2>
+            <!-- <p v-html="post.body.slice(0,200)"></p> -->
+            <router-link :to="'/design/' + post.id">
+              <button class="btn btn-outline-dark">Read more</button>
+            </router-link>
+
+            <!-- <router-link :to="{name: 'Detail', params: { id: post.id }}"> Read More </router-link> -->
+
+
+          </div>
         </div>
       </div>
 
