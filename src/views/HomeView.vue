@@ -54,18 +54,28 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="container-fluid px-0 pt-0 pt-lg-5 mt-lg-4">
-      <div class="row row min-vh-100 bg-success text-light m-3 rounded-5 shadow">
+    <div class="container-fluid px-0 pt-0 pt-lg-5">
+      <div class="row m-3 min-vh-100">
+        <div class="col-lg-12 col-xl-10 d-flex flex-column justify-content-center align-items-start text-start p-4 p-lg-5">
+            <!-- <h5 class="fs-3 mb-3">Andrew Mason</h5> -->
+            <h1 class="fw-900" style="font-size: 14vmin; line-height: 85%; letter-spacing: -6px;">Frontend Developer. Design Engineer. Writer. Musician.</h1>
+            <p class="col-md-9 fs-4 mt-3 mb-0">I'm a passionate frontend developer & visual designer driven to create beautiful and effective digital experiences.</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-chevron-down mt-4" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </div>
+      </div>
+      
+      <!-- <div class="row min-vh-100 bg-success text-light m-3 rounded-5 shadow">
         <div class="col-lg-8 offset-lg-2 d-flex flex-column justify-content-center align-items-center text-center p-5">
             <h5 class="fs-3 mb-3">Andrew Mason</h5>
-            <!-- <h5 class="fs-3 text-light mb-3">🅼🅰🆂🅾🅽</h5> -->
             <h1 class="display-1 lh-1 ls-1 fw-900">Frontend Developer, Design Engineer, Writer, Musician.</h1>
             <p class="fs-4 mt-3 mb-0">I'm a passionate frontend developer & visual designer driven to create beautiful and effective digital experiences.</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-chevron-down mt-4" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
             </svg>
         </div>
-      </div>
+      </div> -->
 
       <!-- about -->
 

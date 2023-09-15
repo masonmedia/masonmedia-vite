@@ -31,7 +31,6 @@
         <div class="offcanvas offcanvas-end border-bottom w-100 font-antonio" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title fs-3">🅼</h5>
-                <!-- <button type="button" class="btn-close text-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
                 <button class="btn pt-0 pe-0" role="button" data-bs-dismiss="offcanvas" aria-label="Close">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                         <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
@@ -40,7 +39,7 @@
             </div>
             <div class="offcanvas-body d-flex flex-column align-items-start justify-content-end py-5">
                 <ul class="nav">
-                    <li class="lh-1 ls-1 fw-900"
+                    <li class="lh-1 ls-1"
                     data-bs-dismiss="offcanvas">
                         <router-link class="nav-link pb-1" v-for="(route, index) in router.options.routes.slice(0,5)" :key="index"
                         :to="route.path">
@@ -79,12 +78,13 @@ a:hover {
 .nav-item,
 .nav-link:focus {
     font-weight: bold;
+    letter-spacing: -1px;
 }
 
 .offcanvas-body .nav-link {
     font-size: 8vmin;
     font-weight: 900;
-    /* line-height: 8vmin; */
+    text-transform: uppercase;
 }
 
 .btn-close, .offcanvas-header .btn-close {
