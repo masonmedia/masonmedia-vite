@@ -93,7 +93,7 @@ onMounted(() => {
         <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch min-vh-75 px-5 pt-3 pb-5 left-center">
             <h5 class="mb-3">02</h5>
             <h1 class="display-1 lh-1 ls-1 fw-900">What I do</h1>
-            <p class="fs-5 mt-3 mb-0 col-md-11">I specialize in building and designing custom, interactive websites and web applications, CMSs and blogging solutions, designing APIs and data structures, using the latest technologies and tools. I am experienced in DevOps, hosting solutions, DNS and domain management, version control, speed optimization, and SEO.</p>
+            <p class="fs-5 mt-3 mb-0 col-md-11">I specialize in building and designing custom interactive websites, web applications, CMSs and blogging solutions, migrating and replatforming technology stacks, and strive to use the latest web technologies and tools. I am experienced in DevOps, hosting solutions, DNS and domain management, version control, speed optimization, and SEO.</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-chevron-down mt-4" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
             </svg>
