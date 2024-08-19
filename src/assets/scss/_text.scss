@@ -10,8 +10,9 @@ h1,
 h2,
 .h3,
 h3 {
-  // font-family: 'Antonio', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-  font-family: 'Inter', "Helvetica Neue", Helvetica, Arial sans-serif;
+  font-family: 'Antonio', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  // font-family: 'Inter', "Helvetica Neue", Helvetica, Arial sans-serif;
+  text-transform: uppercase;
 }
 
 p {
@@ -24,14 +25,9 @@ h5,
 }
 
 .site-title {
-  color: transparent;
-  font-size: 23vmin;
-  font-weight: 900;
-  line-height: 85%;
-  letter-spacing: -3px;
-  margin: 0;
-  -webkit-text-stroke: 3px #ffffff;
-  // text-shadow: 1px 1px 5px #dcd2c8, 3px 3px 10px #dcd2c8, 6px 6px 5px #dcd2c8;
+  font-size: 17vmin;
+  line-height: 90%;
+  letter-spacing: -5px;
 }
 
 .site-subtitle {

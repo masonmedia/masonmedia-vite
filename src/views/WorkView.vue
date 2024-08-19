@@ -111,36 +111,13 @@ onBeforeMount(() => {
         </div>
       </div>
 
-        <!-- <div class="row m-0">
-            <div class="col-sm-12 p-0 min-vh-50">
-            <TransitionGroup name="fade" mode="out-in">
-                <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50"></div>
-                <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in img-full min-vw-100" src="https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1483&q=80" alt="">
-            </TransitionGroup>
-            </div>
-        </div> -->
-
-        <!-- <div class="row m-3 rounded-5 min-vh-75" style="background-color: rgba(0,0,0,0.05)">
-        <div class="up col-lg-6 p-5 m-0 left-center"> 
-            <h1 class="fw-bold lh-1 ls-1" style="letter-spacing: -3px;">Explore some of my work below. All projects were built from scratch using a variety of technologies.</h1>
-        </div>
-      </div> -->
-
       <div class="container-fluid">
           <div class="row py-3 m-3">
-            <!-- <div class="col-lg-6 min-vh-50 left-center py-5">
-                <h1 class="fw-bold lh-1 ls-1" style="letter-spacing: -3px;">Explore some of my work below. All projects were built from scratch using a variety of technologies.</h1>
-            </div> -->
-
-            <!-- <hr class="w-100 text-secondary"> -->
-
             <div class="col-lg-4 col-md-6 p-0">
                 <div class="bg-light border shadow m-2 p-5 rounded-5" style="min-height: 350px;">
                     <h3 class="h2 fw-bold ls-base">Intro</h3>
                     <p class="text-uppercase">The projects below were built from scratch using a range of technologies, design approaches, UX/UI goals, and deployment solutions.</p>
                 </div>
-                <!-- <h3 class="h2 fw-bold ls-base">Intro</h3>
-                <p class="text-uppercase">The projects below were built from scratch using a range of technologies, design approaches, UX/UI goals, and deployment solutions.</p> -->
             </div>
             <div class="col-lg-4 col-md-6 p-0">
                 <div class="bg-light border shadow m-2 p-5 rounded-5" style="min-height: 350px;">
@@ -182,7 +159,7 @@ onBeforeMount(() => {
                 <div class="up accordion-item border-0 pb-3" :class="repos.length-1 ? 'mt-3' : 'my-3'"
                 style="background: transparent"
                 v-for="(item, index) in repos" :key="index">
-                    <div class="up row" v-if="repos"
+                    <div class="up row" v-if="repos && index != 1"
                     data-bs-toggle="collapse" :data-bs-target="'#item_' + index" aria-expanded="false" aria-controls="flush-collapseOne">
                         <div class="col-lg-5 left-center order-2 order-lg-1">
                             <div class="m-0 m-lg-3 p-4" v-if="titles[index]">

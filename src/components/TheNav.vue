@@ -13,8 +13,8 @@
             <!-- </div> -->
         </div>
         <!-- nav -->
-        <nav class="navbar p-3 fixed-top d-none d-lg-block bg-white w-100 border-bottom">
-        <!-- <nav class="navbar p-3 fixed-top d-none d-lg-block w-100" style="background: #D6CCC2"> -->
+        <nav class="navbar p-3 bg-white fixed-top d-none d-lg-block w-100 border-bottom">
+        <!-- <nav class="navbar p-3 fixed-top d-none d-lg-block w-100 border-bottom" style="background: #222;" data-bs-theme="dark"> -->
         <!-- <nav class="navbar p-3 fixed-top d-none d-lg-block w-100" :class="location.path === '/' ? 'border-bottom border-secondary' : 'bg-light border-bottom'" :style="location.path === '/' ? 'background: #D6CCC2' : ''"> -->
             <div class="container-fluid">
                 <router-link class="fs-2" to="/">🅼</router-link>
