@@ -67,10 +67,13 @@ gsap.from("h1, h2", {
           </div>
 
           <div class="position-relative">
-            <h1 class="fw-light text-uppercase mb-2 mb-lg-4 pb-3 font-antonio" style="color: #DDB892; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2); ">
+            <!-- <h1 class="fw-light text-uppercase mb-2 mb-lg-4 pb-3 font-antonio" style="color: #DDB892; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2); ">
                 <span class="title" v-for="(item, index) in mason" :key="index">{{ item }}</span>
+            </h1> -->
+            <h1 class="fw-light text-uppercase mb-2 mb-lg-4 pb-3 font-antonio" style="color: darkturquoise; letter-spacing: -5px; font-size: 15vmin; transform: scale(1.9,2); ">
+                MASON
             </h1>
-            <h2 class="fw-light text-uppercase pb-5 font-antonio" style="color: #DDB892; letter-spacing: -1px;">
+            <h2 class="fw-light text-uppercase pb-5 font-antonio" style="color: #bede10; letter-spacing: -1px;">
                 <span class="title">Developer.</span>
                 <span class="title">Designer.</span>
                 <span class="title">Writer.</span>
