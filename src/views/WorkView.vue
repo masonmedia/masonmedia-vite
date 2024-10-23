@@ -106,8 +106,8 @@ const titles = [
 ]
 
 const images = [
-    "public/images/pc_screen_masonmedia.png",
-    "public/images/pot_masonmedia.jpg",
+    "https://raw.githubusercontent.com/masonmedia/prince_collection_astro/main/public/images/general/pc_screen_masonmedia.png",
+    "https://raw.githubusercontent.com/masonmedia/prince-of-travel/main/public/images/general/pot_masonmedia.jpg?token=GHSAT0AAAAAACZNDJYI4ECY5CULGNIU5SYOZYZFSTQ",
     "https://raw.githubusercontent.com/masonmedia-projects/decentral/master/assets/img/dc_browser_screen.png",
     // "https://raw.githubusercontent.com/masonmedia-projects/warren-yen-portfolio/master/img/wy_browser_screen.png",
     "https://raw.githubusercontent.com/masonmedia-projects/copetin/master/img/copetin_browser_ss.png",
