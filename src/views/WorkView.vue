@@ -9,6 +9,10 @@ const { animate } = useAnimation();
 // check image loaded
 const { isLoaded, loadImage } = useImageLoader();
 
+function getImageUrl(name, ext) {
+  return new URL(`../assets/images/${name}.${ext}`, import.meta.url).href
+}
+
 fetch(url)
 .then(response => response.json())
 .then((data) => {
@@ -73,7 +77,6 @@ const titles = [
         "description": "Website build for Oakwood Guitar School. The project required a layout optimized for marketing & sales conversions & an elegant UI design. Built with React, Gatsby, React-bootstrap, React-reveal, and required graphic design & UX copywriting.",
         "link": "https://oakwoodguitarschool.com",
         "active": false
-
     },
     {
         "microtitle": "Education/Ecommerce",
@@ -84,11 +87,19 @@ const titles = [
         "active": false
     },
     {
+        "microtitle": "Automotive/Software",
+        "title": "Exride",
+        "stack": "Logo and branding design mockup",
+        "description": "This project proposed logo and branding designs for a cargurus-styles auto-trader website, exride.com. Designs offer a variety of options drawing on and expanding a provided color palette, with explorations of typography, imagery, and use of icons.",
+        "link": "https://www.canva.com/design/DAFf_rtAMNI/8SxfTH9bUEq8dhtnfz-M4A/view?#1",
+        "active": false
+    },
+    {
         "microtitle": "Todo List App",
         "title": "Vue Todos",
         "stack": "Vuejs, Bootstrap 5, BootstrapVue, JS, SCSS",
         "description": "A repo exploring the traditional todo app in Vuejs with various layouts and functionalities. App uses Vue 2, BootstrapVue and Bootstrap 5, uses color palettes from happyhues.co, and is deployed on Github Pages.",
-        "link": "https://masonmedia-projects.github.io/vue-todos/",
+        "link": "tps://masonmedia-projects.github.io/vue-todos/ht",
         "active": false
     }
     // {
@@ -107,13 +118,14 @@ const titles = [
 
 const images = [
     "https://raw.githubusercontent.com/masonmedia/prince_collection_astro/main/public/images/general/pc_screen_masonmedia.png",
-    "https://raw.githubusercontent.com/masonmedia/prince-of-travel/main/public/images/general/pot_masonmedia.jpg?token=GHSAT0AAAAAACZNDJYI4ECY5CULGNIU5SYOZYZFSTQ",
+    new URL(`/images/pot_masonmedia.jpg`, import.meta.url).href,
     "https://raw.githubusercontent.com/masonmedia-projects/decentral/master/assets/img/dc_browser_screen.png",
     // "https://raw.githubusercontent.com/masonmedia-projects/warren-yen-portfolio/master/img/wy_browser_screen.png",
     "https://raw.githubusercontent.com/masonmedia-projects/copetin/master/img/copetin_browser_ss.png",
     "https://raw.githubusercontent.com/masonmedia-projects/neil-whitford/master/assets/img/neil_whitford_browser_ss.png",
     "https://raw.githubusercontent.com/masonmedia-projects/oakwood-guitar-school/master/static/ogs_social_banner.png",
     "https://raw.githubusercontent.com/masonmedia-projects/vue-shopping-cart/master/public/ldt-homepage.png",
+    new URL(`/images/exride_demo.png`, import.meta.url).href,
     "https://raw.githubusercontent.com/masonmedia-projects/vue-todos/master/public/mm_vue_todos_screen.png",
     "https://raw.githubusercontent.com/masonmedia-projects/vue-vite-jmc/master/public/jmc-homepage.png",
     "https://raw.githubusercontent.com/masonmedia-projects/viral-nation-demo/master/public/vn-homepage.png"
