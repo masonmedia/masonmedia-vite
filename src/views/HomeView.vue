@@ -56,13 +56,13 @@ onMounted(() => {
   <div>
     <div class="container-fluid px-0 pt-0 pt-lg-5">
       <div class="row px-4 min-vh-700">
-        <div class="col-lg-10 offset-lg-1 d-flex flex-column justify-content-center align-items-start align-items-lg-center text-start text-lg-center p-4 p-lg-5">
-            <!-- <h5 class="fs-3 mb-0 ms-1">Andrew Mason</h5> -->
-            <h1 class="fw-900 site-title">Developer. <span class="text-success">Designer.</span><span class="text-primary">Writer.</span> <span class="text-danger">Musician.</span></h1>
-            <p class="col-md-9 fs-4 mt-3 mb-0 lh-base">I'm a passionate frontend developer & visual designer driven to create beautiful and effective digital experiences.</p>
+        <div class="col-lg-10 d-flex flex-column justify-content-center align-items-start text-start p-4 p-lg-5">
+            <h1 class="fw-900 site-title">I'm a passionate frontend developer & visual designer driven to create beautiful digital experiences.</h1>
+            <!--<h1 class="fw-900 site-title">Developer. <span class="text-success">Designer.</span><span class="text-primary">Writer.</span> <span class="text-danger">Musician.</span></h1>-->
+            <!--<p class="col-md-9 fs-4 mt-3 mb-0 lh-base">I'm a passionate frontend developer & visual designer driven to create beautiful and effective digital experiences.</p>-->
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-chevron-down mt-4" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-            </svg>
+            </svg>`
         </div>
       </div>
 

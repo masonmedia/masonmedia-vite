@@ -1,5 +1,5 @@
 {
-  "name": "masonmedia",
+  "name": "mason_media",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
