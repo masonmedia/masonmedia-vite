@@ -29,15 +29,15 @@ const titles = [
         "title": "Prince Collection",
         "stack": "Astro, Vue, Wordpress API, AOS, Bootstrap 5",
         "description": "A custom website built for Prince of Travel's luxury travel concierge brand, Prince Collection. The UI design centers on an existing color palette that was expanded for greater variety, cursive and serif fonts for elegance, and combines the refinement of luxury travel websites with the appeal and accessiblity of travel blogs.",
-        "link": "https://princecollection.com/",
+        "link": "https://prince-collection.netlify.app/",
         "active": false
     },
     {
-        "microtitle": "Travel Blog",
-        "title": "Prince of Travel",
-        "stack": "Astro, Vue, Wordpress API, AOS, Bootstrap 5",
-        "description": "A redesign and replatforming project for travel website, Prince of Travel. The project entailed a complete redesign and rebuild of their former Wordpress website focusing on speed/performance, modernized UI, brand refresh, and totally retooled stack.",
-        "link": "https://princeoftravel.com/",
+        "microtitle": "Parent Blog",
+        "title": "Return of the Living Dad",
+        "stack": "Astro, Vue, AOS, Bootstrap 5",
+        "description": "Custom website and CMS built with Astro, Bootstrap and Vue. User interface is simple and clean, with a focus on typography and contrast.",
+        "link": "https://returnofthelivingdad.com/",
         "active": false
     },
     {
@@ -118,7 +118,7 @@ const titles = [
 
 const images = [
     "https://raw.githubusercontent.com/masonmedia/prince_collection_astro/main/public/images/general/pc_screen_masonmedia.png",
-    new URL(`/images/pot_masonmedia.jpg`, import.meta.url).href,
+    new URL(`/images/rotld_browser.png`, import.meta.url).href,
     "https://raw.githubusercontent.com/masonmedia-projects/decentral/master/assets/img/dc_browser_screen.png",
     // "https://raw.githubusercontent.com/masonmedia-projects/warren-yen-portfolio/master/img/wy_browser_screen.png",
     "https://raw.githubusercontent.com/masonmedia-projects/copetin/master/img/copetin_browser_ss.png",
