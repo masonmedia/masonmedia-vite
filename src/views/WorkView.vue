@@ -79,13 +79,21 @@ const titles = [
         "active": false
     },
     {
-        "microtitle": "Education/Ecommerce",
-        "title": "Leadership Development App",
-        "stack": "Vue, Vue CLI, BootstrapVue, SCSS, Vuex, LMS, i18n",
-        "description": "A shopping cart style application using Vue 2, Vuex, BootstrapVue, and animate.css. The project's functionality centers on users selecting from a variety of leadership learning paths, adding resources to a cart, and downloading items for exploration. State is saved both locally and in a learning management system.",
-        "link": "https://vue-shopping-cart.pages.dev/",
+        "microtitle": "Travel/Education",
+        "title": "Workshops in Wild Places",
+        "stack": "Vue, Vite, Bootstrap, GSAP, Wikipedia and google maps API",
+        "description": "A website redesign for Workshops in Wild Places, an art education initiative travelling to unique locations worldwide to explore local environments through art.",
+        "link": "https://wiwp-demo.netlify.app/",
         "active": false
     },
+    // {
+    //     "microtitle": "Education/Ecommerce",
+    //     "title": "Leadership Development App",
+    //     "stack": "Vue, Vue CLI, BootstrapVue, SCSS, Vuex, LMS, i18n",
+    //     "description": "A shopping cart style application using Vue 2, Vuex, BootstrapVue, and animate.css. The project's functionality centers on users selecting from a variety of leadership learning paths, adding resources to a cart, and downloading items for exploration. State is saved both locally and in a learning management system.",
+    //     "link": "https://vue-shopping-cart.pages.dev/",
+    //     "active": false
+    // },
     {
         "microtitle": "Automotive/Software",
         "title": "Exride",
@@ -124,7 +132,8 @@ const images = [
     "https://raw.githubusercontent.com/masonmedia-projects/copetin/master/img/copetin_browser_ss.png",
     "https://raw.githubusercontent.com/masonmedia-projects/neil-whitford/master/assets/img/neil_whitford_browser_ss.png",
     "https://raw.githubusercontent.com/masonmedia-projects/oakwood-guitar-school/master/static/ogs_social_banner.png",
-    "https://raw.githubusercontent.com/masonmedia-projects/vue-shopping-cart/master/public/ldt-homepage.png",
+    // "https://raw.githubusercontent.com/masonmedia-projects/vue-shopping-cart/master/public/ldt-homepage.png",
+    new URL(`/images/mm-wiwp-screen.png`, import.meta.url).href,
     new URL(`/images/exride_demo.png`, import.meta.url).href,
     "https://raw.githubusercontent.com/masonmedia-projects/vue-todos/master/public/mm_vue_todos_screen.png",
     "https://raw.githubusercontent.com/masonmedia-projects/vue-vite-jmc/master/public/jmc-homepage.png",
